@@ -73,39 +73,40 @@ Computer tests and algebraic logic allow us to formulate the final conclusion of
 
 ---
 
-## 📂 Project Structure / Структура репозитория
+## 📂 Repository Structure
 
-Все файлы проекта расположены в корневом каталоге для максимальной прозрачности и прямого доступа к теоретической и вычислительной базе исследования:
+All project files are located in the root directory for maximum transparency and direct access to the theoretical and computational foundation of the research:
 
 ```text
 collatz-3d-attractor/
-├── README.md                     # Главный манифест, базовая 3D-геометрия и правила грамматики
+├── README.md                     # Core manifest, base 3D geometry rules, and ternary grammar
 │
-├── MANIFEST_PART2.md             # Этап 2: Теорема о коническом сжатии и тест "Титана" (EN)
-├── MANIFEST_PART2_RU.md          # Этап 2: Теорема о коническом сжатии и тест "Титана" (RU)
+├── MANIFEST_PART2.md             # Stage 2: Conical Compression Theorem & 1,000-digit Titan test (EN)
+├── MANIFEST_PART2_RU.md          # Stage 2: Conical Compression Theorem & 1,000-digit Titan test (RU)
 │
-├── THEORY_ERGODICITY.md          # Этап 3: Марковское доказательство стационарности 1:1:1 (EN)
-├── THEORY_ERGODICITY_RU.md       # Этап 3: Марковское доказательство стационарности 1:1:1 (RU)
+├── THEORY_ERGODICITY.md          # Stage 3: Markovian Analytical Proof of the 1:1:1 Stationary State (EN)
+├── THEORY_ERGODICITY_RU.md       # Stage 3: Markovian Analytical Proof of the 1:1:1 Stationary State (RU)
 │
-├── THEORY_QUANTUM_PROJECTIONS.md # Этап 4: Квантовые проекции кубиков и матрица поворота 137.5° (EN)
+├── THEORY_QUANTUM_PROJECTIONS.md # Stage 4: Quantum Cube Projections & 137.5° Matrix Rotation Theory (EN)
 │
-├── MANIFEST_PART5.md             # Этап 5: Потеря энтропии по Шеннону (0.138 бит/шаг) (EN)
-├── MANIFEST_PART5_RU.md          # Этап 5: Потеря энтропии по Шеннону (0.138 бит/шаг) (RU)
+├── MANIFEST_PART5.md             # Stage 5: Shannon Entropy Loss Invariant (0.138 bits/step) (EN)
+├── MANIFEST_PART5_RU.md          # Stage 5: Shannon Entropy Loss Invariant (0.138 bits/step) (RU)
 │
-├── MANIFEST_PART6.md             # Этап 6: p-адическая топология и магистраль Узла 20 (EN)
-├── MANIFEST_PART6_RU.md          # Этап 6: p-адическая топология и магистраль Узла 20 (RU)
+├── MANIFEST_PART6.md             # Stage 6: 2-adic Topology and the Node 20 Global Highway Hub (EN)
+├── MANIFEST_PART6_RU.md          # Stage 6: 2-adic Topology and the Node 20 Global Highway Hub (RU)
 │
-├── MANIFEST_PART7.md             # Этап 7: Топологический монолит Клина +1 и встречные потоки (EN)
-├── MANIFEST_PART7_RU.md          # Этап 7: Топологический монолит Клина +1 и встречные потоки (RU)
+├── MANIFEST_PART7.md             # Stage 7: The Avalanche Wedge Law & Non-Invertible Bit Collisions (EN)
+├── MANIFEST_PART7_RU.md          # Stage 7: The Avalanche Wedge Law & Non-Invertible Bit Collisions (RU)
 │
-├── collatz_27.obj                # 3D spatial trajectory of number 27 (111 steps, peak 9232)
+├── collatz_27.obj                # 3D spatial trajectory of number 27 (111 steps, peak value 9232)
 ├── collatz_31.obj                # 3D spatial trajectory of number 31 (106 steps, 5 full loops)
-├── collatz_titan_1000.obj        # 3D spatial trajectory of the 1,000-digit Titan integer
+├── collatz_titan_1000.obj        # 3D spatial trajectory of the pseudo-random 1,000-digit Titan integer
 │
-├── retention_analyzer.py         # Python-скрипт расчета глобального коэффициента удержания (66.42%)
-├── generate_titan_3d.py          # Python-скрипт генерации базовой OBJ-траектории гигантских чисел
-└── generate_titan_colored_3d.py  # Python-скрипт генерации 3D-меша с цветовой разметкой грамматики
+├── retention_analyzer.py         # Python tracker computing global retention coefficient (66.42%)
+├── generate_titan_3d.py          # Python exporter generating raw OBJ trajectories for massive integers
+└── generate_titan_colored_3d.py  # Python exporter generating grammar-colored 3D meshes for Cinema 4D/Blender
 ```
+
 
 
 
