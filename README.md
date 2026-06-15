@@ -73,18 +73,40 @@ Computer tests and algebraic logic allow us to formulate the final conclusion of
 
 ---
 
-## 📂 Repository Structure
+## 📂 Project Structure / Структура репозитория
 
-The repository contains all the necessary source codes, 3D models, and text manifests for our bilingual research platform:
+Все файлы проекта расположены в корневом каталоге для максимальной прозрачности и прямого доступа к теоретической и вычислительной базе исследования:
 
-*   `LICENSE` — the official open MIT License that legally protects the project's copyrights.
-*   `README.md` — the main international manifest of the 3D attractor model in English (this file).
-*   `README_RU.md` — the manifest of the model in Russian.
-*   `collatz_tornado.png` — the main high-resolution 3D rendering of the gravitational vortex and three-color attributes.
-*   `simulator.py` — an interactive English Python script for calculating trajectories of ultra-large numbers.
-*   `simulator_ru.py` — an interactive Russian Python script.
-*   `collatz_27.obj` — 3D spatial trajectory ("tornado") of the number 27 (111 steps, 5 full loops).
-*   `collatz_31.obj` — 3D spatial trajectory ("spring") of the number 31 (106 steps, 5 full loops).
+```text
+collatz-3d-attractor/
+├── README.md                     # Главный манифест, базовая 3D-геометрия и правила грамматики
+│
+├── MANIFEST_PART2.md             # Этап 2: Теорема о коническом сжатии и тест "Титана" (EN)
+├── MANIFEST_PART2_RU.md          # Этап 2: Теорема о коническом сжатии и тест "Титана" (RU)
+│
+├── THEORY_ERGODICITY.md          # Этап 3: Марковское доказательство стационарности 1:1:1 (EN)
+├── THEORY_ERGODICITY_RU.md       # Этап 3: Марковское доказательство стационарности 1:1:1 (RU)
+│
+├── THEORY_QUANTUM_PROJECTIONS.md # Этап 4: Квантовые проекции кубиков и матрица поворота 137.5° (EN)
+│
+├── MANIFEST_PART5.md             # Этап 5: Потеря энтропии по Шеннону (0.138 бит/шаг) (EN)
+├── MANIFEST_PART5_RU.md          # Этап 5: Потеря энтропии по Шеннону (0.138 бит/шаг) (RU)
+│
+├── MANIFEST_PART6.md             # Этап 6: p-адическая топология и магистраль Узла 20 (EN)
+├── MANIFEST_PART6_RU.md          # Этап 6: p-адическая топология и магистраль Узла 20 (RU)
+│
+├── MANIFEST_PART7.md             # Этап 7: Топологический монолит Клина +1 и встречные потоки (EN)
+├── MANIFEST_PART7_RU.md          # Этап 7: Топологический монолит Клина +1 и встречные потоки (RU)
+│
+├── collatz_27.obj                # 3D spatial trajectory of number 27 (111 steps, peak 9232)
+├── collatz_31.obj                # 3D spatial trajectory of number 31 (106 steps, 5 full loops)
+├── collatz_titan_1000.obj        # 3D spatial trajectory of the 1,000-digit Titan integer
+│
+├── retention_analyzer.py         # Python-скрипт расчета глобального коэффициента удержания (66.42%)
+├── generate_titan_3d.py          # Python-скрипт генерации базовой OBJ-траектории гигантских чисел
+└── generate_titan_colored_3d.py  # Python-скрипт генерации 3D-меша с цветовой разметкой грамматики
+```
+
 
 
 ## 📄 License
