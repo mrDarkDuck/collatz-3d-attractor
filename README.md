@@ -107,6 +107,8 @@ All project files are located in the root directory for maximum transparency, pr
 * ⚙️ [simulator_ru.py](simulator_ru.py) — Python engine computing global retention coefficient and statistics (RU)
 
 
+[![DOI](https://zenodo.org/badge/1269980651.svg)](https://doi.org/10.5281/zenodo.20708022)
+
 
 ## 📄 License
 This project is distributed under the open **MIT License**. You are free to use, modify, and develop this geometric model.
