@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Collatz Conjecture Simulator</title>
+    <style>
+        body { background-color: #111116; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .container { max-width: 900px; width: 100%; background: #16161f; padding: 25px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #222230; }
+        h1 { margin: 0 0 10px 0; font-size: 24px; text-align: center; }
+        p { color: #a4b0be; font-size: 14px; text-align: center; margin: 0 0 20px 0; }
+        .input-block { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
+        input { background: #0b0b0e; border: 1px solid #333344; color: #fff; padding: 12px 20px; font-size: 16px; border-radius: 6px; width: 60%; outline: none; }
+        input:focus { border-color: #1e90ff; }
+        button { background: #1e90ff; color: #fff; border: none; padding: 12px 25px; font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        button:hover { background: #0077e6; }
+        .legend { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; font-size: 12px; font-weight: bold; }
+        .badge { padding: 4px 10px; border-radius: 4px; }
+        .table-container { max-height: 400px; overflow-y: auto; border: 1px solid #222230; border-radius: 6px; margin-bottom: 25px; background: #0b0b0e; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-family: monospace; font-size: 13px; }
+        th { background: #1c1c26; padding: 12px; border-bottom: 2px solid #222230; color: #a4b0be; position: sticky; top: 0; }
+        td { padding: 10px 12px; border-bottom: 1px solid #16161f; }
+        .row-1 { color: #ff4757; }
+        .row-0a { color: #2ed573; }
+        .row-0b { color: #1e90ff; }
+        .report { background: #1c1c26; padding: 20px; border-radius: 6px; border-left: 4px solid #1e90ff; display: none; }
+        .report h3 { margin: 0 0 15px 0; font-size: 16px; }
+        .report ul { margin: 0; padding-left: 20px; font-size: 14px; color: #e2e8f0; line-height: 1.6; }
+    </style>
+</head>
+<body>
+<div style="text-align: right; max-width: 900px; width: 100%; margin: 10px auto;"><a href="index_en.html" style="color: #1e90ff; text-decoration: none; font-weight: bold;">🇬🇧 Switch to English</a></div>
+
+<div class="container">
+    <h1>Interactive 3D Collatz Conjecture Simulator</h1>
+    <p>Троичная логика и бинарный баланс сил притяжения к аттрактору (0,0,0)</p>
+
+    <div class="input-block">
+        <input type="text" id="numberInput" placeholder="Введите любое натуральное число..." autocomplete="off">
+        <button onclick="runSimulation()">Запустить полет</button>
+    </div>
+
+    <div class="legend">
+        <span class="badge" style="background: #ff4757;">1 Нечетный (Импульс)</span>
+        <span class="badge" style="background: #2ed573; color: #000;">0a Супер-четный (Сжатие)</span>
+        <span class="badge" style="background: #1e90ff;">0b Полу-четный (Сдвиг Y)</span>
+    </div>
+
+    <div class="table-container" id="tableContainer" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Шаг</th>
+                    <th style="width: 30%;">Число</th>
+                    <th style="width: 20%;">Признак 3D</th>
+                    <th style="width: 40%;">Траектория в пространстве</th>
+                </tr>
+            </thead>
+            <tbody id="resultBody"></tbody>
+        </table>
+    </div>
+
+    <div class="report" id="reportBlock">
+        <h3>📊 СУХОЙ ЛОГИЧЕСКИЙ ОТЧЕТ ПОЛЕТА</h3>
+        <ul id="reportList"></ul>
+    </div>
+</div>
+
+<script>
+    function runSimulation() {
+        const inputVal = document.getElementById('numberInput').value.trim();
+        if (!inputVal) return alert("Вы ничего не ввели!");
+        
+        // Используем BigInt, чтобы страница не ломалась от гигантских 92-значных чисел!
+        let n;
+        try {
+            n = BigInt(inputVal);
+            if (n <= 0n) throw new Error();
+        } catch(e) {
+            return alert("Пожалуйста, введите корректное натуральное число больше 0.");
+        }
+
+        const startNumber = n.toString();
+        const resultBody = document.getElementById('resultBody');
+        resultBody.innerHTML = ""; // Очистка старых результатов
+
+        let step = 0;
+        let count_1 = 0;
+        let count_0a = 0;
+        let count_0b = 0;
+        let mgl_captures = 0;
+        let wasGrowthLastStep = false;
+
+        while (n !== 1n) {
+            let typeStr, action, rowClass, currentType;
+            let currentN = n.toString();
+
+            if (n % 2n !== 0n) {
+                typeStr = "1 (Нечетный)";
+                action = "💥 Рост 3n+1 -> Импульс вверх";
+                rowClass = "row-1";
+                count_1++;
+                n = 3n * n + 1n;
+                wasGrowthLastStep = true;
+            } else {
+                if (n % 4n === 0n) {
+                    typeStr = "0a (Супер-чет)";
+                    if (wasGrowthLastStep) {
+                        action = "⚡ КАПКАН! Рост мгновенно перехвачен супер-чётностью";
+                        mgl_captures++;
+                    } else {
+                        action = "🟩 Сжатие -> Скольжение по желобу вниз (Z)";
+                    }
+                    rowClass = "row-0a";
+                    count_0a++;
+                } else {
+                    typeStr = "0b (Полу-чет)";
+                    action = "🔵 Нырок по оси Y -> Вираж спирали внутрь";
+                    rowClass = "row-0b";
+                    count_0b++;
+                }
+                n = n / 2n;
+                wasGrowthLastStep = false;
+            }
+
+            // Ограничение вывода длинных чисел на экран, чтобы таблица была красивой
+            let displayNum = currentN.length <= 18 ? currentN : currentN.substring(0, 15) + "...";
+
+            const row = `<tr>
+                <td>${step}</td>
+                <td class="${rowClass}">${displayNum}</td>
+                <td class="${rowClass}"><b>${typeStr}</b></td>
+                <td>${action}</td>
+            </tr>`;
+            resultBody.innerHTML += row;
+            step++;
+        }
+
+        // Финальный шаг (единица)
+        resultBody.innerHTML += `<tr>
+            <td>${step}</td>
+            <td class="row-1">1</td>
+            <td class="row-1"><b>1 (Нечетный)</b></td>
+            <td>🏁 ДОСТИГНУТ АТТРАКТОР (Центр воронки)</td>
+        </tr>`;
+        count_1++;
+
+        // Показываем блоки с результатами
+        document.getElementById('tableContainer').style.display = "block";
+        document.getElementById('reportBlock').style.display = "block";
+
+        // Генерация отчета
+        const totalDeletions = count_0a + count_0b;
+        const captureRate = count_1 > 1 ? ((mgl_captures / (count_1 - 1)) * 100).toFixed(1) : "0.0";
+
+        const reportList = document.getElementById('reportList');
+        reportList.innerHTML = `
+            <li><b>Длина траектории падения:</b> ${step} шагов.</li>
+            <li><b>Каскадов сжатия (Зеленый '0a'):</b> ${count_0a}</li>
+            <li><b>Поворотов синей оси (Синий '0b'):</b> ${count_0b}</li>
+            <li><b>Мгновенных перехватов суперчётностью:</b> ${mgl_captures} раз.</li>
+            <li><b>Эффективность ловушки:</b> ${captureRate}% шагов роста срезаны мгновенно.</li>
+            <li><b>Баланс сил:</b> ${count_1} импульсов роста против ${totalDeletions} шагов деления.</li>
+            <li><b>Итог:</b> Сила деления победила. Число достроено до двоичной степени 2^x и стянуто в точку (0,0,0).</li>
+        `;
+    }
+</script>
+</body>
+</html>
