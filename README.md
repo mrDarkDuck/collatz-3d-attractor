@@ -74,9 +74,18 @@ Computer tests and algebraic logic allow us to formulate the final conclusion of
 ---
 
 ## 📂 Repository Structure
-*   `simulator.py` — an interactive Python script for analyzing any ultra-large numbers.
-*   `models/collatz_27.obj` — 3D trajectory ("tornado") of the number 27 (111 steps, 5 full loops).
-*   `models/collatz_31.obj` — 3D trajectory ("spring") of the number 31 (106 steps, 5 full loops).
+
+The repository contains all the necessary source codes, 3D models, and text manifests for our bilingual research platform:
+
+*   `LICENSE` — the official open MIT License that legally protects the project's copyrights.
+*   `README.md` — the main international manifest of the 3D attractor model in English (this file).
+*   `README_RU.md` — the manifest of the model in Russian.
+*   `collatz_tornado.png` — the main high-resolution 3D rendering of the gravitational vortex and three-color attributes.
+*   `simulator.py` — an interactive English Python script for calculating trajectories of ultra-large numbers.
+*   `simulator_ru.py` — an interactive Russian Python script.
+*   `collatz_27.obj` — 3D spatial trajectory ("tornado") of the number 27 (111 steps, 5 full loops).
+*   `collatz_31.obj` — 3D spatial trajectory ("spring") of the number 31 (106 steps, 5 full loops).
+
 
 ## 📄 License
 This project is distributed under the open **MIT License**. You are free to use, modify, and develop this geometric model.
