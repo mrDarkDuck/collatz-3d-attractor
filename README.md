@@ -1,4 +1,6 @@
 # Collatz Conjecture: 3D Attractor & Ternary Logic Model
+![Collatz 3D Tornado Model](collatz_tornado.png)
+
 
 ## 📌 Overview
 This repository contains the materials of a research project proposing a new conceptual approach to the **Collatz Conjecture (3n+1)**. Instead of the classical analysis of arithmetic values, this model translates the problem into the language of symbolic dynamics and 3D topology.
