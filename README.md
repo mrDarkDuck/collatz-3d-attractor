@@ -1,6 +1,9 @@
 # Collatz Conjecture: 3D Attractor & Ternary Logic Model
 ![Collatz 3D Tornado Model](collatz_tornado.png)
 
+**Project Author:** Kirill Maksimov (GitHub: @mrDarkuck)  
+**Disclaimer:** I am completely outside the world of advanced mathematics or professional academia. This project represents a look at a 90-year-old puzzle from the perspective of systems logic, binary code, and 3D geometry. It is an outsider's attempt to visualize chaos and turn dry equations into a tangible, physical model.
+
 
 ## 📌 Overview
 This repository contains the materials of a research project proposing a new conceptual approach to the **Collatz Conjecture (3n+1)**. Instead of the classical analysis of arithmetic values, this model translates the problem into the language of symbolic dynamics and 3D topology.
