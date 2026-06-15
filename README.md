@@ -98,8 +98,8 @@ All project files are located in the root directory for maximum transparency, pr
 * 📓 [MANIFEST_PART6_RU.md](MANIFEST_PART6_RU.md) — Stage 6: 2-adic Topology and the Node 20 Global Highway Hub (RU)
 * 📔 [MANIFEST_PART7.md](MANIFEST_PART7.md) — Stage 7: The Avalanche Wedge Law & Non-Invertible Bit Collisions (EN)
 * 📔 [MANIFEST_PART7_RU.md](MANIFEST_PART7_RU.md) — Stage 7: The Avalanche Wedge Law & Non-Invertible Bit Collisions (RU)
-* 🚀 [nautilus_3d_viewer_en.html](https://github.io) — **[LIVE DEMO]** Autonomous HTML5/Canvas 3D interactive viewer (English UI)
-* 🚀 [nautilus_3d_viewer_ru.html](https://github.io) — **[LIVE DEMO]** Autonomous HTML5/Canvas 3D interactive viewer (Russian UI)
+* 🚀 [nautilus_3d_viewer_en.html](nautilus_3d_viewer_en.html) — **[LIVE DEMO]** Autonomous HTML5/Canvas 3D interactive viewer (English UI)
+* 🚀 [nautilus_3d_viewer_ru.html](nautilus_3d_viewer_ru.html) — **[LIVE DEMO]** Autonomous HTML5/Canvas 3D interactive viewer (Russian UI)
 * 📐 [collatz_27.obj](collatz_27.obj) — 3D spatial trajectory of number 27 (111 steps, peak value 9232)
 * 📐 [collatz_31.obj](collatz_31.obj) — 3D spatial trajectory of number 31 (106 steps, 5 full loops)
 * 🖼️ [collatz_tornado.png](collatz_tornado.png) — Attractor render visualization / asset
