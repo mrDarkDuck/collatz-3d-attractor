@@ -101,6 +101,9 @@ All project files are located in the root directory for maximum transparency, pr
 - ⚙️ [simulator_blue_trap_en.py](./simulator_blue_trap_en.py) — Autonomous verification script for quantum tornado loop quantization along the Y-axis depth (English version)
 - 📑 [ADDENDUM_AVALANCHE_EN.md](./ADDENDUM_AVALANCHE_EN.md) — Theoretical Addendum: Proof of bitwise entropy erasure and defense against anomalous trajectories
 - ⚙️ [simulator_bit_avalanche_en.py](./simulator_bit_avalanche_en.py) — Visualisation script for the bit carry wave and avalanche entropy collapse (English version)
+- 📑 [ADDENDUM_ISOMORPHISM_EN.md](./ADDENDUM_ISOMORPHISM_EN.md) — Theoretical Addendum: Proof of strict algebraic isomorphism of the 3D Nautilus attractor
+- ⚙️ [simulator_isomorphism_en.py](./simulator_isomorphism_en.py) — Calculation script for 3D trajectory coordinates based on trigonometric remainder indicators (English version)
+
 
 
 
