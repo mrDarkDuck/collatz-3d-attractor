@@ -1,5 +1,6 @@
 # Гипотеза Коллатца: Модель 3D-аттрактора и троичной логики
 ![Collatz 3D Tornado Model](collatz_tornado.png)
+[Switch to ENG](https://mrdarkduck.github.io/collatz-3d-attractor/)
 
 **Автор проекта:** Кирилл Максимов (GitHub: @mrDarkDuck)  
 **Дисклеймер:** Я полностью далек от мира высшей математики и профессиональной академической науки. Данный проект — это взгляд на 90-летнюю загадку со стороны системной логики, двоичного кода и 3D-геометрии. Это попытка автора со свежим взглядом визуализировать хаос и превратить сухие цифры в осязаемую физическую модель.
@@ -84,26 +85,17 @@
 * 🌀 [README.md](README.md) — Главный манифест, базовая 3D-геометрия и дорожная карта проекта (EN)
 * 🌀 [README_RU.md](README_RU.md) — Главный манифест и дорожная карта проекта (Русская версия)
 * 📄 [LICENSE](LICENSE) — Открытая лицензия проекта
-* 📜 [WHITE_PAPER.md](WHITE_PAPER.md) — Белая Книга: научно-популярный таймлайн и синтез всего штурма (EN)
 * 📜 [WHITE_PAPER_RU.md](WHITE_PAPER_RU.md) — Белая Книга: научно-популярный таймлайн и синтез всего штурма (RU)
-* 📘 [MANIFEST_PART2.md](MANIFEST_PART2.md) — Этап 2: Теорема о коническом сжатии и тест "Титана" (EN)
 * 📘 [MANIFEST_PART2_RU.md](MANIFEST_PART2_RU.md) — Этап 2: Теорема о коническом сжатии и тест "Титана" (RU)
-* 📗 [THEORY_ERGODICITY_PART3.md](THEORY_ERGODICITY_PART3.md) — Этап 3: Марковское доказательство стационарности 1:1:1 (EN)
 * 📗 [THEORY_ERGODICITY_PART3_RU.md](THEORY_ERGODICITY_PART3_RU.md) — Этап 3: Марковское доказательство стационарности 1:1:1 (RU)
-* 📙 [THEORY_QUANTUM_PROJECTIONS_PART4.md](THEORY_QUANTUM_PROJECTIONS_PART4.md) — Этап 4: Квантовые проекции кубиков и матрица поворота 137.5° (EN)
 * 📙 [THEORY_QUANTUM_PROJECTIONS_PART4_RU.md](THEORY_QUANTUM_PROJECTIONS_PART4_RU.md) — Этап 4: Квантовые проекции кубиков и матрица поворота 137.5° (RU)
-* 📕 [MANIFEST_PART5.md](MANIFEST_PART5.md) — Этап 5: Потеря энтропии по Шеннону (0.138 бит/шаг) (EN)
 * 📕 [MANIFEST_PART5_RU.md](MANIFEST_PART5_RU.md) — Этап 5: Потеря энтропии по Шеннону (0.138 бит/шаг) (RU)
-* 📓 [MANIFEST_PART6.md](MANIFEST_PART6.md) — Этап 6: p-адическая топология и магистраль Узла 20 (EN)
 * 📓 [MANIFEST_PART6_RU.md](MANIFEST_PART6_RU.md) — Этап 6: p-адическая топология и магистраль Узла 20 (RU)
-* 📔 [MANIFEST_PART7.md](MANIFEST_PART7.md) — Этап 7: Топологический монолит Клина +1 и встречные потоки (EN)
 * 📔 [MANIFEST_PART7_RU.md](MANIFEST_PART7_RU.md) — Этап 7: Топологический монолит Клина +1 и встречные потоки (RU)
-* 🚀 [nautilus_3d_viewer_en.html](nautilus_3d_viewer_en.html) — **[ЗАПУСТИТЬ]** Автономный интерактивный 3D-движок HTML5/Canvas (Английский интерфейс)
 * 🚀 [nautilus_3d_viewer_ru.html](nautilus_3d_viewer_ru.html) — **[ЗАПУСТИТЬ]** Автономный интерактивный 3D-движок HTML5/Canvas (Русский интерфейс)
 * 📐 [collatz_27.obj](collatz_27.obj) — 3D-траектория числа 27 (111 шагов, пик 9232)
 * 📐 [collatz_31.obj](collatz_31.obj) — 3D-траектория числа 31 (106 шагов, 5 полных витков)
 * 🖼️ [collatz_tornado.png](collatz_tornado.png) — Рендер-визуализация аттрактора
-* ⚙️ [simulator.py](simulator.py) — Python-скрипт расчета коэффициента удержания и статистики (EN)
 * ⚙️ [simulator_ru.py](simulator_ru.py) — Python-скрипт расчета коэффициента удержания и статистики (RU)
 
 - 📑 [ADDENDUM_BLUE_TRAP_RU.md](ADDENDUM_BLUE_TRAP_RU.md) — Теоретическое дополнение: Доказательство 2-адической памяти и фрактального деления Синего Капкана
