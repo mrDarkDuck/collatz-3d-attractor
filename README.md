@@ -97,8 +97,11 @@ All project files are located in the root directory for maximum transparency, pr
 * 🖼️ [collatz_tornado.png](collatz_tornado.png) — Attractor render visualization / asset
 * ⚙️ [simulator.py](simulator.py) — Python engine computing global retention coefficient and statistics (EN)
 
-- 📑 [ADDENDUM_BLUE_TRAP_EN.md](ADDENDUM_BLUE_TRAP_EN.md) — Theoretical Addendum: Proof of 2-adic memory and fractal division of the Blue Trap
-- ⚙️ [simulator_blue_trap_en.py](simulator_blue_trap_en.py) — Autonomous verification script for quantum tornado loop quantization along the Y-axis depth (English version)
+- 📑 [ADDENDUM_BLUE_TRAP_EN.md](./ADDENDUM_BLUE_TRAP_EN.md) — Theoretical Addendum: Proof of 2-adic memory and fractal division of the Blue Trap
+- ⚙️ [simulator_blue_trap_en.py](./simulator_blue_trap_en.py) — Autonomous verification script for quantum tornado loop quantization along the Y-axis depth (English version)
+- 📑 [ADDENDUM_AVALANCHE_EN.md](./ADDENDUM_AVALANCHE_EN.md) — Theoretical Addendum: Proof of bitwise entropy erasure and defense against anomalous trajectories
+- ⚙️ [simulator_bit_avalanche_en.py](./simulator_bit_avalanche_en.py) — Visualisation script for the bit carry wave and avalanche entropy collapse (English version)
+
 
 
 
