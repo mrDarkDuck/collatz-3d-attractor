@@ -102,6 +102,8 @@
 - ⚙️ [simulator_blue_trap_ru.py](./simulator_blue_trap_ru.py) — Автономный скрипт верификации квантования витков синего торнадо по глубине оси Y (Русская версия)
 - 📑 [ADDENDUM_AVALANCHE_RU.md](./ADDENDUM_AVALANCHE_RU.md) — Теоретическое дополнение: Доказательство побитового уничтожения хаоса и защита от аномальных траекторий
 - ⚙️ [simulator_bit_avalanche_ru.py](./simulator_bit_avalanche_ru.py) — Скрипт визуализации волны битового переноса и лавинного схлопывания энтропии (Русская версия)
+- 📑 [ADDENDUM_ISOMORPHISM_RU.md](./ADDENDUM_ISOMORPHISM_RU.md) — Теоретическое дополнение: Доказательство строгого алгебраического изоморфизма 3D-аттрактора Nautilus
+- ⚙️ [simulator_isomorphism_ru.py](./simulator_isomorphism_ru.py) — Скрипт расчета 3D-координат траекторий на основе тригонометрических индикаторов остатков (Русская версия)
 
 
 
