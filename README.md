@@ -1,5 +1,6 @@
 # Collatz Conjecture: 3D Attractor & Ternary Logic Model
 ![Collatz 3D Tornado Model](collatz_tornado.png)
+[switch to rus](https://mrdarkduck.github.io/collatz-3d-attractor/README_RU.html)
 
 **Project Author:** Kirill Maksimov (GitHub: @mrDarkuck)  
 **Disclaimer:** I am completely outside the world of advanced mathematics or professional academia. This project represents a look at a 90-year-old puzzle from the perspective of systems logic, binary code, and 3D geometry. It is an outsider's attempt to visualize chaos and turn dry equations into a tangible, physical model.
@@ -82,29 +83,19 @@ All project files are located in the root directory for maximum transparency and
 All project files are located in the root directory for maximum transparency, providing direct access to the theoretical, computational, and visual layers of the research:
 
 * 🌀 [README.md](README.md) — Core manifest, base 3D geometry rules, and project roadmap
-* 🌀 [README_RU.md](README_RU.md) — Core manifest and project roadmap (Russian version)
 * 📄 [LICENSE](LICENSE) — Project open-source license
 * 📜 [WHITE_PAPER.md](WHITE_PAPER.md) — Complete popular timeline and synthesis of the independent assault (EN)
-* 📜 [WHITE_PAPER_RU.md](WHITE_PAPER_RU.md) — Complete popular timeline and synthesis of the independent assault (RU)
 * 📘 [MANIFEST_PART2.md](MANIFEST_PART2.md) — Stage 2: Conical Compression Theorem & 1,000-digit Titan test (EN)
-* 📘 [MANIFEST_PART2_RU.md](MANIFEST_PART2_RU.md) — Stage 2: Conical Compression Theorem & 1,000-digit Titan test (RU)
 * 📗 [THEORY_ERGODICITY_PART3.md](THEORY_ERGODICITY_PART3.md) — Stage 3: Markovian Analytical Proof of the 1:1:1 Stationary State (EN)
-* 📗 [THEORY_ERGODICITY_PART3_RU.md](THEORY_ERGODICITY_PART3_RU.md) — Stage 3: Markovian Analytical Proof of the 1:1:1 Stationary State (RU)
 * 📙 [THEORY_QUANTUM_PROJECTIONS_PART4.md](THEORY_QUANTUM_PROJECTIONS_PART4.md) — Stage 4: Quantum Cube Projections & 137.5° Matrix Rotation Theory (EN)
-* 📙 [THEORY_QUANTUM_PROJECTIONS_PART4_RU.md](THEORY_QUANTUM_PROJECTIONS_PART4_RU.md) — Stage 4: Quantum Cube Projections & 137.5° Matrix Rotation Theory (RU)
 * 📕 [MANIFEST_PART5.md](MANIFEST_PART5.md) — Stage 5: Shannon Entropy Loss Invariant (0.138 bits/step) (EN)
-* 📕 [MANIFEST_PART5_RU.md](MANIFEST_PART5_RU.md) — Stage 5: Shannon Entropy Loss Invariant (0.138 bits/step) (RU)
 * 📓 [MANIFEST_PART6.md](MANIFEST_PART6.md) — Stage 6: 2-adic Topology and the Node 20 Global Highway Hub (EN)
-* 📓 [MANIFEST_PART6_RU.md](MANIFEST_PART6_RU.md) — Stage 6: 2-adic Topology and the Node 20 Global Highway Hub (RU)
 * 📔 [MANIFEST_PART7.md](MANIFEST_PART7.md) — Stage 7: The Avalanche Wedge Law & Non-Invertible Bit Collisions (EN)
-* 📔 [MANIFEST_PART7_RU.md](MANIFEST_PART7_RU.md) — Stage 7: The Avalanche Wedge Law & Non-Invertible Bit Collisions (RU)
 * 🚀 [nautilus_3d_viewer_en.html](nautilus_3d_viewer_en.html) — **[LIVE DEMO]** Autonomous HTML5/Canvas 3D interactive viewer (English UI)
-* 🚀 [nautilus_3d_viewer_ru.html](nautilus_3d_viewer_ru.html) — **[LIVE DEMO]** Autonomous HTML5/Canvas 3D interactive viewer (Russian UI)
 * 📐 [collatz_27.obj](collatz_27.obj) — 3D spatial trajectory of number 27 (111 steps, peak value 9232)
 * 📐 [collatz_31.obj](collatz_31.obj) — 3D spatial trajectory of number 31 (106 steps, 5 full loops)
 * 🖼️ [collatz_tornado.png](collatz_tornado.png) — Attractor render visualization / asset
 * ⚙️ [simulator.py](simulator.py) — Python engine computing global retention coefficient and statistics (EN)
-* ⚙️ [simulator_ru.py](simulator_ru.py) — Python engine computing global retention coefficient and statistics (RU)
 
 - 📑 [ADDENDUM_BLUE_TRAP_EN.md](ADDENDUM_BLUE_TRAP_EN.md) — Theoretical Addendum: Proof of 2-adic memory and fractal division of the Blue Trap
 - ⚙️ [simulator_blue_trap_en.py](simulator_blue_trap_en.py) — Autonomous verification script for quantum tornado loop quantization along the Y-axis depth (English version)
