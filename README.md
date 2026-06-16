@@ -116,5 +116,6 @@ All project files are located in the root directory for maximum transparency, pr
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20722131.svg)](https://doi.org/10.5281/zenodo.20722131)
 
+
 ## 📄 License
 This project is distributed under the open **MIT License**. You are free to use, modify, and develop this geometric model.
