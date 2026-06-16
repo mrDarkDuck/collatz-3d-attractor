@@ -114,6 +114,20 @@ The shift $x \ll 1$ guarantees the evenness of the intermediate term. The final 
 
 The bitwise avalanche forcefully prints an ordered even structure into the lower bits, driving the trajectory down via the $0a$ framework. Exceptional trajectories cannot physically form due to the discrete laws of binary addition.
 
+### 3. Algebraic Isomorphism of the 3D Nautilus Attractor
+To resolve critiques regarding the metaphorical nature of the geometric model and the $137.5^\circ$ Fibonacci angle, a rigorous framework of state indicator functions has been formulated based on modulo arithmetic without conditional logic:
+* **Odd Indicator (1):** $I_1(n) = n \pmod 2$
+* **Super-Even Indicator (0a):** $I_{0a}(n) = (1 - I_1(n)) \cdot (1 - \lfloor \frac{n \pmod 4}{2} \rfloor)$
+* **Semi-Even Indicator (0b):** $I_{0b}(n) = (1 - I_1(n)) \cdot \lfloor \frac{n \pmod 4}{2} \rfloor$
+
+The dynamic 3D coordinates of the trajectory vector at step $s$ are computed through an iterative matrix rotating the $X-Y$ plane around the $Z$-axis by the golden angle $\theta \approx 137.5^\circ$ combined with radial compression $r_s = \log_2(n_s)$:
+
+$$\begin{pmatrix} \Delta x_s \\ \Delta y_s \end{pmatrix} = \begin{pmatrix} \cos(s\theta) & 0 \\ 0 & \sin(s\theta) \end{pmatrix} \begin{pmatrix} r_s (I_1 + I_{0a}) \\ r_s (I_1 + I_{0a}) \end{pmatrix} + \begin{pmatrix} 0 \\ r_s \cdot I_{0b} \end{pmatrix}$$
+$$\Delta z_s = n_s \cdot 0.01$$
+
+This operator establishes a strict isomorphism: the spatial coordinates of the Nautilus attractor are uniquely and rigidly bounded by the current arithmetic status of $n \pmod 4$, elevating the geometric visualization to a formal coordinate representation of a discrete dynamical system.
+
+
 *Full empirical verification of these principles is available via the autonomous scripts `simulator_blue_trap_en.py` and `simulator_bit_avalanche_en.py` in the repository root.*
 
 
