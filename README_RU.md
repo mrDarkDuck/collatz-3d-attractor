@@ -106,6 +106,10 @@
 * ⚙️ [simulator.py](simulator.py) — Python-скрипт расчета коэффициента удержания и статистики (EN)
 * ⚙️ [simulator_ru.py](simulator_ru.py) — Python-скрипт расчета коэффициента удержания и статистики (RU)
 
+- 📑 [ADDENDUM_BLUE_TRAP_RU.md](ADDENDUM_BLUE_TRAP_RU.md) — Теоретическое дополнение: Доказательство 2-адической памяти и фрактального деления Синего Капкана
+- ⚙️ [simulator_blue_trap_ru.py](simulator_blue_trap_ru.py) — Автономный скрипт верификации квантования витков синего торнадо по глубине оси Y (Русская версия)
+
+
 
 [![DOI](https://zenodo.org/badge/1269980651.svg)](https://doi.org/10.5281/zenodo.20708022)
 
