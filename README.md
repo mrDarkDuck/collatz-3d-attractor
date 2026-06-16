@@ -105,7 +105,7 @@ All project files are located in the root directory for maximum transparency, pr
 
 
 
-[![DOI](https://zenodo.org/badge/1269980651.svg)](https://doi.org/10.5281/zenodo.20708022)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20716180.svg)](https://doi.org/10.5281/zenodo.20716180)
 
 
 ## 📄 License
