@@ -106,6 +106,10 @@ All project files are located in the root directory for maximum transparency, pr
 * ⚙️ [simulator.py](simulator.py) — Python engine computing global retention coefficient and statistics (EN)
 * ⚙️ [simulator_ru.py](simulator_ru.py) — Python engine computing global retention coefficient and statistics (RU)
 
+- 📑 [ADDENDUM_BLUE_TRAP_EN.md](ADDENDUM_BLUE_TRAP_EN.md) — Theoretical Addendum: Proof of 2-adic memory and fractal division of the Blue Trap
+- ⚙️ [simulator_blue_trap_en.py](simulator_blue_trap_en.py) — Autonomous verification script for quantum tornado loop quantization along the Y-axis depth (English version)
+
+
 
 [![DOI](https://zenodo.org/badge/1269980651.svg)](https://doi.org/10.5281/zenodo.20708022)
 
