@@ -98,8 +98,10 @@
 * 🖼️ [collatz_tornado.png](collatz_tornado.png) — Рендер-визуализация аттрактора
 * ⚙️ [simulator_ru.py](simulator_ru.py) — Python-скрипт расчета коэффициента удержания и статистики (RU)
 
-- 📑 [ADDENDUM_BLUE_TRAP_RU.md](ADDENDUM_BLUE_TRAP_RU.md) — Теоретическое дополнение: Доказательство 2-адической памяти и фрактального деления Синего Капкана
-- ⚙️ [simulator_blue_trap_ru.py](simulator_blue_trap_ru.py) — Автономный скрипт верификации квантования витков синего торнадо по глубине оси Y (Русская версия)
+- 📑 [ADDENDUM_BLUE_TRAP_RU.md](./ADDENDUM_BLUE_TRAP_RU.md) — Теоретическое дополнение: Доказательство 2-адической памяти и фрактального деления Синего Капкана
+- ⚙️ [simulator_blue_trap_ru.py](./simulator_blue_trap_ru.py) — Автономный скрипт верификации квантования витков синего торнадо по глубине оси Y (Русская версия)
+- 📑 [ADDENDUM_AVALANCHE_RU.md](./ADDENDUM_AVALANCHE_RU.md) — Теоретическое дополнение: Доказательство побитового уничтожения хаоса и защита от аномальных траекторий
+- ⚙️ [simulator_bit_avalanche_ru.py](./simulator_bit_avalanche_ru.py) — Скрипт визуализации волны битового переноса и лавинного схлопывания энтропии (Русская версия)
 
 
 
