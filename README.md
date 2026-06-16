@@ -107,6 +107,12 @@ All project files are located in the root directory for maximum transparency, pr
 - ⚙️ [simulator_convergence_en.py](./simulator_convergence_en.py) — Analysis script for local fluctuation decay and attractor suction density (English version)
 - 📑 [ADDENDUM_LOOPS_EN.md](./ADDENDUM_LOOPS_EN.md) — Theoretical Addendum: Algebraic exclusion of hidden loops via trailing bit mask irreversibility
 - ⚙️ [simulator_loop_lock_en.py](./simulator_loop_lock_en.py) — Tracking script for trailing bit mask entropy drift and loop locking (English version)
+- 📑 [ADDENDUM_CONVERGENCE_EN.md](./ADDENDUM_CONVERGENCE_EN.md) — Theoretical Addendum: Proof of global frequency convergence to 1/3 and asymptotic channel confluence
+- ⚙️ [simulator_convergence_en.py](./simulator_convergence_en.py) — Analysis script for local fluctuation decay and attractor suction density (English version)
+- 📑 [ADDENDUM_LOOPS_EN.md](./ADDENDUM_LOOPS_EN.md) — Theoretical Addendum: Algebraic exclusion of hidden loops via trailing bit mask irreversibility
+- ⚙️ [simulator_loop_lock_en.py](./simulator_loop_lock_en.py) — Tracking script for trailing bit mask entropy drift and loop locking (English version)
+- 📑 [ADDENDUM_LYAPUNOV_EN.md](./ADDENDUM_LYAPUNOV_EN.md) — Theoretical Addendum: Proof of attractor stability via the Lyapunov function V(n) = log2(n)
+- ⚙️ [simulator_lyapunov_en.py](./simulator_lyapunov_en.py) — Verification script for monotonic energy dissipation within the blue vortex (English version)
 
 
 
