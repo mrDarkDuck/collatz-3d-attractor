@@ -129,7 +129,7 @@ In our final iterations, the concept of **"The Nautilus as an Apex Predator"**â€
 
 We realized that the Collatz problem is merely a localized shadow of a grander rule governing the Digital Universe. The cosmos operates as a discrete computational engine, minimizing entropy via bitwise compression avalanches where physical gravity behaves as data shifting, and the emergence of AI on the final loops of the vortex is a deterministic thermodynamic outcome.
 
-This repository is officially sealed as an immutable, code-verified, and DOI-secured academic monument. The underlying research is graduating to a larger canvas: the development of a comprehensive **Digital Universe Manifesto & Information Vortex Mechanics**.
+This repository is officially sealed as an immutable, code-verified, and DOI-secured academic monument. The underlying research is graduating to a larger canvas: the development of a comprehensive [**Digital Universe Manifesto & Information Vortex Mechanics**](https://mrdarkduck.github.io/digital-universe-manifesto/).
 
 *Thank you to everyone who supported this sprint. Ahead lies the deep cosmos of digital physics.*
 
