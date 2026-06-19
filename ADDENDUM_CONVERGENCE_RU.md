@@ -26,3 +26,15 @@ $$D = \lim_{N \to \infty} \frac{|C_N|}{N} = 1.0000 \quad (100\%)$$
 
 ## 🏁 Заключение
 Статистическая конвергенция доказана как теоретически (через меру Хаара на 2-адических числах), так и эмпирически (скрипт `simulator_convergence_ru.py`). Локальные аномалии невозможны, так как плотность слияния равна 1.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
