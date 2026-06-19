@@ -50,3 +50,15 @@ Nodes 20, 10, and 5 are not arbitrary milestones; they are **Attracting Fixed Po
 As the Binary Bit Blender destroys Shannon information entropy at a flat rate of $0.13835$ bits per step (Stage 5), the binary string of any giant "Monster Number" is mathematically shaved down. In the $\mathbb{Z}_2$ metric, this loss of informational volume forces a deterministic gravitational drift directly into the neighborhood of the `10100_2` (Node 20) attractor. 
 
 The Topological Highway is an inescapable structural funnel of the space itself. The network has only one global drain, confirming the total collapse of all infinities into the terminal 4-2-1 loop.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
