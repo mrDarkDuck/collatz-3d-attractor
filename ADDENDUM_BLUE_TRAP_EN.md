@@ -19,14 +19,14 @@ $$n \equiv 2^{d+1} - 2 \pmod{2^{d+2}}$$
 3. **Depth $d=3$ ($12.5\%$ of all blue numbers):** $n \equiv 14 \pmod{32}$ — numbers of the form $32m+14$ ($14, 46, 78...$). They execute three loops.
 
 ## 📊 Mathematical Conclusion
-The asymptotic distribution of these subsets strictly follows a geometric progression with a common ratio of $1/2$:
+The asymptotic distribution of these subsets strictly follows a geometric progression with a common ratio of $$1/2$$:
 $$\lim_{N \to \infty} P(\text{depth } d) = \frac{1}{2^d}$$
 
 This ensures the absolute convergence of the probability sum:
 $$\sum_{d=1}^{\infty} \frac{1}{2^d} = 1$$
 
 ## 🏁 Summary
-Since any natural number has a finite binary (2-adic) expansion, the depth $d$ for any given $n$ is strictly bounded. The tornado cannot trap a number infinitely along the Y-axis or allow it to escape to infinity. The Blue Trap dissipates chaotic energy and forces the trajectory back onto the green compression rails of $0a$. Run `simulator_blue_trap_en.py` for empirical verification.
+Since any natural number has a finite binary (2-adic) expansion, the depth $$d$$ for any given $$n$$ is strictly bounded. The tornado cannot trap a number infinitely along the Y-axis or allow it to escape to infinity. The Blue Trap dissipates chaotic energy and forces the trajectory back onto the green compression rails of $$0a$$. Run `simulator_blue_trap_en.py` for empirical verification.
 <script>
 MathJax = {
   tex: {
