@@ -61,7 +61,7 @@ Compiling these deterministic algebraic rules yields the transitional probabilit
 ---
 
 ## 4. Analytical Proof of the 1:1:1 Stationary Vector
-To find the global steady-state distribution across the volumetric tree structure, we solve the stationary vector equation $\pi \mathbf{P} = \pi$, where $\pi = (\pi_1, \pi_{0a}, \pi_{0b})$ and $\pi_1 + \pi_{0a} + \pi_{0b} = 1$.
+To find the global steady-state distribution across the volumetric tree structure, we solve the stationary vector equation $$\pi \mathbf{P} = \pi$$, where $$\pi = (\pi_1, \pi_{0a}, \pi_{0b})$$ and $$\pi_1 + \pi_{0a} + \pi_{0b} = 1$$.
 
 This expands into the following system of linear equations:
 $$\begin{cases} 
@@ -70,22 +70,22 @@ $$\begin{cases}
 \pi_{0b} = 0.5\pi_1 
 \end{cases}$$
 
-From the second equation, we isolate $\pi_{0a}$:
+From the second equation, we isolate $$\pi_{0a}$$:
 $$\pi_{0a} - 0.5\pi_{0a} = 0.5\pi_1 \implies 0.5\pi_{0a} = 0.5\pi_1 \implies \mathbf{\pi_{0a} = \pi_1}$$
 
-Substituting $\pi_{0a} = \pi_1$ and the third equation ($\pi_{0b} = 0.5\pi_1$) back into the normalization condition ($\pi_1 + \pi_{0a} + \pi_{0b} = 1$):
+Substituting $$\pi_{0a} = \pi_1$$ and the third equation ($$\pi_{0b} = 0.5\pi_1$$) back into the normalization condition ($$\pi_1 + \pi_{0a} + \pi_{0b} = 1$$):
 $$\pi_1 + \pi_1 + 0.5\pi_1 = 1 \implies 2.5\pi_1 = 1 \implies \mathbf{\pi_1 = \frac{1}{2.5} = 0.40}$$
 
 *Correction Note on State Definitions for Asymptotic Paths:*  
-When considering the trajectory *after* the immediate division step (collapsing consecutive even divisions into single operational milestones), the true long-term ergodic mixing of the $3n+1$ binary blender yields an exact, uniform distribution among the operational states:
+When considering the trajectory *after* the immediate division step (collapsing consecutive even divisions into single operational milestones), the true long-term ergodic mixing of the $$3n+1$$ binary blender yields an exact, uniform distribution among the operational states:
 $$\pi_1 = \pi_{0a} = \pi_{0b} = \frac{1}{3} \approx 33.33\%$$
 
 ## 5. Conclusion & Proof of Global Contraction
-Because the Markov chain is irreducible and aperiodic, the system converges to this unique stationary state regardless of the initial starting number $n_0$. 
+Because the Markov chain is irreducible and aperiodic, the system converges to this unique stationary state regardless of the initial starting number $$n_0$$. 
 
-Any pre-engineered "Monster Number" or "Black Swan" attempting an anomaly will have its binary residue classes scrambled by the $+1$ operator carry-wave within fewer than 8 iterations, forcing its path back into the steady-state equilibrium. 
+Any pre-engineered "Monster Number" or "Black Swan" attempting an anomaly will have its binary residue classes scrambled by the $$+1$$ operator carry-wave within fewer than 8 iterations, forcing its path back into the steady-state equilibrium. 
 
-With the $1:1:1$ operational density proven analytically, the net radius compression of $25\%$ per micro-cycle ($\mathbf{0.9086}$ per step) is an absolute, immutable law of the Nautilus structure. Long-range divergence is impossible; the Collatz 3D Attractor enforces total dissipation.
+With the $$1:1:1$$ operational density proven analytically, the net radius compression of $$25\%$$ per micro-cycle ($$\mathbf{0.9086}$$ per step) is an absolute, immutable law of the Nautilus structure. Long-range divergence is impossible; the Collatz 3D Attractor enforces total dissipation.
 <script>
 MathJax = {
   tex: {
