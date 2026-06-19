@@ -52,3 +52,26 @@ Within a strict combinatorial horizon capped at 8 steps, the scrambled binary ma
 ```
 
 At the exact moment of confluence, the phase memory of the isolated track is erased. The trajectory is captured by the main line, locked into the contractive flow of the **M-Invariant ($0.9086^z$)**, and funneled straight into the 4-2-1 vacuum. Parallel mathematical trees cannot exist. The trunk is one, and it is absolute.
+
+---
+
+
+## Addendum v3.0.0: The Matryoshka of Funnels and Geometric Collision Exclusion
+
+### 1. Individual Number Passport (Resolving Modular Anomalies)
+Ternary remainder logic $\pmod 6$ dictates the instantaneous direction. However, numbers with identical remainders (such as $6 \equiv 2 \pmod 6$ and $14 \equiv 2 \pmod 6$) exhibit completely different trajectories. To resolve this ambiguity, we introduce the **"Matryoshka of Funnels"**—a hierarchical bitwise-ternary passport:
+$$\text{Passport}(n) = \Big( \langle I_1, I_{0a}, I_{0b} \rangle_3 \;{\Large\mid}\; \langle b_1, b_2, \dots, b_k \rangle_2 \Big)$$
+
+Applying a $\pmod{16}$ mask fully exposes the hidden 2-adic potential of the numbers:
+*   $6 \equiv 0110_2 \implies$ the fourth bit being `0` quenches the avalanche, steering the number into a rapid blue dive.
+*   $14 \equiv 1110_2 \implies$ the dense block of ones `111` activates the avalanche wedge $T(n) = (n \ll 1) + n + 1$. The *carry wave* propagates from right to left, restructuring the entire bitwise arrangement and forcing the number to generate entropy up to a peak value of $52$.
+
+### 2. Principle of Geometric Collision Exclusion (Vacant Space Principle)
+In the 3D attractor, each step is transformed via the rotation matrix $R_z(137.5^\circ)$ around the Z-axis. The $137.5^\circ$ angle is derived directly from the golden ratio $\phi$ and is strictly irrational.
+
+Mirroring botanical phyllotaxis found in nature, this angle ensures that **no point on any trajectory will ever return to its exact previous coordinates**. Every subsequent phase position remains inherently vacant.
+
+This law guarantees maximum data packing efficiency and algorithmically prevents phase collisions:
+1. **Disruption of External Loops:** Any hypothetical external graph attempting to lock into a closed cycle encounters a continuous irrational phase shift from the $R_z$ matrix, shattering its cyclical symmetry.
+2. **Topological Siphon:** A loop broken by the irrational angle transforms into a contracting 3D spiral under the global Lyapunov energy drain (minus $0.415$ bits per macro-cycle). It is irreversibly siphoned and digested by the "Nautilus Apex Predator" at the very first boundary collision with the Matryoshka funnel mask.
+
