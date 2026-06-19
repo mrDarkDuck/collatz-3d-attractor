@@ -1,3 +1,4 @@
+{% raw %}
 <script>
   window.MathJax = {
     tex: {
@@ -7,6 +8,8 @@
   };
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+{% endraw %}
+
 
 
 # 3D-Аттрактор Коллатца: Глобальная связность и теория топологического монолита
