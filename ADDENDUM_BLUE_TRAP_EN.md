@@ -27,3 +27,15 @@ $$\sum_{d=1}^{\infty} \frac{1}{2^d} = 1$$
 
 ## 🏁 Summary
 Since any natural number has a finite binary (2-adic) expansion, the depth $d$ for any given $n$ is strictly bounded. The tornado cannot trap a number infinitely along the Y-axis or allow it to escape to infinity. The Blue Trap dissipates chaotic energy and forces the trajectory back onto the green compression rails of $0a$. Run `simulator_blue_trap_en.py` for empirical verification.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
