@@ -1,5 +1,0 @@
-theme: jekyll-theme-primer
-plugins:
-  - jekyll-default-layout
-kramdown:
-  math_engine: mathjax
