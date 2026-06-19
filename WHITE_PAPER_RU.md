@@ -157,3 +157,15 @@ $$V(n_{\text{выход}}) = \log_2(3m+1) < \log_2(8m+2) = V(n_{\text{вход}}
 👉 https://github.com/mrDarkDuck/collatz-3d-attractor
 
 Будем рады конструктивной дискуссии, p-адическим рецензиям и совместному штурму кода!
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
