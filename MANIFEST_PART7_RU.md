@@ -1,17 +1,3 @@
-{% raw %}
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
-    }
-  };
-</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-{% endraw %}
-
-
-
 # 3D-Аттрактор Коллатца: Глобальная связность и теория топологического монолита
 **Автор:** Кирилл Максимов (@mrDarkDuck)  
 **База исследования:** Аналитическое доказательство Этапа 7 — Исключение изолированных петель и многодревесных гипотез
