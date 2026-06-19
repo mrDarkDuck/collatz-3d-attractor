@@ -26,3 +26,15 @@ However, because the cyclic periods of binary shifting and ternary multiplicatio
 
 ## 🏁 Summary
 Hidden non-trivial loops cannot form because the $3x+1$ operation is bitwise irreversible across the infinite set of natural numbers. The trajectory is forced to generate new bitwise profiles until the negative drift of the $1:1:1$ frequency invariant drops its scale into the global $20 \to 10 \to 5$ sink. Verify this bit-shifting behavior via `simulator_loop_lock_en.py`.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
