@@ -137,3 +137,15 @@ This repository is officially sealed as an immutable, code-verified, and DOI-sec
 
 ## 📄 License
 This project is distributed under the open **MIT License**. You are free to use, modify, and develop this geometric model.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
