@@ -81,3 +81,16 @@ Mirroring botanical phyllotaxis found in nature (sunflower seed packing), this l
 1. **Disruption of External Loops:** Any hypothetical external graph attempting to lock into a closed cycle encounters a continuous irrational phase shift from the $R_z$ matrix, shattering its cyclical symmetry.
 2. **Topological Siphon:** A loop broken by the irrational angle transforms into a contracting 3D spiral under the global Lyapunov energy drain (minus $0.415$ bits per macro-cycle). It is irreversibly siphoned and digested by the "Nautilus Apex Predator" at the very first boundary collision with the Matryoshka funnel mask.
 
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
