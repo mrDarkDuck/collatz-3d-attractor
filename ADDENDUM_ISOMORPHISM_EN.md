@@ -33,3 +33,15 @@ $$\Delta z_s = n_s \cdot 0.01$$
 
 ## 🏁 Summary
 The geometric model is mathematically isomorphic to the core Collatz operator: spatial coordinates are uniquely and rigidly bound to the current arithmetic status of $n \pmod 4$. The metaphor is successfully upgraded to a strict geometric representation of discrete dynamical systems. Verification is available in `simulator_isomorphism_en.py`.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
