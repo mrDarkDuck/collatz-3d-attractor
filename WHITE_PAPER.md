@@ -101,52 +101,52 @@ Expert review of the core model highlighted a classical vulnerability found in a
 This extension completely resolves these vulnerabilities, proving that the system's memory is never lost but is instead strictly spatialized into the depth of the Y-axis, while chaotic lower-bit configurations are destroyed by a deterministic bitwise avalanche.
 
 ### 1. Theorem of the Fractal Blue Trap Immersion
-The semi-even axis 0b(4k+2) is not a flat, one-dimensional toggle; it is a fractal separator. Any number $$n \in 0b$$ undergoes exactly $d$ consecutive "blue loops" (cycles of $0b \to 1 \to 0b$) along the Y-axis depth before its guaranteed ejection onto the compressing green framework of super-evenness $0a$ ($4k$) if and only if the following modular congruence holds:
+The semi-even axis 0b(4k+2) is not a flat, one-dimensional toggle; it is a fractal separator. Any number $$n \in 0b$$ undergoes exactly $$d$$ consecutive "blue loops" (cycles of $$0b \to 1 \to 0b$$) along the Y-axis depth before its guaranteed ejection onto the compressing green framework of super-evenness $$0a$$ ($$4k$$) if and only if the following modular congruence holds:
 $$n \equiv 2^{d+1} - 2 \pmod{2^{d+2}}$$
 
-The asymptotic distribution of these subsets follows a geometric progression with a common ratio of $1/2$ ($50\% : 25\% : 12.5\% : 6.25\% \dots$). Since any natural number features a finite 2-adic expansion, the immersion depth $d$ is strictly bounded. An infinite blue loop is impossible.
+The asymptotic distribution of these subsets follows a geometric progression with a common ratio of $$1/2$$ ($$50\% : 25\% : 12.5\% : 6.25\% \dots$$). Since any natural number features a finite 2-adic expansion, the immersion depth $$d$$ is strictly bounded. An infinite blue loop is impossible.
 
 ### 2. The Avalanche Wedge Law Against Anomalous Trajectories
-To eliminate hypothetical "Black Swans" (infinitely ascending anomalous numbers), the bitwise dynamics of the $3x+1$ operation are mathematically formulated as:
+To eliminate hypothetical "Black Swans" (infinitely ascending anomalous numbers), the bitwise dynamics of the $$3x+1$$ operation are mathematically formulated as:
 $$3x + 1 = (x \ll 1) + x + 1$$
 
-The shift $x \ll 1$ guarantees the evenness of the intermediate term. The final addition of `+ 1` triggers a bit carry wave sweeping from right to left. If the chaotic tail of an odd number $x$ contains a block of $k$ ones, the avalanche deterministically "burns them out," converting the tail into a block of at least $k+1$ zeros.
+The shift $$x \ll 1$$ guarantees the evenness of the intermediate term. The final addition of `+ 1` triggers a bit carry wave sweeping from right to left. If the chaotic tail of an odd number $$x$$ contains a block of $$k$$ ones, the avalanche deterministically "burns them out," converting the tail into a block of at least $$k+1$$ zeros.
 
-The bitwise avalanche forcefully prints an ordered even structure into the lower bits, driving the trajectory down via the $0a$ framework. Exceptional trajectories cannot physically form due to the discrete laws of binary addition.
+The bitwise avalanche forcefully prints an ordered even structure into the lower bits, driving the trajectory down via the $$0a$$ framework. Exceptional trajectories cannot physically form due to the discrete laws of binary addition.
 
 ### 3. Algebraic Isomorphism of the 3D Nautilus Attractor
-To resolve critiques regarding the metaphorical nature of the geometric model and the $137.5^\circ$ Fibonacci angle, a rigorous framework of state indicator functions has been formulated based on modulo arithmetic without conditional logic:
-* **Odd Indicator (1):** $I_1(n) = n \pmod 2$
-* **Super-Even Indicator (0a):** $I_{0a}(n) = (1 - I_1(n)) \cdot (1 - \lfloor \frac{n \pmod 4}{2} \rfloor)$
-* **Semi-Even Indicator (0b):** $I_{0b}(n) = (1 - I_1(n)) \cdot \lfloor \frac{n \pmod 4}{2} \rfloor$
+To resolve critiques regarding the metaphorical nature of the geometric model and the $$137.5^\circ$$ Fibonacci angle, a rigorous framework of state indicator functions has been formulated based on modulo arithmetic without conditional logic:
+* **Odd Indicator (1):** $$I_1(n) = n \pmod 2$$
+* **Super-Even Indicator (0a):** $$I_{0a}(n) = (1 - I_1(n)) \cdot (1 - \lfloor \frac{n \pmod 4}{2} \rfloor)$$
+* **Semi-Even Indicator (0b):** $$I_{0b}(n) = (1 - I_1(n)) \cdot \lfloor \frac{n \pmod 4}{2} \rfloor$$
 
-The dynamic 3D coordinates of the trajectory vector at step $s$ are computed through an iterative matrix rotating the $X-Y$ plane around the $Z$-axis by the golden angle $\theta \approx 137.5^\circ$ combined with radial compression $r_s = \log_2(n_s)$:
+The dynamic 3D coordinates of the trajectory vector at step $$s$$ are computed through an iterative matrix rotating the $$X-Y$$ plane around the $$Z$$-axis by the golden angle $$\theta \approx 137.5^\circ$$ combined with radial compression $$r_s = \log_2(n_s)$$:
 
 $$\begin{pmatrix} \Delta x_s \\ \Delta y_s \end{pmatrix} = \begin{pmatrix} \cos(s\theta) & 0 \\ 0 & \sin(s\theta) \end{pmatrix} \begin{pmatrix} r_s (I_1 + I_{0a}) \\ r_s (I_1 + I_{0a}) \end{pmatrix} + \begin{pmatrix} 0 \\ r_s \cdot I_{0b} \end{pmatrix}$$
 $$\Delta z_s = n_s \cdot 0.01$$
 
-This operator establishes a strict isomorphism: the spatial coordinates of the Nautilus attractor are uniquely and rigidly bounded by the current arithmetic status of $n \pmod 4$, elevating the geometric visualization to a formal coordinate representation of a discrete dynamical system.
+This operator establishes a strict isomorphism: the spatial coordinates of the Nautilus attractor are uniquely and rigidly bounded by the current arithmetic status of $$n \pmod 4$$, elevating the geometric visualization to a formal coordinate representation of a discrete dynamical system.
 
 ### 4. Theorem of Global Frequency Convergence and Asymptotic Channel Confluence
-To eliminate critiques regarding the potential locality of the $1:1:1$ frequency distribution and the $20 \to 10 \to 5$ main pipeline, the system's dynamics are evaluated via the asymptotic Haar measure on the compact group of 2-adic integers $\mathbb{Z}_2$. The perfect symmetry of odd steps yielding either super-even $0a$ or semi-even $0b$ configurations across the infinite set strictly enforces a unique stationary distribution:
+To eliminate critiques regarding the potential locality of the $$1:1:1$$ frequency distribution and the $$20 \to 10 \to 5$$ main pipeline, the system's dynamics are evaluated via the asymptotic Haar measure on the compact group of 2-adic integers $$\mathbb{Z}_2$$. The perfect symmetry of odd steps yielding either super-even $$0a$$ or semi-even $$0b$$ configurations across the infinite set strictly enforces a unique stationary distribution:
 $$\lim_{N \to \infty} P(1) = \lim_{N \to \infty} P(0a) = \lim_{N \to \infty} P(0b) = \frac{1}{3}$$
 
-Frequency fluctuations decay according to the Law of Large Numbers ($\Delta < 0.0009$ over macro scales), locking the negative entropy drift $\Delta = \ln(3/4) < 0$ as a global invariant. The density of the set of integers $C_N$ pulled into the core $20 \to 10 \to 5$ nodal intersection is defined as:
+Frequency fluctuations decay according to the Law of Large Numbers ($$\Delta < 0.0009$$ over macro scales), locking the negative entropy drift $$\Delta = \ln(3/4) < 0$$ as a global invariant. The density of the set of integers $$C_N$$ pulled into the core $$20 \to 10 \to 5$$ nodal intersection is defined as:
 $$D = \lim_{N \to \infty} \frac{|C_N|}{N} = 1.0000 \quad (100\%)$$
 This formally proves that the pipeline is global, acting as the sole thermodynamic exit from the fractal Nautilus shell.
 
 ### 5. Algebraic Bitwise Irreversibility and the Exclusion of Hidden Loops
-To disprove the potential existence of isolated non-trivial integer loops at extreme numerical scales, the analysis drops to the micro-algebraic layer of trailing bit masks. The odd operator $3x+1 = (x \ll 1) + x + 1$ is mathematically established as a strictly non-reversible dissipative operator.
+To disprove the potential existence of isolated non-trivial integer loops at extreme numerical scales, the analysis drops to the micro-algebraic layer of trailing bit masks. The odd operator $$3x+1 = (x \ll 1) + x + 1$$ is mathematically established as a strictly non-reversible dissipative operator.
 
-The shifting and addition operations trigger a bitwise carry wave that forcefully reformats and erases the historical memory of the lower bits. Due to the fundamental incompatibility between binary shift periods (`>> 1`) and ternary scaling intervals ($\log_2(3) \approx 1.585$), the trailing bit configuration continuously mutates, preventing mask self-repetition. The only bitwise fixed point capable of absorbing the carry wave without structural alteration is the `01_2` mask (the number 1). Any other hidden loop is physically forced open by the bitwise avalanche.
+The shifting and addition operations trigger a bitwise carry wave that forcefully reformats and erases the historical memory of the lower bits. Due to the fundamental incompatibility between binary shift periods (`>> 1`) and ternary scaling intervals ($$\log_2(3) \approx 1.585$$), the trailing bit configuration continuously mutates, preventing mask self-repetition. The only bitwise fixed point capable of absorbing the carry wave without structural alteration is the `01_2` mask (the number 1). Any other hidden loop is physically forced open by the bitwise avalanche.
 
 
 ### 6. Validation of Physical Concepts via the Lyapunov Function
-To ground the attractor’s physics-based terminology ("energy", "vortex compression") in formal mathematics, a macro-stability Lyapunov function assessing binary scale has been implemented: $V(n) = \log_2(n)$. Evaluating a complete fractal macro-step of the Blue Trap from tornado insertion ($0b$) to framework extraction ($0a$) for the foundational $8m+2$ group yields:
+To ground the attractor’s physics-based terminology ("energy", "vortex compression") in formal mathematics, a macro-stability Lyapunov function assessing binary scale has been implemented: $$V(n) = \log_2(n)$$. Evaluating a complete fractal macro-step of the Blue Trap from tornado insertion ($$0b$$) to framework extraction ($$0a$$) for the foundational $$8m+2$$ group yields:
 
 $$V(n_{\text{output}}) = \log_2(3m+1) < \log_2(8m+2) = V(n_{\text{input}}) \quad \forall m \ge 1$$
 
-Because for any fractal immersion depth $d$ within the blue vortex, the final exit coordinate is strictly smaller than the input value, the Lyapunov inequality $V(n_{\text{output}}) < V(n_{\text{input}})$ holds true across the infinite set of natural numbers. The Nautilus attractor possesses verified asymptotic stability as a discrete dynamical system.
+Because for any fractal immersion depth $$d$$ within the blue vortex, the final exit coordinate is strictly smaller than the input value, the Lyapunov inequality $$V(n_{\text{output}}) < V(n_{\text{input}})$$ holds true across the infinite set of natural numbers. The Nautilus attractor possesses verified asymptotic stability as a discrete dynamical system.
 
 *Full empirical verification of these principles is available via the autonomous verification scripts (simulator_blue_trap_en.py, simulator_bit_avalanche_en.py, simulator_isomorphism_en.py, simulator_convergence_en.py, simulator_loop_lock_en.py, and simulator_lyapunov_en.py) in the repository root.*
 
