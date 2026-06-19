@@ -23,3 +23,15 @@ $$V(n_{\text{output}}) = \log_2(3m+1) < \log_2(8m+2) = V(n_{\text{input}}) \quad
 
 ## 🏁 Summary
 Because for any fractal immersion depth $d$ within the blue vortex, the final exit coordinate is strictly smaller than the input value, the Lyapunov inequality $V(n_{\text{output}}) < V(n_{\text{input}})$ holds true across the infinite set of natural numbers. The Nautilus attractor possesses strict asymptotic stability, legitimizing terms like "gravity" and "vortex compression". Verify via `simulator_lyapunov_en.py`.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
