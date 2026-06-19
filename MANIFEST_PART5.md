@@ -56,13 +56,13 @@ Where:
 
 This information-theoretic bound provides an absolute architectural barrier that no "Super-Dense Monster Number" can breach:
 
-1. **The Law of Irreversible Scavenging:** Every execution of the $3n+1$ bit blender strips the number of its binary structural memory. The $+1$ carry-wave operates as an entropy scrambler, systematically eroding the number’s pre-engineered bit sequence at a flat rate of $0.13835$ bits per step.
-2. **The Absolute Lifespan Limit ($z_{max}$):** A critic may hypothesize a "Monster Number" of a Googol bit-length designed to loop indefinitely. However, because the informational friction constant is scale-invariant and strictly greater than zero, the number’s structural ammunition is bound to hit absolute zero at a deterministic lifetime horizon:
+1. **The Law of Irreversible Scavenging:** Every execution of the $$3n+1$$ bit blender strips the number of its binary structural memory. The $$+1$$ carry-wave operates as an entropy scrambler, systematically eroding the number’s pre-engineered bit sequence at a flat rate of $$0.13835$$ bits per step.
+2. **The Absolute Lifespan Limit ($$z_{max}$$):** A critic may hypothesize a "Monster Number" of a Googol bit-length designed to loop indefinitely. However, because the informational friction constant is scale-invariant and strictly greater than zero, the number’s structural ammunition is bound to hit absolute zero at a deterministic lifetime horizon:
    $$z_{max} = \frac{B_0}{0.13835} \approx 7.23 \cdot B_0 \text{ steps}$$
    
-   *Empirical Verification:* For our 1,000-digit Titan integer ($\approx 3322$ bits), this information-theoretic lifespan limit dictates a maximum possible survival of: $7.23 \times 3322 \approx 24,018$ steps. Our actual Python stress-test collapsed into the terminal attractor at exactly **25,135 steps**—reflecting a flawless mathematical alignment with Shannon's entropy bounds within a microscopic флуктуация margin.
+   *Empirical Verification:* For our 1,000-digit Titan integer ($$\approx 3322$$ bits), this information-theoretic lifespan limit dictates a maximum possible survival of: $$7.23 \times 3322 \approx 24,018$$ steps. Our actual Python stress-test collapsed into the terminal attractor at exactly **25,135 steps**—reflecting a flawless mathematical alignment with Shannon's entropy bounds within a microscopic флуктуация margin.
 
-3. **The Zero-Entropy Sink:** As $B(z) \to 0$, the volumetric cube structure loses all hidden phase information. The system collapses into an informational vacuum where information loss stops—the stable, zero-entropy terminal crystal of the **4-2-1 loop**.
+3. **The Zero-Entropy Sink:** As $$B(z) \to 0$$, the volumetric cube structure loses all hidden phase information. The system collapses into an informational vacuum where information loss stops—the stable, zero-entropy terminal crystal of the **4-2-1 loop**.
 
 ---
 *Verified and formalized via Shannon entropy metrics for the open-source Collatz-3D-Attractor repository.*
