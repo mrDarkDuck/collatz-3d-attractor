@@ -124,3 +124,15 @@ $$e^{\ln\left(\sqrt[3]{\frac{3}{4}}\right)} = \sqrt[3]{\frac{3}{4}} \approx 0.90
 
 ---
 *Проверено и скомпилировано с помощью высокоточных вычислительных движков Python для открытого репозитория Collatz-3D-Attractor.*
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
