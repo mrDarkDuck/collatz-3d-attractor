@@ -21,3 +21,15 @@ Shifting $x$ left by 1 bit ($x \ll 1$) guarantees that the least significant bit
 
 ## 🏁 Summary
 A number cannot sustain an chaotic configuration to escape to infinity. Every odd state unleashes a bitwise avalanche that forcefully reformats its LSB structure and guarantees downstream compression. Exceptional trajectories cannot exist because the carry-wave avalanche is bound by deterministic bitwise operations across the entire infinite set of natural numbers. Verify this logic via `simulator_bit_avalanche_en.py`.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
