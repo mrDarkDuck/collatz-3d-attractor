@@ -101,7 +101,7 @@ Expert review of the core model highlighted a classical vulnerability found in a
 This extension completely resolves these vulnerabilities, proving that the system's memory is never lost but is instead strictly spatialized into the depth of the Y-axis, while chaotic lower-bit configurations are destroyed by a deterministic bitwise avalanche.
 
 ### 1. Theorem of the Fractal Blue Trap Immersion
-The semi-even axis $0b$ ($4k+2$) is not a flat, one-dimensional toggle; it is a fractal separator. Any number $n \in 0b$ undergoes exactly $d$ consecutive "blue loops" (cycles of $0b \to 1 \to 0b$) along the Y-axis depth before its guaranteed ejection onto the compressing green framework of super-evenness $0a$ ($4k$) if and only if the following modular congruence holds:
+The semi-even axis 0b(4k+2) is not a flat, one-dimensional toggle; it is a fractal separator. Any number $$n \in 0b$$ undergoes exactly $d$ consecutive "blue loops" (cycles of $0b \to 1 \to 0b$) along the Y-axis depth before its guaranteed ejection onto the compressing green framework of super-evenness $0a$ ($4k$) if and only if the following modular congruence holds:
 $$n \equiv 2^{d+1} - 2 \pmod{2^{d+2}}$$
 
 The asymptotic distribution of these subsets follows a geometric progression with a common ratio of $1/2$ ($50\% : 25\% : 12.5\% : 6.25\% \dots$). Since any natural number features a finite 2-adic expansion, the immersion depth $d$ is strictly bounded. An infinite blue loop is impossible.
