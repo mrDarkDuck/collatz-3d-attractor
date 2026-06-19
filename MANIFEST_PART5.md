@@ -13,12 +13,12 @@ By evaluating the system as a lossy communication channel, this document provide
 
 ## 2. The Informational Profile of a "Titan" Number
 Let an arbitrary giant integer n possess an informational capacity B measured in pure Shannon bits, where:
-\[B = \log_2(n)\]
+$$B = \log_2(n)$$
 
-Our verified Stage 3 Markovian invariant proved that at scale (n → ∞), the ternary state densities (`1`, `0a`, `0b`) converge to a symmetric 1:1:1 distribution. Consequently, over one complete macro-cycle (3 discrete steps along the Z-axis consisting of one growth impulse and two mandatory divisions), the number is multiplied by an average scaling factor of exactly \(\frac{3}{4}\).
+Our verified Stage 3 Markovian invariant proved that at scale (n → ∞), the ternary state densities (`1`, `0a`, `0b`) converge to a symmetric 1:1:1 distribution. Consequently, over one complete macro-cycle (3 discrete steps along the Z-axis consisting of one growth impulse and two mandatory divisions), the number is multiplied by an average scaling factor of exactly $$\frac{3}{4}$$.
 
 Converting this spatial compression into Shannon entropy dynamics via base-2 logarithms yields:
-\[\Delta B_{cycle} = \log_2\left(\frac{3}{4}\right) = \log_2(3) - \log_2(4) \approx 1.58496 - 2 = -0.41504 \text{ bits}\]
+$$\Delta B_{cycle} = \log_2\left(\frac{3}{4}\right) = \log_2(3) - \log_2(4) \approx 1.58496 - 2 = -0.41504 \text{ bits}$$
 
 Thus, every full spatial loop around the Nautilus Shell permanently and irreversibly destroys **0.41504 bits** of unique structural information.
 
@@ -27,10 +27,10 @@ Thus, every full spatial loop around the Nautilus Shell permanently and irrevers
 ## 3. The Informational Friction Constant
 To find the exact rate of information destruction at **every single discrete step z** of the attractor, we divide the cycle loss by the 3 structural milestones:
 
-\[\Delta B_z = \frac{-0.41504}{3} \approx -0.13835 \text{ bits/step}\]
+$$\Delta B_z = \frac{-0.41504}{3} \approx -0.13835 \text{ bits/step}$$
 
 ### The Universal Information-Theoretic Law of the Attractor:
-\[B(z) = B_0 - 0.13835 \cdot z\]
+$$B(z) = B_0 - 0.13835 \cdot z$$
 
 Where:
 * **\(B_0 = \log_2(n_0)\)** — The initial information density (bit-length of the starting number).
