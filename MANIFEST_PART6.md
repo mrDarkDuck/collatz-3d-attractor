@@ -36,9 +36,9 @@ A tracking algorithm mapping 10,000 independent numerical rivers down the Nautil
 ---
 
 ## 3. Analytical Proof via p-adic Fixed Points
-To convert this network convergence into a strict analytical law, we transition to **p-adic topology over the ring of 2-adic integers $\mathbb{Z}_2$**. 
+To convert this network convergence into a strict analytical law, we transition to **p-adic topology over the ring of 2-adic integers $$\mathbb{Z}_2$$**. 
 
-In 2-adic metrics, the distance between two numbers is determined not by their linear difference, but by the structural alignment of their lowest-order binary bits. The continuous execution of the $3n+1$ operator combined with division by 2 acts as a p-adic reduction mechanism, stripping high-order information and forcing elements toward fundamental binary residues.
+In 2-adic metrics, the distance between two numbers is determined not by their linear difference, but by the structural alignment of their lowest-order binary bits. The continuous execution of the $$3n+1$$ operator combined with division by 2 acts as a p-adic reduction mechanism, stripping high-order information and forcing elements toward fundamental binary residues.
 
 Decomposing our primary Pivot Points into their 2-adic binary masks reveals an embedded fractal nesting:
 * **Node 5:**   `101_2`
@@ -47,7 +47,7 @@ Decomposing our primary Pivot Points into their 2-adic binary masks reveals an e
 
 Nodes 20, 10, and 5 are not arbitrary milestones; they are **Attracting Fixed Points** within the p-adic topology of the Collatz automaton. 
 
-As the Binary Bit Blender destroys Shannon information entropy at a flat rate of $0.13835$ bits per step (Stage 5), the binary string of any giant "Monster Number" is mathematically shaved down. In the $\mathbb{Z}_2$ metric, this loss of informational volume forces a deterministic gravitational drift directly into the neighborhood of the `10100_2` (Node 20) attractor. 
+As the Binary Bit Blender destroys Shannon information entropy at a flat rate of $$0.13835$$ bits per step (Stage 5), the binary string of any giant "Monster Number" is mathematically shaved down. In the $$\mathbb{Z}_2$$ metric, this loss of informational volume forces a deterministic gravitational drift directly into the neighborhood of the `10100_2` (Node 20) attractor. 
 
 The Topological Highway is an inescapable structural funnel of the space itself. The network has only one global drain, confirming the total collapse of all infinities into the terminal 4-2-1 loop.
 <script>
