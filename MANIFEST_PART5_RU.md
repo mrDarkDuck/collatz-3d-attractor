@@ -66,3 +66,15 @@
 
 ---
 *Верифицировано и формализовано на основе метрик шенноновской энтропии для открытого репозитория Collatz-3D-Attractor.*
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
