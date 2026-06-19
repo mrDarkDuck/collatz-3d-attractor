@@ -135,3 +135,15 @@
 
 ## 📄 Лицензия
 Проект распространяется под открытой лицензией **MIT**. Вы можете свободно использовать, модифицировать и развивать данную геометрическую модель.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
