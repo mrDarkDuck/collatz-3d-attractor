@@ -51,35 +51,35 @@ Within a strict combinatorial horizon capped at 8 steps, the scrambled binary ma
  [ Monolithic Trunk Fall ] ──────────► Converted into the 20 ➔ 10 ➔ 5 ➔ 16 pipeline
 ```
 
-At the exact moment of confluence, the phase memory of the isolated track is erased. The trajectory is captured by the main line, locked into the contractive flow of the **M-Invariant ($0.9086^z$)**, and funneled straight into the 4-2-1 vacuum. Parallel mathematical trees cannot exist. The trunk is one, and it is absolute.
+At the exact moment of confluence, the phase memory of the isolated track is erased. The trajectory is captured by the main line, locked into the contractive flow of the **M-Invariant ($$0.9086^z$$)**, and funneled straight into the 4-2-1 vacuum. Parallel mathematical trees cannot exist. The trunk is one, and it is absolute.
 
 ---
 
 ## Addendum v3.0.0: The Matryoshka of Funnels, Fractal Phyllotaxis, and Geometric Collision Exclusion
 
 ### 1. Individual Number Passport (Resolving Modular Anomalies)
-Ternary remainder logic $\pmod 6$ dictates the instantaneous direction. However, numbers with identical remainders (such as $6 \equiv 2 \pmod 6$ and $14 \equiv 2 \pmod 6$) exhibit completely different trajectories. To resolve this ambiguity, we introduce the **"Matryoshka of Funnels"**—a hierarchical bitwise-ternary passport:
+Ternary remainder logic $$\pmod 6$$ dictates the instantaneous direction. However, numbers with identical remainders (such as $$6 \equiv 2 \pmod 6$$ and $$14 \equiv 2 \pmod 6$$) exhibit completely different trajectories. To resolve this ambiguity, we introduce the **"Matryoshka of Funnels"**—a hierarchical bitwise-ternary passport:
 $$\text{Passport}(n) = \Big( \langle I_1, I_{0a}, I_{0b} \rangle_3 \;{\Large\mid}\; \langle b_1, b_2, \dots, b_k \rangle_2 \Big)$$
 
-Applying a $\pmod{16}$ mask fully exposes the hidden 2-adic potential of the numbers:
-*   $6 \equiv 0110_2 \implies$ the fourth bit being `0` quenches the avalanche, steering the number into a rapid blue dive.
-*   $14 \equiv 1110_2 \implies$ the dense block of ones `111` activates the avalanche wedge $T(n) = (n \ll 1) + n + 1$. The *carry wave* propagates from right to left, restructuring the entire bitwise arrangement and forcing the number to generate entropy up to a peak value of $52$.
+Applying a $$\pmod{16}$$ mask fully exposes the hidden 2-adic potential of the numbers:
+*   $$6 \equiv 0110_2 \implies$$ the fourth bit being `0` quenches the avalanche, steering the number into a rapid blue dive.
+*   $$14 \equiv 1110_2 \implies$$ the dense block of ones `111` activates the avalanche wedge $$T(n) = (n \ll 1) + n + 1$$. The *carry wave* propagates from right to left, restructuring the entire bitwise arrangement and forcing the number to generate entropy up to a peak value of $$52$$.
 
 ### 2. Dynamics of 3D Fractal Phyllotaxis
 The mathematical description of a point (number) moving within the 3D attractor space at each iteration step is governed by the fundamental mapping:
 $$V \mapsto R_z(137.5^\circ)S_V + T$$
 
 Where the operator components unfold the topological essence of the model:
-*   $S_V$ — the current 3D state vector of the number (its spatial coordinates $X, Y, Z$ within the funnel).
-*   $R_z(137.5^\circ)$ — the rotation matrix around the vertical Z-axis strictly by the Golden Angle. It twists the number's vector into a spiral, shifting the phase and separating trajectories in an aperiodic fashion.
-*   $T$ — the translation (shift) vector which, guided by ternary indicators ($I_1, I_{0a}, I_{0b}$), either pushes the number upward (avalanche entropy growth) or drops it downward "into the screen" along the blue Y-axis (blue dive dissipation).
+*   $$S_V$$ — the current 3D state vector of the number (its spatial coordinates $$X, Y, Z$$ within the funnel).
+*   $$R_z(137.5^\circ)$$ — the rotation matrix around the vertical Z-axis strictly by the Golden Angle. It twists the number's vector into a spiral, shifting the phase and separating trajectories in an aperiodic fashion.
+*   $$T$$ — the translation (shift) vector which, guided by ternary indicators ($$I_1, I_{0a}, I_{0b}$$), either pushes the number upward (avalanche entropy growth) or drops it downward "into the screen" along the blue Y-axis (blue dive dissipation).
 
 ### 3. Principle of Geometric Collision Exclusion (Vacant Space Principle)
 The use of the Golden Angle ensures absolute aperiodicity of the phase space in the X-Y plane. Because the ratio of the rotation angle to a full circle is completely irrational, **no point on any trajectory will ever return to its exact previous coordinates**.
 
 Mirroring botanical phyllotaxis found in nature (sunflower seed packing), this law guarantees that **every subsequent phase position of the trajectory remains inherently vacant**. This ensures maximum data packing efficiency and algorithmically prevents phase collisions:
-1. **Disruption of External Loops:** Any hypothetical external graph attempting to lock into a closed cycle encounters a continuous irrational phase shift from the $R_z$ matrix, shattering its cyclical symmetry.
-2. **Topological Siphon:** A loop broken by the irrational angle transforms into a contracting 3D spiral under the global Lyapunov energy drain (minus $0.415$ bits per macro-cycle). It is irreversibly siphoned and digested by the "Nautilus Apex Predator" at the very first boundary collision with the Matryoshka funnel mask.
+1. **Disruption of External Loops:** Any hypothetical external graph attempting to lock into a closed cycle encounters a continuous irrational phase shift from the $$R_z$$ matrix, shattering its cyclical symmetry.
+2. **Topological Siphon:** A loop broken by the irrational angle transforms into a contracting 3D spiral under the global Lyapunov energy drain (minus $$0.415$$ bits per macro-cycle). It is irreversibly siphoned and digested by the "Nautilus Apex Predator" at the very first boundary collision with the Matryoshka funnel mask.
 
 <script>
 MathJax = {
