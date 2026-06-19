@@ -66,3 +66,15 @@ This information-theoretic bound provides an absolute architectural barrier that
 
 ---
 *Verified and formalized via Shannon entropy metrics for the open-source Collatz-3D-Attractor repository.*
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
