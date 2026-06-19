@@ -86,3 +86,15 @@ Because the Markov chain is irreducible and aperiodic, the system converges to t
 Any pre-engineered "Monster Number" or "Black Swan" attempting an anomaly will have its binary residue classes scrambled by the $+1$ operator carry-wave within fewer than 8 iterations, forcing its path back into the steady-state equilibrium. 
 
 With the $1:1:1$ operational density proven analytically, the net radius compression of $25\%$ per micro-cycle ($\mathbf{0.9086}$ per step) is an absolute, immutable law of the Nautilus structure. Long-range divergence is impossible; the Collatz 3D Attractor enforces total dissipation.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
