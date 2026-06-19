@@ -26,3 +26,15 @@ The main channel behaves as a topological sink (the core of the attractor). Any 
 
 ## 🏁 Summary
 Statistical convergence is verified both theoretically (via the Haar measure on 2-adic rings) and empirically (via `simulator_convergence_en.py`). Local anomalies cannot exist because the confluence density is exactly 1.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
