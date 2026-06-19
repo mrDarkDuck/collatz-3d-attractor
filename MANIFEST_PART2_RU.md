@@ -127,12 +127,14 @@ $$e^{\ln\left(\sqrt[3]{\frac{3}{4}}\right)} = \sqrt[3]{\frac{3}{4}} \approx 0.90
 <script>
 MathJax = {
   tex: {
-    inlineMath: [['\\(','\\)']],
-    displayMath: [['$$','$$']]
+    inlineMath: [
+      ['$', '$'],
+      ['\\(', '\\)']
+    ],
+    displayMath: [
+      ['$$', '$$'],
+      ['\\[', '\\]']
+    ]
   }
 };
-</script>
-
-<script async
-src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
