@@ -47,3 +47,15 @@ The Cube Matrix proof eliminates the possibility of long-range anomalies based o
 2. **Volumetric Parity Starvation:** Adding a single cube ($\mathbf{T}$) along the height axis is a statistically negligible expansion. As soon as the irrational rotation exposes the cubes to the observer, the system executes a division by 2, **instantly halving or cutting 75% of the total volumetric mass** of the object. 
 
 **Conclusion:** The spatial mechanics of the Nautilus Attractor operate as a strict contraction mapping. No "Black Swan" can sustain the infinite hidden alignment required for divergence. Every volumetric matrix of cubes is bound to lose mass, decrease its radius, and crystallize into the stable terminal 4-2-1 loop.
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
