@@ -23,7 +23,7 @@
 ## 🌀 Кинематика 3D-вращения матрицы $$R_z$$
 Пусть $$\theta = 137.5^\circ \approx 2.3999$$ рад — золотой угол Фибоначчи. Координаты траектории на шаге $$s$$ вычисляются через итеративное применение матрицы поворота вокруг оси Z и радиальное сжатие $$r_s = \log_2(n_s)$$:
 
-$$\begin{pmatrix} \Delta x_s \\ \Delta y_s \end{pmatrix} = \begin{pmatrix} \cos(s\theta) & 0 \\ 0 & \sin(s\theta) \end{pmatrix} \begin{pmatrix} r_s (I_1 + I_{0a}) \\ r_s (I_1 + I_{0a}) \end{pmatrix} + \begin{pmatrix} 0 \\ r_s \cdot I_{0b} \end{pmatrix}$$
+\\( \begin{pmatrix} \Delta x_s \\ \Delta y_s \end{pmatrix} = \begin{pmatrix} \cos(s\theta) & 0 \\ 0 & \sin(s\theta) \end{pmatrix} \begin{pmatrix} r_s (I_1 + I_{0a}) \\ r_s (I_1 + I_{0a}) \end{pmatrix} + \begin{pmatrix} 0 \\ r_s \cdot I_{0b} \end{pmatrix} \\)
 
 \\( \Delta z_s = n_s \cdot 0.01 \\)
 
