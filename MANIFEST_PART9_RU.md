@@ -45,3 +45,16 @@ $$\begin{aligned} X_{k+1} &= X_k \cdot \cos(137.5^\circ \cdot \text{sgn}(n_k)) -
 ---
 ### Заключение Stage 9
 Калибровка знака и переход к глобальной тригонометрической модели доказали, что `collatz-3d-attractor v3.0.0` — это не просто абстрактная математическая визуализация, а полноценный, прикладной архитектурный фреймворк для безопасного управления, шифрования и сжатия битовой энтропии в цифровых системах будущего. **Q.E.D.**
+<script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
