@@ -144,7 +144,7 @@ The shifting and addition operations trigger a bitwise carry wave that forcefull
 ### 6. Validation of Physical Concepts via the Lyapunov Function
 To ground the attractor’s physics-based terminology ("energy", "vortex compression") in formal mathematics, a macro-stability Lyapunov function assessing binary scale has been implemented: $$V(n) = \log_2(n)$$. Evaluating a complete fractal macro-step of the Blue Trap from tornado insertion ($$0b$$) to framework extraction ($$0a$$) for the foundational $$8m+2$$ group yields:
 
-$$ V(n_{\text{output}}) = \log_2(3m+1) \lt \log_2(8m+2) = V(n_{\text{input}}) \quad \forall m \ge 1 $$
+\( V(n_{\text{output}}) = \log_2(3m+1) \lt \log_2(8m+2) = V(n_{\text{input}}) \quad \forall m \ge 1 \)
 
 Because for any fractal immersion depth $$d$$ within the blue vortex, the final exit coordinate is strictly smaller than the input value, the Lyapunov inequality $$V(n_{\text{output}}) < V(n_{\text{input}})$$ holds true across the infinite set of natural numbers. The Nautilus attractor possesses verified asymptotic stability as a discrete dynamical system.
 
@@ -177,3 +177,15 @@ The complete analytical manifest (compiled in 8 parts), Python validation script
 
 We welcome rigorous critique, p-adic peer reviews, and collaborative forks of the code!
 
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
