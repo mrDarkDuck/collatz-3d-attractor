@@ -1,6 +1,6 @@
 # Theoretical Addendum: The Lyapunov Function and Rigid Energy Dissipation
 
-**Project Author:** Kirill Maksimov (GitHub: `@mrDarkDuck`)  
+**Project Author:** Kirill Maksimov (GitHub: `@mrDarkDuck`)   
 **Status:** Official justification for the physical and geometric terminology utilized across the project. Elevates terms such as "energy", "vortex", and "space compression" from metaphors into a formal stability theorem of dynamic systems.
 
 ## 📐 Mathematical Formulation of Lyapunov Stability
