@@ -45,7 +45,7 @@ class TopologicalSiphonCipher:
         # Прогоняем число через сифон для генерации carry wave хаоса
         for _ in range(self.steps):
             if current % 2 != 0:
-                # Лавинный клин: 3n + sgn(n). Для положительного пространства: 3n + 1
+                # Лавинный клин: T(n) = (n << 1) + n + 1 (эквивалент 3n + 1)
                 current = (current << 1) + current + 1
                 trajectory_log.append(1) # Фиксируем фазу лавины
             else:
@@ -75,9 +75,10 @@ class TopologicalSiphonCipher:
                 current = current * 2
             else:
                 # Обратный зеркальный лавинный клин: (n - 1) / 3
-                 if (current - 1) % 3 != 0:
-        raise ValueError("[Крах сифона]: Обнаружен поддельный или поврежденный маршрут ключа!")
-    current = (current - 1) // 3
+                # Интегрированная ИИ-проверка на целостность и подделку маршрута
+                if (current - 1) % 3 != 0:
+                    raise ValueError("[Крах сифона]: Обнаружен поддельный или поврежденный маршрут ключа!")
+                current = (current - 1) // 3
                 
         # Снимаем паддинг, если он был
         if padding_bit == 1:
@@ -90,7 +91,7 @@ class TopologicalSiphonCipher:
 # ==========================================
 if __name__ == "__main__":
     # Исходный секретный манифест
-    secret_data = " mrDarkDuck. collatz-3d-attractor v3.0.0. Проект успешно завершен и запечатан."
+    secret_data = "mrDarkDuck. collatz-3d-attractor v4.0.0. Проект успешно завершен и запечатан."
     
     print(f"1. Исходный текст: '{secret_data}'\n")
     
