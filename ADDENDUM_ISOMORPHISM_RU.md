@@ -25,7 +25,7 @@
 
 $$\begin{pmatrix} \Delta x_s \\ \Delta y_s \end{pmatrix} = \begin{pmatrix} \cos(s\theta) & 0 \\ 0 & \sin(s\theta) \end{pmatrix} \begin{pmatrix} r_s (I_1 + I_{0a}) \\ r_s (I_1 + I_{0a}) \end{pmatrix} + \begin{pmatrix} 0 \\ r_s \cdot I_{0b} \end{pmatrix}$$
 
-$$\Delta z_s = n_s \cdot 0.01$$
+\\( \Delta z_s = n_s \cdot 0.01 \\)
 
 ### Физико-алгебраический смысл:
 * При состояниях `1` и `0a` шаг сдвига полностью изоморфен классическому плоскому вращению плоскости $$X-Y$$ на угол $$\theta$$.
