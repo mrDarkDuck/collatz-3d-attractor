@@ -166,9 +166,20 @@ We realized that the Collatz problem is merely a localized shadow of a grander r
 
 This repository is officially sealed as an immutable, code-verified, and DOI-secured academic monument. The underlying research is graduating to a larger canvas: the development of a comprehensive [**Digital Universe Manifesto & Information Vortex Mechanics**](https://mrdarkduck.github.io/digital-universe-manifesto/).
 
-*Thank you to everyone who supported this sprint. Ahead lies the deep cosmos of digital physics.*
+## 💻 Applied Prototype: "Topological Siphon" Cryptosystem (v1.0)
+
+The working script `cryptosiphon_v1.py` has been added to the repository, implementing an asymmetric encryption prototype based on the global avalanche operator $3n + \text{sgn}(n)$.
+
+### Execution Instructions:
+To test the cipher engine, run the following command:
+```bash
+python cryptosiphon_v1.py
+```
+The script automatically converts the plain text string into a massive spatial Z-coordinate (pseudo-random noise), generates a private phase trajectory map (`private_key_path`), and performs deterministic mirror decryption to restore the original text with zero bit loss.
+
 
 ---
+*Thank you to everyone who supported this sprint. Ahead lies the deep cosmos of digital physics.*
 
 ## 📄 License
 This project is distributed under the open **MIT License**. You are free to use, modify, and develop this geometric model.
