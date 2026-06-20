@@ -176,15 +176,4 @@ The complete analytical manifest (compiled in 8 parts), Python validation script
 👉 https://github.com/mrDarkDuck/collatz-3d-attractor
 
 We welcome rigorous critique, p-adic peer reviews, and collaborative forks of the code!
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    displayMath: [['$$','$$']]
-  }
-};
-</script>
 
-<script async
-src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
