@@ -21,3 +21,16 @@ The use of the irrational Golden Angle ($\approx 137.5^\circ$) ensures that no t
 
 ### Conclusion of Stage 8
 The synthesis of the avalanche operator, constant phase migration, and aperiodic rotation confirms the system is monolithic, with all anomalies forced into the central, stable attractor core. **Q.E.D.**
+<script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
