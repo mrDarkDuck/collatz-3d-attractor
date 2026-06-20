@@ -11,7 +11,7 @@ This addendum mathematically proves that within the 3D Nautilus geometry, **the 
 ## 📐 Theorem of Quantum Tornado Loops
 Any semi-even number $$n \in 0b$$ ($$4k+2$$) undergoes exactly $$d$$ consecutive "blue dives" (cycles of $$0b \to 1 \to 0b$$) along the Y-axis depth before its deterministic ejection onto the flat green super-even framework $0a$ ($$4k$$) if and only if it satisfies the following modular congruence:
 
-\\[ n \equiv 2^{d+1} - 2 \pmod{2^{d+2}} \\]
+\\( n \equiv 2^{d+1} - 2 \pmod{2^{d+2}} \\)
 
 ### Number Families Ranked by Immersion Depth:
 1. **Depth $$d=1$$ ($$50\%$$ of all blue numbers):** $$n \equiv 2 \pmod 8$$ — numbers of the form $$8m+2$$ ($$2, 10, 18, 26...$$). They make a single loop and exit to $$0a$$: $$0b \to 1 \to 0a$$.
