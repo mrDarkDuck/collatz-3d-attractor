@@ -1,7 +1,7 @@
 # Theoretical Addendum: Algebraic Exclusion of Hidden Non-Trivial Loops
 
 **Project Author:** Kirill Maksimov (GitHub: `@mrDarkDuck`)  
-**Status:** Official addendum to PART6 (The Loop Exclusion). Completely resolves the AI reviewer's critique regarding the potential existence of isolated non-trivial loops in higher numerical ranges.
+**Status:** Official addendum to PART6 (The Loop Exclusion). Completely resolves the AI reviewer's critique regarding the potential existence of isolated non-trivial loops in higher numerical ranges. 
 
 ## 🧠 The Bounded Loop Dilemma
 The reviewer correctly highlighted a mathematical vulnerability in macro-statistical approaches: the ergodicity and connectedness of the averaged Markov transition matrix for states `1`, `0a`, and `0b` do not inherently prevent an isolated, non-trivial loop of integers from existing at extreme scales. Such a loop could theoretically rotate indefinitely, maintaining the average $$1:1:1$$ frequency distribution, yet never intersecting the primary downstream channel.
