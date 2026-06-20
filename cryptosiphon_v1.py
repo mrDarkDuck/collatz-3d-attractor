@@ -75,7 +75,9 @@ class TopologicalSiphonCipher:
                 current = current * 2
             else:
                 # Обратный зеркальный лавинный клин: (n - 1) / 3
-                current = (current - 1) // 3
+                 if (current - 1) % 3 != 0:
+        raise ValueError("[Крах сифона]: Обнаружен поддельный или поврежденный маршрут ключа!")
+    current = (current - 1) // 3
                 
         # Снимаем паддинг, если он был
         if padding_bit == 1:
