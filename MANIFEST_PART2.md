@@ -55,7 +55,7 @@ To understand the absolute stability of the Nautilus Attractor, one must visuali
 ## 3. The Conical Compression Theorem
 
 ### Theorem Formulation
-*Every discrete trajectory \(T_n\) initiated in the phase space of the Nautilus Shell attractor is mathematically trapped in a process of asymptotic radial compression toward the central Z-axis. Bounded by deterministic topological hubs and the algebraic friction of the Bit Blender, long-range divergence or the formation of alternative closed orbits is physically impossible.*
+*Every discrete trajectory $$T_n$$ initiated in the phase space of the Nautilus Shell attractor is mathematically trapped in a process of asymptotic radial compression toward the central Z-axis. Bounded by deterministic topological hubs and the algebraic friction of the Bit Blender, long-range divergence or the formation of alternative closed orbits is physically impossible.*
 
 ### The Mathematical Blueprint of the Collapse:
 1. **Erasure of Phase Degrees of Freedom:** At critical Pivot Points, the chaotic variance of starting numbers is nullified. Trajectories are consolidated into shared mathematical lanes.
