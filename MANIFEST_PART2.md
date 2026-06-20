@@ -120,16 +120,16 @@ Once the pre-engineered binary pattern is exhausted, the "Monster" loses its str
 ---
 *Verified and compiled via high-precision Python runtime engines for the open-source Collatz-3D-Attractor repository.*
 <script>
+<script>
 MathJax = {
   tex: {
-    inlineMath: [
-      ['$$', '$$'],
-      ['\\(', '\\)']
-    ],
-    displayMath: [
-      ['$$', '$$'],
-      ['\\[', '\\]']
-    ]
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
   }
 };
 </script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
