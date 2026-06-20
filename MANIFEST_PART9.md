@@ -45,3 +45,16 @@ Because the trajectory of any informational array is entirely bound by the law o
 ---
 ### Conclusion of Stage 9
 Sign calibration and the transition to a global trigonometric model demonstrate that `collatz-3d-attractor v3.0.0` is not merely an abstract mathematical visualization, but a highly functional, applied architectural framework designed for the secure management, encryption, and compression of bitwise entropy in next-generation computing systems. **Q.E.D.**
+<script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
