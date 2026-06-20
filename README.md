@@ -48,10 +48,10 @@ By mapping the state transition graph backwards in time (up the tree of ancestor
 ## ⚖️ Algebraic Trap of the Semi-Even Axis
 The interaction of attributes is strictly deterministic. We have derived the formula for the **Blue Trap**, proving that the semi-even node `0b` has no structural freedom.
 
-Any semi-even number is written as \(4k+2\). Expanding the brackets of the accelerated Collatz step \((3n+1)/2\), we get:
-\[\frac{4k+2}{2} = 2k+1 \text{ (Odd '1')} \longrightarrow 3(2k+1)+1 = 6k+3+1 = \mathbf{6k+4}\]
+Any semi-even number is written as $$4k+2$$. Expanding the brackets of the accelerated Collatz step $$(3n+1)/2$$, we get:
+$$\frac{4k+2}{2} = 2k+1 \text{ (Odd '1')} \longrightarrow 3(2k+1)+1 = 6k+3+1 = \mathbf{6k+4}$$
 
-Factoring out the four (\(4 \times (1.5k+1)\)), we algebraically prove that the semi-even node on the next step **always, without a single exception in the Universe, crashes into the green wall of super-evenness `0a`**. There is a mandatory, hard-coded spatial turn: **`0b` \(\to\) `1` \(\to\) `0a`**.
+Factoring out the four ($$4 \times (1.5k+1)$$), we algebraically prove that the semi-even node on the next step **always, without a single exception in the Universe, crashes into the green wall of super-evenness `0a`**. There is a mandatory, hard-coded spatial turn: **`0b` $$\to$$ `1` $$\to$$ `0a`**.
 
 ---
 
@@ -66,8 +66,8 @@ The repository includes a Python simulator that tests the model at extreme scale
 ## 🏁 The Bottom Line: The Binary Gravity Rule
 Computer tests and algebraic logic allow us to formulate the final conclusion of the model:
 
-1.  **Every number in the Universe is just an incomplete power of two (\(2^x\)).** Its trajectory is a binary code cluttered with "noise" from extra ones.
-2.  The \(3n+1\) step acts as a **binary vacuum cleaner**. Due to the bit-shift carry wave, it cleans out this noise, turning any number into a super-even one.
+1.  **Every number in the Universe is just an incomplete power of two ($$2^x$$).** Its trajectory is a binary code cluttered with "noise" from extra ones.
+2.  The $$3n+1$$ step acts as a **binary vacuum cleaner**. Due to the bit-shift carry wave, it cleans out this noise, turning any number into a super-even one.
 3.  Since division by 2 on a long distance dominates multiplication with a massive advantage (**1317 vs 639**), and the super-even trap instantly cuts off half of the growth steps (**49.8%**), numbers physically do not have the spatial clearance to evade compression.
 
 **Conclusion:** The infinity of numbers collapsed into a closed three-color grammar. Every number is doomed to lose energy on the blue axis, fly into the green compression chute, and slide down the binary framework of powers of two to the very bottom of the vortex — to the final unit.
