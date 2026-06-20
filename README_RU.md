@@ -112,7 +112,8 @@ $$\frac{4k+2}{2} = 2k+1 \text{ (Нечетное '1')} \longrightarrow 3(2k+1)+1
 
 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20716180.svg)](https://doi.org/10.5281/zenodo.20716180)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20777274.svg)](https://doi.org/10.5281/zenodo.20777274)
+
 
 ---
 
