@@ -5,7 +5,7 @@ This document introduces the 3D-attractor v3.0.0, mapping 2-adic bits to "Nautil
 ---
 
 ## 1. The Matryoshka of Funnels
-We introduce a bitwise-ternary passport to define trajectory behavior, where `1110_2` ($14$) activates an avalanche operator $$T(n) = (n \ll 1) + n + 1$$, resulting in a 52-peak.
+We introduce a bitwise-ternary passport to define trajectory behavior, where `1110_2` ($$14$$) activates an avalanche operator $$ T(n) = (n \ll 1) + n + 1 $$, resulting in a 52-peak.
 
 ---
 
