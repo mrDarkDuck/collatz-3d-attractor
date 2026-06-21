@@ -18,7 +18,7 @@ To elevate this model from a "highly probable hypothesis" to an absolute analyti
 ## 2. Mathematical Formalization of the Ternary Grammar
 Let \\( \mathbb{N} \\) be the set of natural numbers. We partition the phase space of the attractor based on modular congruence classes modulo 4, mapping them directly to the project's ternary state grammar:
 
-1. **State `0a` (Super-Even Rails):** \( n \equiv 0 \pmod 4\). Generates multi-step divisions (\\( \ge 2 \\) divisions by 2).
+1. **State `0a` (Super-Even Rails):** \\( n \equiv 0 \pmod 4\\). Generates multi-step divisions (\\( \ge 2 \\) divisions by 2).
 2. **State `0b` (Semi-Even / Blue Trap):** \\( n \equiv 2 \pmod 4 \\). Generates exactly one division by 2, forcing an immediate transition to an odd number.
 3. **State `1` (Growth Impulses):** \\( n \equiv 1 \pmod 4 \\) or \\( n \equiv 3 \pmod 4 \\). Bounded odd numbers executing the \\( 3n+1 \\) expansion.
 
@@ -28,7 +28,7 @@ Let \\( \mathbb{N} \\) be the set of natural numbers. We partition the phase spa
 To understand the dynamic flow of numerical energy through the volumetric tree structure, we analyze the exact algebraic mapping of each state after a single execution of the Collatz operator \\( \mathcal{C}(n) \\):
 
 ### 3.1. Decomposition of the Odd State (`1`)
-Any arbitrary odd number \\( n \\) belongs to either \\( 4k+1\) or \\( 4k+3 \\) with a uniform asymptotic probability of \\( 0.5 \\) in the infinite set of integers. 
+Any arbitrary odd number \\( n \\) belongs to either \\( 4k+1\\) or \\( 4k+3 \\) with a uniform asymptotic probability of \\( 0.5 \\) in the infinite set of integers. 
 
 * **Case A (\\( 4k+1 \\)):**
   \\(  \mathcal{C}(4k+1) = 3(4k+1) + 1 = 12k + 4 = 4(3k+1) \\)
@@ -36,7 +36,7 @@ Any arbitrary odd number \\( n \\) belongs to either \\( 4k+1\) or \\( 4k+3 \\) 
   \\(  \text{State } 1 \xrightarrow{P=0.5} \text{State } 0a \\)
 
 * **Case B (\\( 4k+3 \\)):**
-  \(  \mathcal{C}(4k+3) = 3(4k+3) + 1 = 12k + 10 = 2(6k+5) \)
+  \\(  \mathcal{C}(4k+3) = 3(4k+3) + 1 = 12k + 10 = 2(6k+5) \\)
   Since \( 12k+10 = 4(3k+2) + 2 \equiv 2 \pmod 4\), this operation triggers a deterministic mapping to the semi-even **Blue Trap**:  
   \\(  \text{State } 1 \xrightarrow{P=0.5} \text{State } 0b \\)
 
