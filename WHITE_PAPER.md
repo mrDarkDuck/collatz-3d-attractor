@@ -40,7 +40,7 @@ To verify how this geometry performs at scale, we conducted a rigorous benchmark
 The integer endured 25,135 steps before achieving absolute dissipation. Crucially, the law of large numbers exposed a flawless steady-state balance. On macroscopic distances, the operational density of our three grammar states stabilizes into a perfect 1:1:1 symmetry (exactly ~33.3% each).
 
 Leveraging this symmetry, we derived the analytical Global Contraction Equation of the attractor:
-R(z) = R₀ · (√¾)ᶻ = R₀ · (0.9086)ᶻ
+\\( R(z)=R_{0}\cdot (\sqrt[3]{4})^{z}=R_{0}\cdot (0.9086)^{z} \\)
 
 The scaling factor of 0.9086—the Maksimov Constant—represents the fundamental damping rate of chaos. Within the logarithmic coordinates of the Nautilus Shell, it operates as a Banach contraction mapping: on every single step, the trajectory radius of any integer shrinks by 9.14%, relentlessly pulling the volume down into the core.
 
