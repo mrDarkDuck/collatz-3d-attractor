@@ -15,7 +15,7 @@ We no longer view Collatz sequences as random sequences of numbers. Instead, we 
 
 The mathematical core of Stage 2 is the analytical derivation of the chaos energy dissipation law. In the logarithmic phase space of the **Nautilus Shell**, the trajectory radius $$R$$ as a function of discrete time $$z$$ (the height of the 3D cone) strictly obeys the following contractive equation:
 
-\\( R(z) = R_0 \cdot \left( \sqrt[3]{\frac{3}{4}} \right)^z = R_0 \cdot (0.9086)^z \\)
+\\( R(z)=R_{0}\cdot (\sqrt[3]{4})^{z}=R_{0}\cdot (0.9086)^{z} \\)
 
 Where:
 * **\\( R_0 = \ln(n_0) \\)** — The initial logarithmic radius (representing the bit-length or magnitude of the starting integer).
