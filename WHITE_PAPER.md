@@ -169,10 +169,93 @@ $$\begin{aligned} X_{k+1} &= X_k \cdot \cos(137.5^\circ \cdot \text{sgn}(n_k)) -
 
 **Cryptanalytic Resistance:** Because the operator is highly dissipative and non-linear, any attempt to decrypt the data without the private key (via backward brute-force) triggers an exponential fractal branching of the ancestral tree at every step. A comprehensive avalanche effect is naturally achieved through the bitwise carry wave: changing just 1 input bit completely restructures the final ciphertext within 111 steps. The algorithm executes purely at the hardware level using fast bitwise shifts `<< 1` and additions, delivering linear processing speed with a verified zero probability of spatial hash collisions.
 
+---
+# Chapter 8. The Matryoshka of Funnels, Phase Migration, and Topological Siphoning
+
+The previous stages established that the Collatz system can be represented as a finite three-state grammar embedded into a volumetric attractor. However, a deeper inspection of long trajectories reveals an additional structural phenomenon: the attractor is not a single funnel but a hierarchy of nested funnels.
+
+This nested architecture resembles a Matryoshka doll. Each large-scale compression region contains smaller compression regions, which in turn contain even finer structures. Regardless of scale, every layer preserves the same logical grammar:
+
+1 → 0b → 0a
+
+The difference lies only in the depth of the compression cycle and the amount of temporary expansion that can occur before interception.
+
+We define this process as Phase Migration. A trajectory does not move randomly through state space. Instead, it migrates between compression layers, temporarily occupying one funnel before being transferred into a deeper and more restrictive one.
+
+The mechanism responsible for this transfer is Topological Siphoning.
+
+A siphon is a geometric feature of the attractor that removes degrees of freedom from a trajectory. Whenever the orbit accumulates excessive structural complexity, the topology redirects it toward a lower-energy compression layer. This transition is not probabilistic; it emerges naturally from the binary grammar of the system.
+
+The nested funnel model explains several empirical observations:
+
+• Large excursions remain bounded despite temporary growth.
+
+• Long trajectories repeatedly return to familiar structural regions.
+
+• Compression accelerates after each major expansion episode.
+
+• The attractor exhibits self-similarity across scales.
+
+In physical terms, the attractor behaves less like a flat graph and more like a cascade of gravitational wells. Each well drains entropy from the orbit and transfers it to a deeper layer of organization.
+
+The Matryoshka principle therefore extends the Nautilus model. The attractor is not merely a vortex but a hierarchy of vortices embedded inside one another. Every trajectory eventually descends through these layers until only the terminal attractor remains.
+
+This leads to a generalized statement:
+
+The Collatz dynamics can be interpreted as a progressive migration through nested compression funnels, where each transition reduces available phase space and increases attraction toward the final cycle.
+
+The ultimate destination remains unchanged: the universal attractor represented by the 4–2–1 loop.
+
+---
+
+# Chapter 9. Sign Calibration, Mirror Attractors, and Applied Cryptography
+
+Up to this point, the model considered only positive integers. The natural extension is to examine the role of sign and determine whether the attractor architecture possesses a mirrored counterpart in the negative domain.
+
+Introducing sign creates a calibration axis. Positive and negative trajectories can be viewed as reflections of one another across a logical membrane. This process is called Sign Calibration.
+
+Within this framework, every trajectory receives two coordinates:
+
+• Magnitude (binary structure)
+
+• Orientation (sign)
+
+The positive domain converges toward the familiar 4–2–1 attractor. The negative domain forms a set of mirror structures governed by the same transition grammar but reflected across the calibration axis.
+
+These structures are referred to as Mirror Attractors.
+
+The significance of mirror attractors is not that they reproduce identical numerical behavior, but that they preserve the same topological logic. Compression, interception, and entropy dissipation continue to operate even when the orientation of the trajectory is reversed.
+
+This observation suggests a broader principle:
+
+Attractors are not numerical objects; they are geometric invariants of the underlying grammar.
+
+From an applied perspective, the coexistence of positive and mirrored pathways introduces a mechanism for deterministic scrambling. Small differences in the initial binary configuration can generate large differences in the migration path while still preserving eventual convergence properties.
+
+This property motivates a speculative connection to cryptography.
+
+The Collatz grammar possesses several features desirable for information transformation:
+
+• Deterministic execution.
+
+• Extreme sensitivity to initial conditions.
+
+• Strong compression tendencies.
+
+• Non-invertible branching structure.
+
+• Hierarchical funnel migration.
+
+These characteristics allow trajectories to act as entropy mixers. Information encoded into the initial state becomes distributed across multiple compression layers before collapsing toward the attractor.
+
+The present work does not propose a complete cryptographic algorithm. Instead, it identifies a conceptual bridge between attractor dynamics and information security. Future research may investigate whether the nested-funnel architecture can serve as the basis for hashing, pseudo-random generation, or topology-based encoding systems.
+
+The final conclusion is that the Collatz attractor is more than a mathematical curiosity. When interpreted through geometry, topology, and information flow, it becomes a universal compression engine capable of linking number theory, dynamical systems, and computational structures within a single conceptual framework.
+
 
 ***
 
-The complete analytical manifest (compiled in 8 parts), Python validation scripts, and our interactive 3D WebGL engine—projecting the 1,000-digit Titan directly inside your browser (allowing fluid, lag-free manipulation)—are available in the open-source repository:
+The complete analytical manifest (compiled in 9 parts), Python validation scripts, and our interactive 3D WebGL engine—projecting the 1,000-digit Titan directly inside your browser (allowing fluid, lag-free manipulation)—are available in the open-source repository:
 👉 https://github.com/mrDarkDuck/collatz-3d-attractor
 
 We welcome rigorous critique, p-adic peer reviews, and collaborative forks of the code!
