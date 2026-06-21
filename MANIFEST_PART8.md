@@ -17,7 +17,7 @@ $$V \mapsto R_z(137.5^\circ)S_V + T$$
 Here, $$S_V$$ is the current 3D state, $R_z$ represents rotation by the Golden Angle (ensuring non-repeating trajectories), and $$T$$ is the translation vector that governs movement towards either the avalanche entropy peak or the blue dive dissipation channel, as detailed in.
 
 ## 5. Principle of Geometric Collision Exclusion (Vacant Space Principle)
-The use of the irrational Golden Angle ($$\approx 137.5^\circ$) ensures that no trajectory point ever repeats, creating a "vacant space" that prevents cycle formation, per the findings in. This causes any theoretical external loop to be broken and pulled into the "Topological Siphon," forcing all paths into a 3D funnel that collapses towards the single 100% confluence channel ($$20 \to 10 \to 5 \to 1$$).
+The use of the irrational Golden Angle ($$\approx 137.5^\circ$$) ensures that no trajectory point ever repeats, creating a "vacant space" that prevents cycle formation, per the findings in. This causes any theoretical external loop to be broken and pulled into the "Topological Siphon," forcing all paths into a 3D funnel that collapses towards the single 100% confluence channel ($$20 \to 10 \to 5 \to 1$$).
 
 ### Conclusion of Stage 8
 The synthesis of the avalanche operator, constant phase migration, and aperiodic rotation confirms the system is monolithic, with all anomalies forced into the central, stable attractor core. **Q.E.D.**
