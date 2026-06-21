@@ -91,6 +91,9 @@ All project files are located in the root directory for maximum transparency, pr
 * 📕 [MANIFEST_PART5.md](MANIFEST_PART5.md) — Stage 5: Shannon Entropy Loss Invariant (0.138 bits/step) (EN)
 * 📓 [MANIFEST_PART6.md](MANIFEST_PART6.md) — Stage 6: 2-adic Topology and the Node 20 Global Highway Hub (EN)
 * 📔 [MANIFEST_PART7.md](MANIFEST_PART7.md) — Stage 7: The Avalanche Wedge Law & Non-Invertible Bit Collisions (EN)
+* 📔 [MANIFEST_PART8.md](MANIFEST_PART8.md) — Stage 8: The Matryoshka of Funnels, Phase Migration, and Topological Siphoning
+* 📔 [MANIFEST_PART9.md](MANIFEST_PART9.md) — Stage 9: ign Calibration, Mirror Attractors, and Applied Cryptography
+
 * 🚀 [nautilus_3d_viewer_en.html](nautilus_3d_viewer_en.html) — **[LIVE DEMO]** Autonomous HTML5/Canvas 3D interactive viewer (English UI)
 * 📐 [collatz_27.obj](collatz_27.obj) — 3D spatial trajectory of number 27 (111 steps, peak value 9232)
 * 📐 [collatz_31.obj](collatz_31.obj) — 3D spatial trajectory of number 31 (106 steps, 5 full loops)
