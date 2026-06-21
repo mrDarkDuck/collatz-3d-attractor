@@ -65,7 +65,7 @@ Why does data burn so consistently? To understand the underlying mechanism, we f
 
 To proceed, the system must break the perspective alignment. The 3n+1 operator scales the structure and forces exactly one unit cube onto the perpendicular axis of translation height.
 
-This is where we locate the prime stabilizer of the entire conjecture. The humble "+1" operates as a Topological Avalanche Wedge driven into the number’s binary DNA. The resulting binary carry-wave systematically scrambles the low-order bit configurations. Combined with the 137.5° irrational Golden Twist, the number cannot re-engineer its hidden alignment. Within a strict combinatorial horizon capped at 8 steps, the rogue track is violently ejected from its isolated position and captured by our primary p-adic highway hub—Node 20 ( //( 10100_2 //) ).
+This is where we locate the prime stabilizer of the entire conjecture. The humble "+1" operates as a Topological Avalanche Wedge driven into the number’s binary DNA. The resulting binary carry-wave systematically scrambles the low-order bit configurations. Combined with the 137.5° irrational Golden Twist, the number cannot re-engineer its hidden alignment. Within a strict combinatorial horizon capped at 8 steps, the rogue track is violently ejected from its isolated position and captured by our primary p-adic highway hub—Node 20 (10100<sub>2</sub>)
 
 ---
 
