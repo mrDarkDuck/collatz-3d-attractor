@@ -6,7 +6,7 @@ This document transitions the theoretical framework of `collatz-3d-attractor v3.
 ---
 
 ## 2. Sign Calibration: The Global Symmetrical Operator
-Within the domain of positive natural numbers $$\mathbb{N}$$, the classical avalanche operator $$3n+1$$ serves to expand the informational space. Extending this model across the entire integer axis $\mathbb{Z}$ requires sign calibration to prevent phase branching of orbits.
+Within the domain of positive natural numbers $$\mathbb{N}$$, the classical avalanche operator $$3n+1$$ serves to expand the informational space. Extending this model across the entire integer axis $$\mathbb{Z}$$ requires sign calibration to prevent phase branching of orbits.
 
 Let us define the sign function as $$\text{sgn}(n) = \frac{n}{|n|}$$. The global symmetrical avalanche operator for the infinite integer space is formulated as:
 $$T_{\text{global}}(n) = 3n + \text{sgn}(n)$$
