@@ -19,7 +19,7 @@ The mathematical core of Stage 2 is the analytical derivation of the chaos energ
 
 Where:
 * **\\( R_0 = \ln(n_0) \\)** — The initial logarithmic radius (representing the bit-length or magnitude of the starting integer).
-* \\( $$z$$ \\) — The coordinate of discrete time (the algorithm iteration step along the vertical Z-axis).
+* \\( z \\) — The coordinate of discrete time (the algorithm iteration step along the vertical Z-axis).
 * **\\( 0.9086 \\)** — The quantum retention coefficient of the phase space (**The M-Invariant**).
 
 ### Strict Analytical Derivation:
