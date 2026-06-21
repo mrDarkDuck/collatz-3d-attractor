@@ -87,6 +87,9 @@ $$\frac{4k+2}{2} = 2k+1 \text{ (Нечетное '1')} \longrightarrow 3(2k+1)+1
 * 📕 [MANIFEST_PART5_RU.md](MANIFEST_PART5_RU.md) — Этап 5: Потеря энтропии по Шеннону (0.138 бит/шаг) (RU)
 * 📓 [MANIFEST_PART6_RU.md](MANIFEST_PART6_RU.md) — Этап 6: p-адическая топология и магистраль Узла 20 (RU)
 * 📔 [MANIFEST_PART7_RU.md](MANIFEST_PART7_RU.md) — Этап 7: Топологический монолит Клина +1 и встречные потоки (RU)
+* 📔 [MANIFEST_PART8_RU.md](MANIFEST_PART8_RU.md) - Этап 8: Матрешка Воронок, Теорема Фазовой Миграции и Топологический Сифон
+* 📔 [MANIFEST_PART9_RU.md](MANIFEST_PART9_RU.md) - Этап 9: Калибровка Знака, Зеркальные Аттракторы и Прикладная Криптография
+
 * 🚀 [nautilus_3d_viewer_ru.html](nautilus_3d_viewer_ru.html) — **[ЗАПУСТИТЬ]** Автономный интерактивный 3D-движок HTML5/Canvas (Русский интерфейс)
 * 📐 [collatz_27.obj](collatz_27.obj) — 3D-траектория числа 27 (111 шагов, пик 9232)
 * 📐 [collatz_31.obj](collatz_31.obj) — 3D-траектория числа 31 (106 шагов, 5 полных витков)
