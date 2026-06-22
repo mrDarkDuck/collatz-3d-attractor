@@ -56,11 +56,11 @@ Factoring out the four ($$4 \times (1.5k+1)$$), we algebraically prove that the 
 ---
 
 ## 📊 Computer Simulation Results (Python)
-The repository includes a Python simulator that tests the model at extreme scales (including integers up to 4000 digits long). Empirical tests fully confirmed the scale invariance of the system:
+The repository includes a Python simulator that tests the model at extreme scales (including integers up to 92 digits long). Empirical tests fully confirmed the scale invariance of the system:
 
 *   **Super-Evenness Interception (The Interception Rate):** It is algebraically proven that the node `0b` forces a hard turn. On a long distance (a 92-digit titan, 1,955 steps), the law of large numbers confirmed the perfect interlocking of trajectories: **49.8% of all growth steps were instantly intercepted and truncated by the green super-even framework**.
 *   **Balance of Forces:** On the same ultra-long distance, **639 growth impulses were recorded against 1,317 steps of division by 2**, which mathematically confirms the continuous dissipation of chaos energy and the contraction of the trajectory to the attractor `(0,0,0)` — the final `4-2-1` loop.
-
+* `Later, a number of 4000 characters was tested: 32858 growth impulses against 65365 division steps by 2.`
 ---
 
 ## 🏁 The Bottom Line: The Binary Gravity Rule
