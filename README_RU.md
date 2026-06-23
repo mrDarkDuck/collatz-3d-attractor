@@ -97,6 +97,8 @@ $$\frac{4k+2}{2} = 2k+1 \text{ (Нечетное '1')} \longrightarrow 3(2k+1)+1
 * 📐 [collatz_31.obj](collatz_31.obj) — 3D-траектория числа 31 (106 шагов, 5 полных витков)
 * 🖼️ [collatz_tornado.png](collatz_tornado.png) — Рендер-визуализация аттрактора
 * ⚙️ [simulator_ru.py](simulator_ru.py) — Python-скрипт расчета коэффициента удержания и статистики (RU)
+* ⚙️ [simulator_ru_5M.py](simulator_ru.py) - Python-скрипт расчета коэффициента удержания и статистики (RU) (поддержка чисел до 5 Млн)
+- 📑 [BENCHMARK_1M_DIGITS_ru.md](BENCHMARK_1M_DIGITS_ru.md) - Отчет по бенч-марк тесту числа в 1 000 0000 знаков
 
 - 📑 [ADDENDUM_BLUE_TRAP_RU.md](./ADDENDUM_BLUE_TRAP_RU.md) — Теоретическое дополнение: Доказательство 2-адической памяти и фрактального деления Синего Капкана
 - ⚙️ [simulator_blue_trap_ru.py](./simulator_blue_trap_ru.py) — Автономный скрипт верификации квантования витков синего торнадо по глубине оси Y (Русская версия)
