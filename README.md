@@ -116,6 +116,7 @@ All project files are located in the root directory for maximum transparency, pr
 - ⚙️ [simulator_loop_lock_en.py](./simulator_loop_lock_en.py) — Tracking script for trailing bit mask entropy drift and loop locking (English version)
 - 📑 [ADDENDUM_LYAPUNOV_EN.md](./ADDENDUM_LYAPUNOV_EN.md) — Theoretical Addendum: Proof of attractor stability via the Lyapunov function V(n) = log2(n)
 - ⚙️ [simulator_lyapunov_en.py](./simulator_lyapunov_en.py) — Verification script for monotonic energy dissipation within the blue vortex (English version)
+- ⚙️ [cryptosiphon_v1_en.py](cryptosiphon_v1_en.py) - Сipher engine
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20777274.svg)](https://doi.org/10.5281/zenodo.20777274)
 
@@ -172,7 +173,7 @@ This repository is officially sealed as an immutable, code-verified, and DOI-sec
 
 ## 💻 Applied Prototype: "Topological Siphon" Cryptosystem (v1.0)
 
-The working script `cryptosiphon_v1.py` has been added to the repository, implementing an asymmetric encryption prototype based on the global avalanche operator $$3n + \text{sgn}(n)$$.
+The working script `cryptosiphon_v1_en.py` has been added to the repository, implementing an asymmetric encryption prototype based on the global avalanche operator $$3n + \text{sgn}(n)$$.
 
 ### Execution Instructions:
 To test the cipher engine, run the following command:
