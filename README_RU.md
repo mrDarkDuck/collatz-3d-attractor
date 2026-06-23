@@ -114,6 +114,7 @@ $$\frac{4k+2}{2} = 2k+1 \text{ (Нечетное '1')} \longrightarrow 3(2k+1)+1
 - ⚙️ [simulator_loop_lock_ru.py](./simulator_loop_lock_ru.py) — Скрипт отслеживания энтропийного дрейфа хвоста битовых масок и блокировки циклов (Русская версия)
 - 📑 [ADDENDUM_LYAPUNOV_RU.md](./ADDENDUM_LYAPUNOV_RU.md) — Теоретическое дополнение: Доказательство устойчивости аттрактора через функцию Ляпунова V(n) = log2(n)
 - ⚙️ [simulator_lyapunov_ru.py](./simulator_lyapunov_ru.py) — Скрипт верификации монотонного убывания энергии и диссипации синего вихря (Русская версия)
+- ⚙️ [cryptosiphon_v1_ru.py](cryptosiphon_v1_ru.py) - Механизм шифрования
 
 
 
