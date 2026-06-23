@@ -6,9 +6,9 @@ import gc
 # Снимаем ограничение Python на конвертацию строк для длинной арифметики
 sys.set_int_max_str_digits(100000)
 
-# Криптографические константы Блочного Сифона v5.0.0
+# Криптографические константы Блочного Сифона v5.1.0
 BLOCK_SIZE_BYTES = 16  # 16 байт = 128 бит
-SIPHON_STEPS = 128     # Жестко фиксированное число шагов сифона (размер ключа = 128 бит)
+SIPHON_STEPS = 128      # Жестко фиксированное число шагов сифона (размер ключа = 128 бит)
 
 # ANSI Цветовая разметка терминала
 RESET = "\033[0m"
@@ -22,7 +22,7 @@ MAGENTA = "\033[35m"
 
 LOCALIZATION = {
     "ru": {
-        "welcome": f"{BOLD}{CYAN}=== БЛОЧНЫЙ ДЕМОНСТРАЦИОННЫЙ СТЕНД: SIMULATOR_4HABR (v5.0.0) ==={RESET}",
+        "welcome": f"{BOLD}{CYAN}=== БЛОЧНЫЙ ДЕМОНСТРАЦИОННЫЙ СТЕНД: SIMULATOR_4HABR (v5.1.0) ==={RESET}",
         "prompt_msg": f"{BOLD}Введите текстовое сообщение для шифрования:{RESET}\n> ",
         "err_empty": f"{RED}[Ошибка]: Сообщение не может быть пустым!{RESET}",
         "init_enc": f"\n{YELLOW}[Инициализация]: Разбиение текста на блоки по 128 бит и запуск лавины...{RESET}",
@@ -43,11 +43,11 @@ LOCALIZATION = {
         "dec_text": f"{BOLD}Результат поблочной сборки зеркального мира:{RESET}\n'{GREEN}{{text}}{RESET}'",
         "err_collapse": f"{RED}[Крах сифона]: В блоке №{{idx}} обнаружен ложный маршрут ключа! Траектория уничтожена.{RESET}",
         "err_utf8": f"{RED}[Ошибка дешифровки]: Топологический коллапс. Восстановленный массив поврежден.{RESET}",
-        "success_msg": f"\n{BOLD}{GREEN}🎉 ПОЗДРАВЛЯЕМ! Все блоки успешно прошли через сифон, исходный текст полностью восстановлен!{RESET}",
+        "success_msg": f"\n{BOLD}{GREEN} ПОЗДРАВЛЯЕМ! Все blocks успешно прошли 🎉 через сифон, исходный текст полностью восстановлен!{RESET}",
         "exit": f"\n{CYAN}Сессия завершена. Блочный проект запечатан.{RESET}"
     },
     "en": {
-        "welcome": f"{BOLD}{CYAN}=== BLOCK-BASED DEMO BENCH: SIMULATOR_4HABR (v5.0.0) ==={RESET}",
+        "welcome": f"{BOLD}{CYAN}=== BLOCK-BASED DEMO BENCH: SIMULATOR_4HABR (v5.1.0) ==={RESET}",
         "prompt_msg": f"{BOLD}Enter a text message to encrypt:{RESET}\n> ",
         "err_empty": f"{RED}[Error]: Message cannot be empty!{RESET}",
         "init_enc": f"\n{YELLOW}[Initialization]: Splitting text into 128-bit blocks and launching avalanche...{RESET}",
@@ -68,7 +68,7 @@ LOCALIZATION = {
         "dec_text": f"{BOLD}Block-reassembled mirror world decryption result:{RESET}\n'{GREEN}{{text}}{RESET}'",
         "err_collapse": f"{RED}[Siphon Collapse]: Fake key trajectory detected in block №{{idx}}! Route destroyed.{RESET}",
         "err_utf8": f"{RED}[Decryption Error]: Topological collapse. Recovered byte array is corrupted.{RESET}",
-        "success_msg": f"\n{BOLD}{GREEN}🎉 CONGRATULATIONS! All blocks successfully passed through the siphon, plaintext restored!{RESET}",
+        "success_msg": f"\n{BOLD}{GREEN} CONGRATULATIONS! All blocks 🎉 successfully passed through the siphon, plaintext restored!{RESET}",
         "exit": f"\n{CYAN}Session finished. Block project sealed.{RESET}"
     }
 }
@@ -80,6 +80,53 @@ except Exception:
 
 LANG = LOCALIZATION.get(sys_lang, LOCALIZATION["en"])
 
+def int_to_128bits(val: int) -> list:
+    """Безопасно извлекает младшие 128 бит длинного числа в виде списка битов."""
+    bits = []
+    for i in range(128):
+        bits.append((val >> (127 - i)) & 1)
+    return bits
+
+def bits_to_128int(bits: list) -> int:
+    """Собирает список из 128 битов обратно в число int."""
+    val = 0
+    for bit in bits:
+        val = (val << 1) | bit
+    return val
+
+def forward_topological_shift(n: int) -> int:
+    """Прямой сдвиг TPP v5.1.0: миграция 33.3% фазовых бит (X -> Y -> Z -> X)."""
+    upper_part = n >> 128
+    lower_128 = n & ((1 << 128) - 1)
+    
+    bits = int_to_128bits(lower_128)
+    x, y, z = bits[0:43], bits[43:86], bits[86:128]
+    
+    # 33.3% фазовой миграции (14 бит с конца осей)
+    t_x, c_x = x[-14:], x[:-14]
+    t_y, c_y = y[-14:], y[:-14]
+    t_z, c_z = z[-14:], z[:-14]
+    
+    # Циклический переброс (Правый винт)
+    bits_permuted = (t_z + c_x) + (t_x + c_y) + (t_y + c_z)
+    return (upper_part << 128) | bits_to_128int(bits_permuted)
+
+def reverse_topological_shift(n: int) -> int:
+    """Обратный сдвиг TPP v5.1.0: зеркальный возврат фазовых бит (X <- Y <- Z <- X)."""
+    upper_part = n >> 128
+    lower_128 = n & ((1 << 128) - 1)
+    
+    bits = int_to_128bits(lower_128)
+    x, y, z = bits[0:43], bits[43:86], bits[86:128]
+    
+    # Зеркальное восстановление ядер и хвостов
+    t_z_rec, c_x_rec = x[:14], x[14:]
+    t_x_rec, c_y_rec = y[:14], y[14:]
+    t_y_rec, c_z_rec = z[:14], z[14:]
+    
+    orig_bits = (c_x_rec + t_x_rec) + (c_y_rec + t_y_rec) + (c_z_rec + t_z_rec)
+    return (upper_part << 128) | bits_to_128int(orig_bits)
+
 class BlockSiphonEngine:
     def __init__(self):
         self.block_size = BLOCK_SIZE_BYTES
@@ -87,7 +134,6 @@ class BlockSiphonEngine:
 
     def slice_to_blocks(self, text: str) -> list:
         raw_bytes = bytearray(text.encode('utf-8'))
-        # Стандартный криптографический паддинг: добавляем длину паддинга в конец
         padding_len = self.block_size - (len(raw_bytes) % self.block_size)
         raw_bytes.extend([padding_len] * padding_len)
         
@@ -102,7 +148,6 @@ class BlockSiphonEngine:
             return raw_bytes
         padding_len = raw_bytes[-1]
         if 0 < padding_len <= self.block_size:
-            # Проверяем валидность паддинга
             if all(b == padding_len for b in raw_bytes[-padding_len:]):
                 return raw_bytes[:-padding_len]
         return raw_bytes
@@ -110,7 +155,6 @@ class BlockSiphonEngine:
     def encrypt_block_interactive(self, n: int, block_idx: int) -> tuple:
         print(LANG["block_start"].format(idx=block_idx))
         
-        # Калибровка знака: гарантируем нечетность стартового вектора внутри блока
         padding_bit = 0
         if n % 2 == 0:
             n = (n << 1) + 1
@@ -129,11 +173,14 @@ class BlockSiphonEngine:
                 current = current // 2
                 trajectory_log.append(0)
                 
+            # ИНТЕГРАЦИЯ ТОПОЛОГИЧЕСКОГО ЛАВИННОГО СДВИГА v5.1.0
+            current = forward_topological_shift(current)
+            
             val_str = str(current)
             if len(val_str) > 60:
                 val_str = val_str[:30] + " ... " + val_str[-30:]
             print(LANG["step_info"].format(step=step, val=val_str, op=op_str))
-                
+            
         key_str = "".join(map(str, trajectory_log))
         return current, key_str, padding_bit
 
@@ -143,6 +190,9 @@ class BlockSiphonEngine:
         path = [int(c) for c in key_str]
         
         for phase in reversed(path):
+            # ИНТЕГРАЦИЯ ЗЕРКАЛЬНОГО ЛАВИННОГО СДВИГА v5.1.0
+            current = reverse_topological_shift(current)
+            
             if phase == 0:
                 op_str = "Reverse Blue Dive (current * 2)"
                 current = current * 2
@@ -156,7 +206,7 @@ class BlockSiphonEngine:
             if len(val_str) > 60:
                 val_str = val_str[:30] + " ... " + val_str[-30:]
             print(LANG["step_dec_info"].format(val=val_str, op=op_str))
-                
+            
         if padding_bit == 1:
             current = current >> 1
             
@@ -166,7 +216,6 @@ def main():
     print(LANG["welcome"])
     engine = BlockSiphonEngine()
     
-    # 1. Предложение ввести сообщение
     plain_text = input(LANG["prompt_msg"]).strip()
     if not plain_text:
         print(LANG["err_empty"])
@@ -180,7 +229,6 @@ def main():
     keys_array = []
     paddings_array = []
     
-    # Поблочное шифрование
     for idx, block_val in enumerate(blocks, 1):
         c_val, k_str, p_bit = engine.encrypt_block_interactive(block_val, idx)
         cipher_array.append(c_val)
@@ -189,31 +237,27 @@ def main():
         
     t_end = time.perf_counter()
     
-    # 2. Вывод на экран результатов
     true_keys_string = ", ".join(keys_array)
     print(LANG["enc_res"])
     print(LANG["ciphertext"].format(cipher=str(cipher_array)))
     print(LANG["key_info"])
     
-    # ЦВЕТОВОЙ АКЦЕНТ: Выделяем важный приватный ключ зеленым цветом в консоли
     print(LANG["key_frag"].format(frag=f"{GREEN}{BOLD}{true_keys_string}{RESET}"))
     print(LANG["time_op"].format(t=t_end - t_start))
     
-    # 2.1. Хирургическая очистка исходной памяти
+    # Хирургическая очистка исходной памяти
     del plain_text
     del blocks
     gc.collect()
     print(LANG["ram_clear"])
-    
-    # 3. Вывод на экран предложения ввести ключ (Цикл до успешного ввода)
+
+    # Продолжение функции main() — Обратный поблочный дешифратор
     while True:
         user_input_keys = input(LANG["prompt_custom_key"]).strip()
         
-        # Возможность прервать операцию вручную
         if user_input_keys == "0" or user_input_keys.lower() == "exit":
             break
             
-        # Парсим ключи, введенные через запятую
         input_keys_list = [k.strip() for k in user_input_keys.split(",")]
         
         if len(input_keys_list) != len(cipher_array):
@@ -232,7 +276,6 @@ def main():
         decrypted_blocks_bytes = bytearray()
         collapse_triggered = False
         
-        # Поблочная дешифровка
         for idx, c_val in enumerate(cipher_array, 1):
             k_str = input_keys_list[idx - 1]
             p_bit = paddings_array[idx - 1] if k_str == keys_array[idx - 1] else 0
@@ -273,7 +316,7 @@ def main():
         print(LANG["time_op"].format(t=t_end - t_start))
         print(LANG["success_msg"])
         break
-
+        
     print(LANG["exit"])
 
 if __name__ == "__main__":
