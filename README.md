@@ -99,6 +99,7 @@ All project files are located in the root directory for maximum transparency, pr
 * 📐 [collatz_31.obj](collatz_31.obj) — 3D spatial trajectory of number 31 (106 steps, 5 full loops)
 * 🖼️ [collatz_tornado.png](collatz_tornado.png) — Attractor render visualization / asset
 * ⚙️ [simulator.py](simulator.py) — Python engine computing global retention coefficient and statistics (EN)
+- 📑 [BENCHMARK_1M_DIGITS_en.md](BENCHMARK_1M_DIGITS_en.md) - Report benchmark test 1 000 000 digits
 
 - 📑 [ADDENDUM_BLUE_TRAP_EN.md](./ADDENDUM_BLUE_TRAP_EN.md) — Theoretical Addendum: Proof of 2-adic memory and fractal division of the Blue Trap
 - ⚙️ [simulator_blue_trap_en.py](./simulator_blue_trap_en.py) — Autonomous verification script for quantum tornado loop quantization along the Y-axis depth (English version)
