@@ -66,3 +66,49 @@ The modulo-$3$ residue of the current odd state acts as an instantaneous phase d
 
 1. **State $x \equiv 2 \pmod 3$ (Ascent / Peak Phase):** the trajectory is actively climbing ($\nu = 1$, $\times 1.5$ growth) or standing at a local apex prior to collapse.
 2. **State $x \equiv 1 \pmod 3$ (Descent / Trough Phase):** the trajectory has undergone a multi-step relaxation drop ($\nu \ge 2$) and is cooling in a decay basin.
+
+---
+
+## 6. Staggered Decomposition of the $6k + 5$ Sequence ($12m + 11 \to 12m + 5$)
+
+The arithmetic progression of odd integers in residue class $2 \pmod 3$, given by $6k + 5$ ($5, 11, 17, 23, 29, 35, 41, 47 \dots$), splits modulo $12$ into two strictly alternating subclasses with opposite dynamical behavior:
+
+1. **Exit Branch ($12m + 5$: $5, 17, 29, 41, 53 \dots$):**
+   $$3(12m + 5) + 1 = 36m + 16 = 4(9m + 4) \implies \nu \ge 2$$
+   Every integer in this subclass becomes divisible by at least $4$ under $3x+1$ (super-even drop $\mathbf{E_{0a}}$) and immediately exits the ascent regime.
+2. **Retention Branch ($12m + 11$: $11, 23, 35, 47, 59 \dots$):**
+   $$3(12m + 11) + 1 = 36m + 34 = 2(18m + 17) \implies \nu = 1$$
+   Every integer in this subclass divides by $2$ strictly once (semi-even compression $\mathbf{E_{0b}}$) and maps to $18m + 17 = 6(3m + 2) + 5$, remaining inside the $6k + 5$ sequence with a $\times 1.5$ scaling factor.
+
+| Start ($12m + 11$) | Algebraic Form | Ascent Steps | Chain Within $6k + 5$ | Exit Point ($12m + 5$) | Post-Exit Collapse |
+| :--- | :---: | :---: | :--- | :---: | :--- |
+| **$95$** | $3 \cdot 2^5 - 1$ | **$4$** | $95 \to 143 \to 215 \to 323$ | **$485$** | $/16 \to 91$ ($1 \pmod 3$) |
+| **$191$** | $3 \cdot 2^6 - 1$ | **$5$** | $191 \to 287 \to 431 \to 647 \to 971$ | **$1457$** | $/4 \to 1093$ ($1 \pmod 3$) |
+| **$383$** | $3 \cdot 2^7 - 1$ | **$6$** | $383 \to 575 \to 863 \to 1295 \to 1943 \to 2915$ | **$4373$** | $/64 \to 205$ ($1 \pmod 3$) |
+| **$767$** | $3 \cdot 2^8 - 1$ | **$7$** | $767 \to 1151 \to 1727 \to 2591 \to 3887 \to 5831 \to 8747$ | **$13121$** | $/4 \to 9841$ ($1 \pmod 3$) |
+
+### 6.1. Recursive Sieve and Exact Ascent Corridor Formula
+
+Applying the $12m + 11$ retention condition iteratively halves the surviving subset at each step. The set of all natural numbers undergoing an ascent streak of **exact length $L$ steps** ($\nu = 1$) before collapsing on step $L+1$ is given by the closed-form progression:
+
+$$n_L(m) = 3 \cdot 2^{L+2} \cdot m + \left(3 \cdot 2^{L+1} - 1\right), \quad m \in \mathbb{N}_0$$
+
+| Ascent Length ($L$) | Exact Class Formula $n_L(m)$ | Density in $\mathbb{N}$ | Minimal Representative ($m=0$) | Leading Progression Terms |
+| :---: | :---: | :---: | :---: | :--- |
+| **$L = 0$** (immediate exit) | $12m + 5$ | $1/12$ ($8.33\%$) | **$5$** ($3 \cdot 2^1 - 1$) | $5, 17, 29, 41, 53 \dots$ |
+| **$L = 1$** ($1$ ascent step) | $24m + 11$ | $1/24$ ($4.17\%$) | **$11$** ($3 \cdot 2^2 - 1$) | $11, 35, 59, 83, 107 \dots$ |
+| **$L = 2$** ($2$ ascent steps) | $48m + 23$ | $1/48$ ($2.08\%$) | **$23$** ($3 \cdot 2^3 - 1$) | $23, 71, 119, 167, 215 \dots$ |
+| **$L = 3$** ($3$ ascent steps) | $96m + 47$ | $1/96$ ($1.04\%$) | **$47$** ($3 \cdot 2^4 - 1$) | $47, 143, 239, 335, 431 \dots$ |
+| **$L = 4$** ($4$ ascent steps) | $192m + 95$ | $1/192$ ($0.52\%$) | **$95$** ($3 \cdot 2^5 - 1$) | $95, 287, 479, 671, 863 \dots$ |
+
+Summing the asymptotic densities of all finite ascent corridors recovers the exact measure of class $6k + 5$:
+
+$$\sum_{L=0}^{\infty} \frac{1}{3 \cdot 2^{L+2}} = \frac{1}{12} + \frac{1}{24} + \frac{1}{48} + \dots = \frac{1}{6}$$
+
+Hence, finite ascent streaks $L \in [0, \infty)$ exhaust the entire measure of residue class $2 \pmod 3$, leaving zero asymptotic density for unbounded monotonic growth.
+
+### 6.2. Bridge Between the 2-Adic and 3-Adic Models
+
+The minimal corridor representative $n_L(0) = 3 \cdot 2^{L+1} - 1$ establishes a direct algebraic identity between the 3-adic recursive sieve and the 2-adic "bit fuel" mechanism (Addendum VII):
+* In binary, $3 \cdot 2^{L+1} - 1 = 2^{L+2} + 2^{L+1} - 1$ takes the form $\mathtt{10}\underbrace{\mathtt{111\dots111}}_{L+1}_2$—a leading $\mathtt{10}$ prefix followed by exactly $L+1$ trailing ones.
+* Adding multiples of the progression modulus $3 \cdot 2^{L+2} \cdot m$ modifies only bits strictly above position $L+2$, leaving the trailing block of $L+1$ consecutive ones and its separating zero untouched.
