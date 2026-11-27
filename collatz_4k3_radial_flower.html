@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Радиальный граф слияния ряда 4k + 3 (Цветок Коллатца)</title>
+  <style>
+    :root {
+      --bg: #05080f;
+      --panel: #0b1120;
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --relay: #f43f5e;
+      --drop: #38bdf8;
+      --source: #fbbf24;
+      --emerald: #10b981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    h1 { font-size: 1.08rem; font-weight: 600; }
+    .subtitle { font-size: 0.82rem; color: var(--muted); margin-top: 3px; }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    select, button {
+      background: #0f172a;
+      color: var(--text);
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    button:hover, select:hover { border-color: #38bdf8; }
+    button.active { background: #1d4ed8; border-color: #3b82f6; }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 10px 24px;
+      background: rgba(11, 17, 32, 0.75);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+
+    .leg-item { display: flex; align-items: center; gap: 7px; }
+    .swatch { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+
+    .workspace {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow: auto;
+    }
+
+    svg {
+      background: radial-gradient(circle at 50% 50%, #0d162c 0%, #05080f 75%);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+      max-width: 100%;
+      height: auto;
+    }
+
+    .node-dot {
+      cursor: pointer;
+      transition: opacity 0.2s, r 0.15s;
+    }
+
+    .edge-arc {
+      fill: none;
+      transition: opacity 0.2s, stroke-width 0.2s;
+      pointer-events: none;
+    }
+
+    #inspector {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background: rgba(11, 17, 32, 0.94);
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      max-width: 340px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.65);
+      backdrop-filter: blur(6px);
+    }
+
+    .mono { font-family: monospace; font-weight: 600; color: #38bdf8; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Радиальная розетка слияния ряда 4k + 3 («Цветок Коллатца»)</h1>
+    <div class="subtitle">Концентрическая проекция: внешнее кольцо (старт 4k+3) → среднее кольцо (3n+1)/2 → внутреннее кольцо (шаг 2)</div>
+  </div>
+  <div class="controls">
+    <label for="ringCount" style="font-size:0.84rem; color:var(--muted);">Узлов на кольце:</label>
+    <select id="ringCount">
+      <option value="24">24 узла (3 .. 95)</option>
+      <option value="48" selected>48 узлов (3 .. 191)</option>
+      <option value="72">72 узла (3 .. 287)</option>
+      <option value="96">96 узлов (3 .. 383)</option>
+      <option value="120">120 узлов (3 .. 479)</option>
+    </select>
+    <button id="btnTogglePetals" class="active">Лепестки эстафеты</button>
+    <button id="btnHighlight27">Цепочка 27 → 31 → 47</button>
+    <button id="btnClear">Сброс</button>
+  </div>
+</header>
+
+<div class="legend">
+  <div class="leg-item"><span class="swatch" style="background: var(--source);"></span> <b>12k + 3</b> — Чистый исток (внешнее кольцо)</div>
+  <div class="leg-item"><span class="swatch" style="background: var(--relay);"></span> <b>8k + 7 → 4k + 3</b> — Лепесток эстафеты (возврат на внешнее кольцо)</div>
+  <div class="leg-item"><span class="swatch" style="background: var(--drop);"></span> <b>8k + 3 → 4m + 1</b> — Уход в безопасную ветку (среднее кольцо)</div>
+  <div class="leg-item"><span class="swatch" style="background: var(--emerald);"></span> Шаг 2: деление на 2^v (к центру)</div>
+</div>
+
+<div class="workspace">
+  <svg id="radialSvg" width="920" height="920" viewBox="0 0 920 920"></svg>
+</div>
+
+<div id="inspector">
+  <div style="color:var(--muted); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.5px;">Инспектор радиального узла</div>
+  <div id="insp-body" style="margin-top:4px;">Наведите курсор на любой узел внешнего кольца, чтобы увидеть его лепесток и сдвиг к центру.</div>
+</div>
+
+<script>
+  const svg = document.getElementById('radialSvg');
+  const ringCountSelect = document.getElementById('ringCount');
+  const inspBody = document.getElementById('insp-body');
+  const btnTogglePetals = document.getElementById('btnTogglePetals');
+
+  let showPetals = true;
+
+  function nextOdd(n) {
+    let val = 3 * n + 1;
+    while ((val & 1) === 0) val >>= 1;
+    return val;
+  }
+
+  function polarToCartesian(cx, cy, r, angleRad) {
+    return {
+      x: cx + r * Math.cos(angleRad),
+      y: cy + r * Math.sin(angleRad)
+    };
+  }
+
+  function createSvgEl(tag, attrs) {
+    const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      el.setAttribute(k, v);
+    }
+    return el;
+  }
+
+  function renderRadial(count) {
+    svg.innerHTML = '';
+    const cx = 460;
+    const cy = 460;
+    const rOuter = 385; // Кольцо 0: старт 4k+3
+    const rMid = 265;   // Кольцо 1: (3n+1)/2
+    const rInner = 145; // Кольцо 2: шаг 2
+    const rCore = 42;   // Центр: аттрактор 1
+
+    // Направляющие окружности
+    [rOuter, rMid, rInner, rCore].forEach((r, idx) => {
+      const circle = createSvgEl('circle', {
+        cx, cy, r,
+        fill: 'none',
+        stroke: idx === 3 ? 'rgba(251, 191, 36, 0.35)' : 'rgba(51, 65, 85, 0.45)',
+        'stroke-width': idx === 3 ? '1.5' : '1',
+        'stroke-dasharray': idx === 3 ? 'none' : '3 5'
+      });
+      svg.appendChild(circle);
+    });
+
+    // Подпись центра (Аттрактор 1)
+    const coreTxt = createSvgEl('text', {
+      x: cx, y: cy + 5,
+      fill: '#fbbf24',
+      'font-size': '14',
+      'font-family': 'monospace',
+      'font-weight': '700',
+      'text-anchor': 'middle'
+    });
+    coreTxt.textContent = '1';
+    svg.appendChild(coreTxt);
+
+    // Генерация узлов
+    const nodes = [];
+    const startSet = new Set();
+    for (let i = 0; i < count; i++) {
+      startSet.add(3 + 4 * i);
+    }
+
+    const hasIncoming = new Set();
+    for (let i = 0; i < count; i++) {
+      const n = 3 + 4 * i;
+      const s1 = (3 * n + 1) / 2;
+      if (startSet.has(s1)) hasIncoming.add(s1);
+    }
+
+    for (let i = 0; i < count; i++) {
+      const n = 3 + 4 * i;
+      const s1 = (3 * n + 1) / 2;
+      const s2 = nextOdd(s1);
+      const angle = -Math.PI / 2 + (2 * Math.PI * i) / count;
+      nodes.push({
+        index: i,
+        n,
+        s1,
+        s2,
+        angle,
+        isRelay: (n % 8 === 7),
+        isPureSource: !hasIncoming.has(n)
+      });
+    }
+
+    const outerPosMap = new Map();
+    nodes.forEach(nd => {
+      outerPosMap.set(nd.n, polarToCartesian(cx, cy, rOuter, nd.angle));
+    });
+
+    const edgesGroup = createSvgEl('g', { id: 'edges-layer' });
+    const nodesGroup = createSvgEl('g', { id: 'nodes-layer' });
+    svg.appendChild(edgesGroup);
+    svg.appendChild(nodesGroup);
+
+    nodes.forEach(nd => {
+      const p0 = polarToCartesian(cx, cy, rOuter, nd.angle);
+      const p1 = polarToCartesian(cx, cy, rMid, nd.angle);
+      const p2 = polarToCartesian(cx, cy, rInner, nd.angle);
+
+      // Радиальный луч: внешнее кольцо -> среднее кольцо
+      const ray1Color = nd.isRelay ? '#f43f5e' : '#38bdf8';
+      const ray1 = createSvgEl('line', {
+        x1: p0.x, y1: p0.y,
+        x2: p1.x, y2: p1.y,
+        stroke: ray1Color,
+        'stroke-width': '1.4',
+        opacity: '0.45',
+        class: `edge-arc chain-${nd.n}`
+      });
+      edgesGroup.appendChild(ray1);
+
+      // Лепесток эстафеты: если s1 попадает обратно на внешнее кольцо
+      if (showPetals && outerPosMap.has(nd.s1)) {
+        const pTarget = outerPosMap.get(nd.s1);
+        const midAngle = (nd.angle + (nodes.find(x => x.n === nd.s1).angle)) / 2;
+        // Контрольная точка смещена наружу/внутрь для красивого лепестка
+        const ctrlRadius = (rOuter + rMid) * 0.52;
+        const ctrlPt = polarToCartesian(cx, cy, ctrlRadius, midAngle);
+
+        const petal = createSvgEl('path', {
+          d: `M ${p1.x} ${p1.y} Q ${ctrlPt.x} ${ctrlPt.y}, ${pTarget.x} ${pTarget.y}`,
+          stroke: '#f43f5e',
+          'stroke-width': '1.5',
+          opacity: '0.42',
+          class: `edge-arc petal-arc chain-${nd.n}`
+        });
+        edgesGroup.appendChild(petal);
+      }
+
+      // Радиальный луч: среднее кольцо -> внутреннее кольцо
+      const ray2Color = nd.s2 > nd.s1 ? '#f59e0b' : '#10b981';
+      const ray2 = createSvgEl('line', {
+        x1: p1.x, y1: p1.y,
+        x2: p2.x, y2: p2.y,
+        stroke: ray2Color,
+        'stroke-width': '1.3',
+        opacity: '0.4',
+        class: `edge-arc chain-${nd.n}`
+      });
+      edgesGroup.appendChild(ray2);
+
+      // Точка на внешнем кольце
+      const color0 = nd.isPureSource ? '#fbbf24' : (nd.isRelay ? '#f43f5e' : '#38bdf8');
+      const dot0 = createSvgEl('circle', {
+        cx: p0.x, cy: p0.y,
+        r: count <= 48 ? 5 : 3.6,
+        fill: color0,
+        class: `node-dot chain-${nd.n}`
+      });
+      dot0.addEventListener('mouseenter', () => highlightChain([nd.n], nd));
+      nodesGroup.appendChild(dot0);
+
+      // Подпись числа по окружности
+      if (count <= 72) {
+        const labelPt = polarToCartesian(cx, cy, rOuter + 20, nd.angle);
+        const deg = (nd.angle * 180) / Math.PI;
+        const flip = deg > 90 || deg < -90;
+        const rot = flip ? deg + 180 : deg;
+
+        const lbl = createSvgEl('text', {
+          x: labelPt.x,
+          y: labelPt.y + 3,
+          fill: color0,
+          'font-size': count <= 48 ? '11' : '9.5',
+          'font-family': 'monospace',
+          'text-anchor': flip ? 'end' : 'start',
+          transform: `rotate(${rot}, ${labelPt.x}, ${labelPt.y})`,
+          class: `node-dot chain-${nd.n}`
+        });
+        lbl.textContent = nd.n;
+        lbl.addEventListener('mouseenter', () => highlightChain([nd.n], nd));
+        nodesGroup.appendChild(lbl);
+      }
+
+      // Точки на среднем и внутреннем кольцах
+      const dot1 = createSvgEl('circle', {
+        cx: p1.x, cy: p1.y,
+        r: count <= 48 ? 3.2 : 2.2,
+        fill: ray1Color,
+        opacity: '0.85',
+        class: `node-dot chain-${nd.n}`
+      });
+      nodesGroup.appendChild(dot1);
+
+      const dot2 = createSvgEl('circle', {
+        cx: p2.x, cy: p2.y,
+        r: count <= 48 ? 3 : 2,
+        fill: ray2Color,
+        opacity: '0.85',
+        class: `node-dot chain-${nd.n}`
+      });
+      nodesGroup.appendChild(dot2);
+    });
+  }
+
+  function highlightChain(nList, infoNode) {
+    document.querySelectorAll('.edge-arc').forEach(el => {
+      el.style.opacity = '0.07';
+      el.style.strokeWidth = '1';
+    });
+    document.querySelectorAll('.node-dot').forEach(el => {
+      el.style.opacity = '0.22';
+    });
+
+    nList.forEach(num => {
+      document.querySelectorAll(`.chain-${num}`).forEach(el => {
+        el.style.opacity = '1';
+        if (el.classList.contains('edge-arc')) {
+          el.style.strokeWidth = '2.8';
+        }
+      });
+    });
+
+    if (infoNode) {
+      const typeDesc = infoNode.isRelay
+        ? '<span style="color:#f43f5e;">8k+7 (Лепесток возврата в 4k+3)</span>'
+        : '<span style="color:#38bdf8;">8k+3 (Сброс в ветку 4m+1)</span>';
+      const srcNote = infoNode.isPureSource
+        ? '<br><span style="color:#fbbf24;">★ Чистый исток (12k+3):</span> нет входящих лепестков.'
+        : '';
+
+      inspBody.innerHTML = `
+        Узел: <span class="mono">${infoNode.n}</span> &rarr; Среднее кольцо: <span class="mono">${infoNode.s1}</span> &rarr; Внутреннее: <span class="mono">${infoNode.s2}</span><br>
+        Тип: ${typeDesc}${srcNote}
+      `;
+    }
+  }
+
+  function resetHighlight() {
+    document.querySelectorAll('.edge-arc').forEach(el => {
+      el.style.opacity = el.classList.contains('petal-arc') ? '0.42' : '0.45';
+      el.style.strokeWidth = '1.4';
+    });
+    document.querySelectorAll('.node-dot').forEach(el => {
+      el.style.opacity = '1';
+    });
+    inspBody.innerHTML = 'Наведите курсор на любой узел внешнего кольца, чтобы увидеть его лепесток и сдвиг к центру.';
+  }
+
+  ringCountSelect.addEventListener('change', () => renderRadial(parseInt(ringCountSelect.value, 10)));
+
+  btnTogglePetals.addEventListener('click', () => {
+    showPetals = !showPetals;
+    btnTogglePetals.classList.toggle('active', showPetals);
+    renderRadial(parseInt(ringCountSelect.value, 10));
+  });
+
+  document.getElementById('btnHighlight27').addEventListener('click', () => {
+    highlightChain([27, 31, 47, 71], null);
+    inspBody.innerHTML = `
+      <span style="color:#fbbf24; font-weight:600;">Радиальная эстафета 27:</span><br>
+      <span class="mono">27</span> (исток) &rarr; <span class="mono">41</span> &rarr; прыжок в <span class="mono">31</span> &rarr; лепестки <span class="mono">47 &rarr; 71 &rarr; 107</span>!
+    `;
+  });
+
+  document.getElementById('btnClear').addEventListener('click', resetHighlight);
+
+  renderRadial(48);
+</script>
+</body>
+</html>

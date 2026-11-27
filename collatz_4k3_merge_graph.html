@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Граф слияния ряда 4k+3 по оператору (3n+1)/2</title>
+  <style>
+    :root {
+      --bg: #05080f;
+      --panel: #0b1120;
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --relay: #f43f5e;    /* 8k+7: эстафета внутри 4k+3 */
+      --drop: #38bdf8;     /* 8k+3: уход в 4m+1 */
+      --source: #fbbf24;   /* 12k+3: чистый исток (нет входящих) */
+      --emerald: #10b981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    h1 { font-size: 1.08rem; font-weight: 600; }
+    .subtitle { font-size: 0.82rem; color: var(--muted); margin-top: 3px; }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    select, button {
+      background: #0f172a;
+      color: var(--text);
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    button:hover, select:hover { border-color: #38bdf8; }
+    button.active { background: #1d4ed8; border-color: #3b82f6; }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 10px 24px;
+      background: rgba(11, 17, 32, 0.75);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+
+    .leg-item { display: flex; align-items: center; gap: 7px; }
+    .swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+    .workspace {
+      display: flex;
+      flex: 1;
+      overflow-x: auto;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    svg {
+      background: radial-gradient(circle at 50% 20%, #0b1326 0%, #05080f 85%);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .node-box {
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .edge-path {
+      fill: none;
+      transition: opacity 0.2s, stroke-width 0.2s;
+    }
+
+    #inspector {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background: rgba(11, 17, 32, 0.94);
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      max-width: 340px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.65);
+      backdrop-filter: blur(6px);
+    }
+
+    .mono { font-family: monospace; font-weight: 600; color: #38bdf8; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Граф переходов и слияния ряда 4k + 3 по оператору (3n + 1) / 2</h1>
+    <div class="subtitle">Шахматная перестановка: половина чисел (8k+7) вливается в соседние стартовые узлы, половина (8k+3) уходит в 4m+1</div>
+  </div>
+  <div class="controls">
+    <label for="countSelect" style="font-size:0.84rem; color:var(--muted);">Число узлов:</label>
+    <select id="countSelect">
+      <option value="20" selected>Первые 20 чисел (3 .. 79)</option>
+      <option value="32">Первые 32 числа (3 .. 127)</option>
+      <option value="45">Первые 45 чисел (3 .. 179)</option>
+    </select>
+    <button id="btnHighlight27">Цепочка 27 → 31 → 47</button>
+    <button id="btnClear">Сброс выделения</button>
+  </div>
+</header>
+
+<div class="legend">
+  <div class="leg-item"><span class="swatch" style="background: var(--source);"></span> <b>12k + 3</b> — «Чистый исток» (нет входящих стрелок с шага 1)</div>
+  <div class="leg-item"><span class="swatch" style="background: var(--relay);"></span> <b>8k + 7 → 4k + 3</b> — Прямая эстафета подъёма внутрь ряда</div>
+  <div class="leg-item"><span class="swatch" style="background: var(--drop);"></span> <b>8k + 3 → 4m + 1</b> — Уход в «безопасную» ветку сброса</div>
+  <div class="leg-item"><span class="swatch" style="background: var(--emerald);"></span> Шаг 2: деление на 2^v после 3n+1</div>
+</div>
+
+<div class="workspace">
+  <svg id="graphSvg" width="1160" height="920"></svg>
+</div>
+
+<div id="inspector">
+  <div style="color:var(--muted); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.5px;">Инспектор траектории</div>
+  <div id="insp-body" style="margin-top:4px;">Наведите курсор на любой узел слева, чтобы проследить его слияние.</div>
+</div>
+
+<script>
+  const svg = document.getElementById('graphSvg');
+  const countSelect = document.getElementById('countSelect');
+  const inspBody = document.getElementById('insp-body');
+
+  function nextOdd(n) {
+    let val = 3 * n + 1;
+    while ((val & 1) === 0) val >>= 1;
+    return val;
+  }
+
+  function renderGraph(count) {
+    svg.innerHTML = '';
+    const rowH = 38;
+    const topPad = 65;
+    const height = topPad + count * rowH + 40;
+    svg.setAttribute('height', height);
+
+    const col0X = 130;
+    const col1X = 500;
+    const col2X = 880;
+
+    const headers = [
+      { x: col0X, text: 'СТАРТ: Ряд 4k + 3 (шаг +4)' },
+      { x: col1X, text: 'ШАГ 1: (3n + 1) / 2 (шаг +6)' },
+      { x: col2X, text: 'ШАГ 2: Следующее нечётное' }
+    ];
+
+    headers.forEach(h => {
+      const t = createSvgEl('text', {
+        x: h.x, y: 34,
+        fill: '#94a3b8',
+        'font-size': '13',
+        'font-weight': '600',
+        'text-anchor': 'middle'
+      });
+      t.textContent = h.text;
+      svg.appendChild(t);
+    });
+
+    const nodes = [];
+    const startSet = new Set();
+    for (let i = 0; i < count; i++) {
+      const n = 3 + 4 * i;
+      startSet.add(n);
+    }
+
+    const hasIncoming = new Set();
+    for (let i = 0; i < count; i++) {
+      const n = 3 + 4 * i;
+      const s1 = (3 * n + 1) / 2;
+      if (startSet.has(s1)) hasIncoming.add(s1);
+    }
+
+    for (let i = 0; i < count; i++) {
+      const n = 3 + 4 * i;
+      const s1 = (3 * n + 1) / 2;
+      const s2 = nextOdd(s1);
+      const isRelay = (n % 8 === 7);
+      const isPureSource = !hasIncoming.has(n);
+      nodes.push({ index: i, n, s1, s2, isRelay, isPureSource });
+    }
+
+    const posMapCol0 = new Map();
+    nodes.forEach(nd => {
+      posMapCol0.set(nd.n, { x: col0X, y: topPad + nd.index * rowH });
+    });
+
+    const edgesGroup = createSvgEl('g', { id: 'edges-layer' });
+    const nodesGroup = createSvgEl('g', { id: 'nodes-layer' });
+    svg.appendChild(edgesGroup);
+    svg.appendChild(nodesGroup);
+
+    nodes.forEach(nd => {
+      const y0 = topPad + nd.index * rowH;
+      const y1 = y0;
+      const y2 = y0;
+
+      const edge1Color = nd.isRelay ? '#f43f5e' : '#38bdf8';
+      const p1 = createBezier(col0X + 46, y0, col1X - 46, y1, edge1Color, nd.n, 'edge1');
+      edgesGroup.appendChild(p1);
+
+      if (posMapCol0.has(nd.s1)) {
+        const targetPos = posMapCol0.get(nd.s1);
+        const relayLoop = createSvgEl('path', {
+          d: `M ${col1X - 46} ${y1} C ${col1X - 180} ${y1}, ${col0X + 180} ${targetPos.y}, ${col0X + 46} ${targetPos.y}`,
+          stroke: '#f43f5e',
+          'stroke-width': '1.4',
+          'stroke-dasharray': '4 4',
+          opacity: '0.32',
+          class: `edge-path chain-${nd.n}`
+        });
+        edgesGroup.appendChild(relayLoop);
+      }
+
+      const edge2Color = nd.s2 > nd.s1 ? '#f59e0b' : '#10b981';
+      const p2 = createBezier(col1X + 46, y1, col2X - 46, y2, edge2Color, nd.n, 'edge2');
+      edgesGroup.appendChild(p2);
+
+      const stroke0 = nd.isPureSource ? '#fbbf24' : (nd.isRelay ? '#f43f5e' : '#38bdf8');
+      const g0 = drawNode(col0X, y0, nd.n, stroke0, nd.isPureSource ? 'исток' : '', nd);
+      nodesGroup.appendChild(g0);
+
+      const stroke1 = nd.isRelay ? '#f43f5e' : '#38bdf8';
+      const tag1 = nd.isRelay ? '∈ 4k+3' : '4m+1';
+      const g1 = drawNode(col1X, y1, nd.s1, stroke1, tag1, nd);
+      nodesGroup.appendChild(g1);
+
+      const g2 = drawNode(col2X, y2, nd.s2, edge2Color, nd.s2 === 1 ? 'финиш' : '', nd);
+      nodesGroup.appendChild(g2);
+    });
+  }
+
+  function createBezier(x1, y1, x2, y2, color, chainId, cls) {
+    const midX = (x1 + x2) / 2;
+    return createSvgEl('path', {
+      d: `M ${x1} ${y1} C ${midX} ${y1}, ${midX} ${y2}, ${x2} ${y2}`,
+      stroke: color,
+      'stroke-width': '1.8',
+      opacity: '0.55',
+      class: `edge-path ${cls} chain-${chainId}`
+    });
+  }
+
+  function drawNode(cx, cy, label, strokeColor, badge, nodeData) {
+    const g = createSvgEl('g', {
+      class: `node-box chain-${nodeData.n}`,
+      'data-n': nodeData.n
+    });
+
+    const rect = createSvgEl('rect', {
+      x: cx - 44, y: cy - 13,
+      width: 88, height: 26,
+      rx: 6,
+      fill: '#0f172a',
+      stroke: strokeColor,
+      'stroke-width': '1.6'
+    });
+
+    const txt = createSvgEl('text', {
+      x: cx, y: cy + 4,
+      fill: '#f8fafc',
+      'font-size': '12.5',
+      'font-family': 'monospace',
+      'font-weight': '600',
+      'text-anchor': 'middle'
+    });
+    txt.textContent = label;
+
+    g.appendChild(rect);
+    g.appendChild(txt);
+
+    if (badge) {
+      const bTxt = createSvgEl('text', {
+        x: cx + 52, y: cy + 4,
+        fill: strokeColor,
+        'font-size': '10.5',
+        opacity: '0.85'
+      });
+      bTxt.textContent = badge;
+      g.appendChild(bTxt);
+    }
+
+    g.addEventListener('mouseenter', () => highlightChain([nodeData.n], nodeData));
+    return g;
+  }
+
+  function highlightChain(nList, infoNode) {
+    document.querySelectorAll('.edge-path').forEach(el => {
+      el.style.opacity = '0.08';
+      el.style.strokeWidth = '1.2';
+    });
+    document.querySelectorAll('.node-box').forEach(el => {
+      el.style.opacity = '0.25';
+    });
+
+    nList.forEach(num => {
+      document.querySelectorAll(`.chain-${num}`).forEach(el => {
+        el.style.opacity = '1';
+        if (el.classList.contains('edge-path')) {
+          el.style.strokeWidth = '3';
+        }
+      });
+    });
+
+    if (infoNode) {
+      const typeDesc = infoNode.isRelay
+        ? '<span style="color:#f43f5e;">8k+7 (Эстафета внутри 4k+3)</span>'
+        : '<span style="color:#38bdf8;">8k+3 (Уход в безопасный ряд 4m+1)</span>';
+      const srcNote = infoNode.isPureSource
+        ? '<br><span style="color:#fbbf24;">★ Чистый исток (12k+3):</span> нет входящих стрелок с шага 1.'
+        : '';
+
+      inspBody.innerHTML = `
+        Старт: <span class="mono">${infoNode.n}</span> &rarr; Шаг 1: <span class="mono">${infoNode.s1}</span> &rarr; Шаг 2: <span class="mono">${infoNode.s2}</span><br>
+        Класс: ${typeDesc}${srcNote}
+      `;
+    }
+  }
+
+  function resetHighlight() {
+    document.querySelectorAll('.edge-path').forEach(el => {
+      el.style.opacity = el.getAttribute('stroke-dasharray') ? '0.32' : '0.55';
+      el.style.strokeWidth = el.getAttribute('stroke-dasharray') ? '1.4' : '1.8';
+    });
+    document.querySelectorAll('.node-box').forEach(el => {
+      el.style.opacity = '1';
+    });
+    inspBody.innerHTML = 'Наведите курсор на любой узел слева, чтобы проследить его слияние.';
+  }
+
+  function createSvgEl(tag, attrs) {
+    const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+    return el;
+  }
+
+  countSelect.addEventListener('change', () => renderGraph(parseInt(countSelect.value, 10)));
+  document.getElementById('btnClear').addEventListener('click', resetHighlight);
+  document.getElementById('btnHighlight27').addEventListener('click', () => {
+    highlightChain([27, 31, 47, 71], null);
+    inspBody.innerHTML = `
+      <span style="color:#fbbf24; font-weight:600;">Знаменитая эстафета 27:</span><br>
+      <span class="mono">27</span> (исток) &rarr; <span class="mono">41</span> &rarr; падает в <span class="mono">31</span> (Мерсенн) &rarr; <span class="mono">47</span> &rarr; <span class="mono">71</span> &rarr; взлёт до 9232!
+    `;
+  });
+
+  renderGraph(20);
+</script>
+</body>
+</html>
