@@ -154,6 +154,13 @@ Computational verification confirms a strict frequency distribution invariant (t
   * Formulated the **2-adic Mersenne ascent limit ($2^m - 1$)**: continuous upward climbs are strictly bounded by trailing consecutive ones ("bit fuel") and deterministically terminate at step $m$ upon collapsing into the super-even state $\mathbf{E_{0a}}$.
 
 [nd_layer_spectrum.py](nd_layer_spectrum.py)
+
+### Addendum VIII: The Mod-3 Multiplicity Filter, Reverse-Tree Valve, and Phase Altitude Indicator
+* **Files:** [`ADDENDUM_8_MOD3_INVARIANT_en.md`](./ADDENDUM_8_MOD3_INVARIANT_en.md) | [`ADDENDUM_8_MOD3_INVARIANT_ru.md`](./ADDENDUM_8_MOD3_INVARIANT_ru.md)
+* **Key Results:**
+  * Proved the **mod-3 exclusion invariant** ($x_k \not\equiv 0 \pmod 3$ for all $k \ge 1$) and classified inverse-tree fractional tails under $\frac{N-1}{3}$ (`.0` active valve, `.33333...` alternating lock, `.66666...` permanent dead stem).
+  * Established the **100% Local Peak Law in $2 \pmod 3$**: downward reversals cannot occur in $3m + 1$, providing a scale-independent two-phase altitude detector.
+
 ---
 
 ### 🪞 Addendum #9: Sign Calibration and Applied Cryptography (v3.0.0)
