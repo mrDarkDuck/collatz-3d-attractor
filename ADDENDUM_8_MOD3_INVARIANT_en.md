@@ -110,5 +110,6 @@ Hence, finite ascent streaks $L \in [0, \infty)$ exhaust the entire measure of r
 ### 6.2. Bridge Between the 2-Adic and 3-Adic Models
 
 The minimal corridor representative $n_L(0) = 3 \cdot 2^{L+1} - 1$ establishes a direct algebraic identity between the 3-adic recursive sieve and the 2-adic "bit fuel" mechanism (Addendum VII):
-* In binary, $3 \cdot 2^{L+1} - 1 = 2^{L+2} + 2^{L+1} - 1$ takes the form $\mathtt{10}\underbrace{\mathtt{111\dots111}}_{L+1}_2$—a leading $\mathtt{10}$ prefix followed by exactly $L+1$ trailing ones.
+* * In binary, $3 \cdot 2^{L+1} - 1 = 2^{L+2} + 2^{L+1} - 1$ takes the form $\mathtt{10}{\underbrace{\mathtt{111\dots111}}_{L+1}}_2$—a leading $\mathtt{10}$ prefix followed by exactly $L+1$ trailing ones.
+
 * Adding multiples of the progression modulus $3 \cdot 2^{L+2} \cdot m$ modifies only bits strictly above position $L+2$, leaving the trailing block of $L+1$ consecutive ones and its separating zero untouched.
