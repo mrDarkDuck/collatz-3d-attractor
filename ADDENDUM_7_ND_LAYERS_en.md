@@ -70,4 +70,25 @@ $$\mathbb{E}[\Delta k_{\text{cycle}}] = (+1)\cdot\frac{1}{3} + (0)\cdot\frac{1}{
 The $N_d$-layer model demonstrates that the global Collatz system is equivalent to a **one-dimensional random walk on a scale-invariant ladder with a constant negative drift and an absorbing barrier at layer $k=0$**.
 
 * **Established Result:** By virtue of $N_d$-layer scale invariance, divergence to infinity is ruled out with measure $1$ ($100\%$ of stochastic trajectories) across any arbitrarily large region of the number line.
-* **Open Frontier:** Completing a strictly deterministic proof requires ruling out the existence of anomalous deterministic subsequences (analogs of Mersenne numbers $2^m - 1$ over finite spans) capable of trapping the phase point indefinitely in the right-hand spectral branch ($\Delta k = +1$) without ever entering the deep-drop regime ($\Delta k \le -2$).
+* **Open Frontier:** Completing a strictly deterministic proof requires ruling out the existence of anomalous deterministic subsequences capable of trapping the phase point indefinitely in the right-hand spectral branch ($\Delta k \in \{0, +1\}$) without ever entering the deep-drop regime ($\Delta k \le -2$).
+
+### 4.1. The Mersenne Ascent Limit ($2^m - 1$) and Conservation of Bit Fuel
+
+Analysis of extreme ascents reveals that the longest continuous growth streak occurs for Mersenne numbers $x_0 = 2^m - 1$, whose binary representation consists of $m$ consecutive ones ($\underbrace{111\dots111}_{m}_2$).
+
+1. **Bit-Burning Mechanics:** At each compressed cycle $\frac{3x + 1}{2}$, the value scales by $1.5$ while a single trailing one is "burned" (converted into a zero and shifted out). After $m - 1$ cycles, the trajectory reaches the exact algebraic state:
+   $$x_{m-1} = 3^{m-1} \cdot 2 - 1$$
+2. **Inevitable Collapse into the Super-Even Regime:** On the $m$-th step, the final trailing one from the initial block is exhausted, forcing the number into the **super-even class ($\mathbf{E_{0a}}$)** and terminating the ascent with a deep layer drop ($\Delta k_{\text{break}} \le -1$).
+3. **Universal Ascent Rhythm:** Throughout all $m - 1$ growth cycles, the system strictly obeys the $N_d$-layer spectral bounds, alternating deterministically between the two upper branches ($\Delta k = +1$ and $\Delta k = 0$):
+   $$[+1, +1, 0, +1, 0, +1, +1, 0, +1, 0 \dots]$$
+   The asymptotic ascent velocity across the $N_d$-grid is $\log_2(3) - 1 \approx 0.58496$ layers per cycle.
+
+| Initial Number ($2^m - 1$) | Starting $N_d$-Layer ($k_{\text{start}}$) | Growth Streak ($m-1$ cycles) | Peak $N_d$-Layer ($k_{\text{peak}}$) | Total Layer Gain ($\Delta k_{\text{total}}$) | First Break Step ($\Delta k_{\text{break}}$) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **$2^5 - 1$** ($31$) | $4$ | **$4$ cycles** | $7$ | $+3$ layers | $-1$ layer |
+| **$2^{10} - 1$** ($1023$) | $9$ | **$9$ cycles** | $15$ | $+6$ layers | $-3$ layers |
+| **$2^{20} - 1$** ($\approx 10^6$) | $19$ | **$19$ cycles** | $31$ | $+12$ layers | $-4$ layers |
+| **$2^{50} - 1$** ($\approx 10^{15}$) | $49$ | **$49$ cycles** | $78$ | $+29$ layers | $-2$ layers |
+| **$2^{100} - 1$** ($\approx 10^{30}$) | $99$ | **$99$ cycles** | $157$ | $+58$ layers | $-3$ layers |
+
+**Corollary (2-Adic Limit):** Sustaining a continuous ascent across $L$ compressed cycles requires a trailing binary block of $L + 1$ consecutive ones. Because every natural number has finite bit length, this "bit fuel" is strictly finite, guaranteeing that any upward climb along the $N_d$-layer ladder terminates in a finite number of steps.
