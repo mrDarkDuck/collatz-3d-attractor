@@ -144,6 +144,15 @@ Inverse-tree trajectory analysis yields the **Theorem of Microstate Phase Migrat
 
 Computational verification confirms a strict frequency distribution invariant (the ergodic balance of the Haar measure): every single number spends exactly **1/3 ($$33.3\%$$)** of its trajectory time in each state. This continuous, deterministic mixing completely prevents the formation of isolated, non-trivial loops.
 
+
+### Addendum VII: Phase-Space Quantization ($N_d$-Layers) and the Transition Spectrum
+* **Files:** [`ADDENDUM_7_ND_LAYERS_en.md`](./ADDENDUM_7_ND_LAYERS_en.md) | [`ADDENDUM_7_ND_LAYERS_ru.md`](./ADDENDUM_7_ND_LAYERS_ru.md)
+* **Core Concept:** Projection of natural numbers onto a ternary state algebra ($\mathbf{O}$, $\mathbf{E_{0b}}$, $\mathbf{E_{0a}}$) and normalization of dyadic intervals $[2^k, 2^{k+1})$ into a uniform scale-invariant phase-space quantum $N_d$.
+* **Key Results:**
+  * Established the **scale invariance** of internal state densities ($50\% / 25\% / 25\%$) within every $N_d$-layer regardless of numerical magnitude.
+  * Derived the **discrete inter-layer transition spectrum** ($\Delta k$) for compressed $\mathbf{O} \to \mathbf{O}'$ cycles, bounded by a hard upper threshold of $\Delta k_{\max} = +1$ ($1/3$ ascent, $1/3$ layer retention, $1/3$ exponential deep-drop tail) with a constant negative drift of $\mathbb{E}[\Delta k] = \log_2(3) - 2 \approx -0.41504$ layers per cycle.
+  * Formulated the **2-adic Mersenne ascent limit ($2^m - 1$)**: continuous upward climbs are strictly bounded by trailing consecutive ones ("bit fuel") and deterministically terminate at step $m$ upon collapsing into the super-even state $\mathbf{E_{0a}}$.
+
 ---
 
 ### 🪞 Addendum #9: Sign Calibration and Applied Cryptography (v3.0.0)
