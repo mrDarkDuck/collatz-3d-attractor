@@ -1,111 +1,111 @@
-# Addendum VII: Квантование фазового пространства ($N_d$-слои) и инвариантный спектр переходов
+# Addendum VII: Phase-Space Quantization ($N_d$-Layers) and the Invariant Transition Spectrum
 
-## 1. Троичная алгебра состояний (State-Space Reduction)
+## 1. Ternary State Algebra (State-Space Reduction)
 
-Для устранения зависимости от абсолютной величины числа всё множество натуральных чисел $\mathbb{N}$ проецируется на конечный алфавит из трех фундаментальных состояний, определяемых поведением числа при делении на $2$:
+To eliminate dependence on the absolute magnitude of a number, the entire set of natural numbers $\mathbb{N}$ is projected onto a finite alphabet of three fundamental states defined by a number's behavior under division by $2$:
 
-* **$\mathbf{O}$ (Нечетное / Odd):** $x \equiv 1 \pmod 2$. Находится в фазе активного возбуждения; единственный оператор перехода — аффинный сдвиг $T(x) = 3x + 1$, переводящий систему в четное состояние.
-* **$\mathbf{E_{0b}}$ (Получетное / Semi-Even):** $x \equiv 2 \pmod 4$. Состояние однократного релаксационного сброса: после одного деления на $2$ ($x/2$) система немедленно возвращается в возбужденное состояние $\mathbf{O}$.
-* **$\mathbf{E_{0a}}$ (Суперчетное / Super-Even):** $x \equiv 0 \pmod 4$. Состояние каскадного затухания: при делении на $2$ система остается в четном классе ($\mathbf{E_{0a}}$ или $\mathbf{E_{0b}}$), формируя серию последовательных сдвигов вниз.
+* **$\mathbf{O}$ (Odd):** $x \equiv 1 \pmod 2$. Represents the active excitation phase; the sole transition operator is the affine shift $T(x) = 3x + 1$, which maps the system into an even state.
+* **$\mathbf{E_{0b}}$ (Semi-Even):** $x \equiv 2 \pmod 4$. Represents a single-step relaxation reset: after a single division by $2$ ($x/2$), the system immediately returns to the excited state $\mathbf{O}$.
+* **$\mathbf{E_{0a}}$ (Super-Even):** $x \equiv 0 \pmod 4$. Represents cascading decay: under division by $2$, the system remains within the even class ($\mathbf{E_{0a}}$ or $\mathbf{E_{0b}}$), generating a chain of consecutive downward shifts.
 
-### Абсолютно четная магистраль ($\mathcal{M}_2$)
-Подмножество чисел вида $x = 2^k$ ($k \ge 1$) представляет собой вырожденный канал чистого затухания:
+### The Strictly Even Highway ($\mathcal{M}_2$)
+The subset of numbers of the form $x = 2^k$ ($k \ge 1$) forms a degenerate pure-decay channel:
 
 $$\mathbf{E_{0a}} \xrightarrow{/2} \mathbf{E_{0a}} \xrightarrow{/2} \dots \xrightarrow{/2} \mathbf{E_{0b}} \xrightarrow{/2} 1$$
 
-Любая траектория, попадающая на магистраль $\mathcal{M}_2$, гарантированно деградирует до терминального аттрактора $1$ за $k$ шагов без единого обратного возбуждения.
+Any trajectory entering the $\mathcal{M}_2$ highway is guaranteed to collapse into the terminal attractor $1$ in exactly $k$ steps without a single upward excitation.
 
 ---
 
-## 2. Нормировка интервалов ($N_d$-сегментация)
+## 2. Interval Normalization ($N_d$-Segmentation)
 
-Степени двойки $2^k$ разбивают числовую ось на счетное множество полуоткрытых диадических интервалов (слоев):
+Powers of two $2^k$ partition the number line into a countable family of half-open dyadic intervals (layers):
 
 $$I_k = [2^k, 2^{k+1}), \quad k = \lfloor \log_2 x \rfloor$$
 
-Длина каждого интервала равна $|I_k| = 2^k$. При переходе к логарифмической метрике аттрактора каждый интервал $I_k$ нормируется к единому эталонному масштабу — **кванту фазового пространства $N_d$**.
+The width of each interval is $|I_k| = 2^k$. When mapped into the logarithmic metric of the attractor, every interval $I_k$ is normalized to a uniform reference scale—the **phase-space quantum $N_d$**.
 
-### Теорема о масштабной инвариантности $N_d$-слоя
-> *Внутренняя структура состояний $\{\mathbf{O}, \mathbf{E_{0b}}, \mathbf{E_{0a}}\}$ внутри любого слоя $N_d$ строго инвариантна относительно индекса $k$ (при $k \ge 2$).*
+### Theorem on the Scale Invariance of an $N_d$-Layer
+> *The internal distribution of states $\{\mathbf{O}, \mathbf{E_{0b}}, \mathbf{E_{0a}}\}$ within any $N_d$-layer is strictly invariant with respect to the layer index $k$ (for all $k \ge 2$).*
 
-**Доказательство:**
-В любом слое $I_k = [2^k, 2^{k+1})$ содержится ровно $2^k$ целых чисел. Из них:
-* ровно $2^{k-1}$ чисел ($50\%$) принадлежат классу $\mathbf{O}$;
-* ровно $2^{k-2}$ чисел ($25\%$) принадлежат классу $\mathbf{E_{0b}}$;
-* ровно $2^{k-2}$ чисел ($25\%$) принадлежат классу $\mathbf{E_{0a}}$.
+**Proof:**
+Any layer $I_k = [2^k, 2^{k+1})$ contains exactly $2^k$ integers. Among them:
+* exactly $2^{k-1}$ integers ($50\%$) belong to class $\mathbf{O}$;
+* exactly $2^{k-2}$ integers ($25\%$) belong to class $\mathbf{E_{0b}}$;
+* exactly $2^{k-2}$ integers ($25\%$) belong to class $\mathbf{E_{0a}}$.
 
-Таким образом, при переходе от чисел порядка $10^2$ к числам порядка $10^{1000}$ «плотность турбулентности» внутри отдельно взятого слоя $N_d$ остается неизменной константой.
+Consequently, when scaling from numbers of order $10^2$ to numbers of order $10^{1000}$, the internal "turbulence density" within any individual $N_d$-layer remains an exact constant.
 
 ---
 
-## 3. Дискретный спектр межслойных переходов ($\Delta k$)
+## 3. Discrete Spectrum of Inter-Layer Transitions ($\Delta k$)
 
-Вся динамика гипотезы Коллатца сводится к блужданию точки по лестнице слоев $N_d$, где каждый шаг описывается дискретным сдвигом $\Delta k = k_{\text{next}} - k_{\text{curr}}$.
+The entire dynamics of the Collatz conjecture reduces to a walk across the ladder of $N_d$-layers, where each step is governed by a discrete layer shift $\Delta k = k_{\text{next}} - k_{\text{curr}}$.
 
-### 3.1. Элементарный операторный шаг
-За одну арифметическую операцию система не может остаться в текущем слое ($\Delta k \neq 0$). Спектр элементарных переходов имеет ровно три разрешенные линии:
+### 3.1. Elementary Operator Step
+In a single arithmetic operation, the system cannot remain in its current layer ($\Delta k \neq 0$). The spectrum of elementary transitions consists of exactly three permitted lines:
 
-| Тип перехода | Сдвиг $\Delta k$ | Условие попадания в слое $N_d$ | Теоретическая мера |
+| Transition Type | Layer Shift $\Delta k$ | Condition Within Layer $N_d$ | Theoretical Measure |
 | :--- | :---: | :--- | :---: |
-| **Релаксация (спуск)** | **$-1$** | Все четные состояния ($\mathbf{E_{0a}} \cup \mathbf{E_{0b}}$) | **$50.00\%$** ($1/2$) |
-| **Слабое возбуждение** | **$+1$** | Нечетные в нижней трети слоя: $x \in [2^k, \frac{4}{3}2^k)$ | **$16.67\%$** ($1/6$) |
-| **Сильное возбуждение** | **$+2$** | Нечетные в верхних двух третях: $x \in [\frac{4}{3}2^k, 2^{k+1})$ | **$33.33\%$** ($1/3$) |
+| **Relaxation (Descent)** | **$-1$** | All even states ($\mathbf{E_{0a}} \cup \mathbf{E_{0b}}$) | **$50.00\%$** ($1/2$) |
+| **Weak Excitation** | **$+1$** | Odd numbers in the lower third: $x \in [2^k, \frac{4}{3}2^k)$ | **$16.67\%$** ($1/6$) |
+| **Strong Excitation** | **$+2$** | Odd numbers in the upper two-thirds: $x \in [\frac{4}{3}2^k, 2^{k+1})$ | **$33.33\%$** ($1/3$) |
 
-### 3.2. Сжатый цикл ($\mathbf{O} \to \mathbf{O}'$)
-При объединении шага возбуждения $3x+1$ с последующим каскадом релаксаций $/2^\nu$ до следующего нечетного состояния $\mathbf{O}'$, спектр переходов между слоями $N_d$ приобретает асимметричный вид с жестким верхним порогом ($\Delta k_{\max} = +1$):
+### 3.2. Compressed Cycle ($\mathbf{O} \to \mathbf{O}'$)
+Combining the excitation step $3x+1$ with the subsequent relaxation cascade $/2^\nu$ until the next odd state $\mathbf{O}'$ is reached yields an asymmetric inter-layer transition spectrum bounded by a hard upper threshold ($\Delta k_{\max} = +1$):
 
-$$\mathbb{P}(\Delta k = m) = \begin{cases} \frac{1}{3}, & m = +1 \quad (\text{переход через получетное } \mathbf{E_{0b}} \text{ из верхней зоны}) \\ \frac{1}{3}, & m = 0 \quad (\text{удержание текущего слоя } N_d) \\ \frac{1}{3 \cdot 2^{|m|}}, & m \le -1 \quad (\text{экспоненциальный хвост глубоких провалов}) \end{cases}$$
+$$\mathbb{P}(\Delta k = m) = \begin{cases} \frac{1}{3}, & m = +1 \quad (\text{transition via semi-even } \mathbf{E_{0b}} \text{ from the upper zone}) \\ \frac{1}{3}, & m = 0 \quad (\text{retention within the current } N_d\text{-layer}) \\ \frac{1}{3 \cdot 2^{|m|}}, & m \le -1 \quad (\text{exponential tail of deep drops}) \end{cases}$$
 
-### 3.3. Интегральный дрейф по лестнице слоев
-Математическое ожидание сдвига по слоям $N_d$ за один полный цикл $\mathbf{O} \to \mathbf{O}'$ является фундаментальной отрицательной константой системы:
+### 3.3. Integral Drift Across the Layer Ladder
+The expected layer shift across $N_d$-intervals over a complete $\mathbf{O} \to \mathbf{O}'$ cycle is a fundamental negative constant of the system:
 
-$$\mathbb{E}[\Delta k_{\text{cycle}}] = (+1)\cdot\frac{1}{3} + (0)\cdot\frac{1}{3} + \sum_{m=1}^{\infty} (-m)\cdot\frac{1}{3 \cdot 2^m} = \frac{1}{3} - \frac{2}{3} = -\frac{1}{3} \text{ (в дискретной сетке } N_d\text{)}$$
+$$\mathbb{E}[\Delta k_{\text{cycle}}] = (+1)\cdot\frac{1}{3} + (0)\cdot\frac{1}{3} + \sum_{m=1}^{\infty} (-m)\cdot\frac{1}{3 \cdot 2^m} = \frac{1}{3} - \frac{2}{3} = -\frac{1}{3} \text{ (on the discrete } N_d\text{ grid)}$$
 
-*(Примечание: с учетом дробного положения внутри слоя точный логарифмический дрейф составляет $\log_2(3) - 2 \approx -0.41504$ слоя за цикл).*
+*(Note: accounting for the continuous fractional position within a layer, the exact logarithmic drift is $\log_2(3) - 2 \approx -0.41504$ layers per cycle).*
 
 ---
 
-## 4. Вывод и граница применимости
+## 4. Conclusion and Theoretical Frontier
 
-Модель $N_d$-слоев доказывает, что глобальная система Коллатца эквивалентна **одномерному случайному блужданию по однородной лестнице масштабов с постоянным отрицательным дрейфом и поглощающим барьером на слое $k=0$**.
+The $N_d$-layer model demonstrates that the global Collatz system is equivalent to a **one-dimensional random walk on a scale-invariant ladder with a constant negative drift and an absorbing barrier at layer $k=0$**.
 
-* **Что доказано:** В силу масштабной инвариантности $N_d$-слоев, отсутствие «убегания на бесконечность» выполняется с мерой $1$ ($100\%$ стохастических траекторий) на любом сколь угодно большом участке числовой оси.
-* **Открытый барьер (Frontier):** Для завершения строгого детерминированного доказательства требуется построить монотонный структурный инвариант (функцию Ляпунова $R(x)$), который строго запрещает существование аномальных подпоследовательностей меры ноль, способных бесконечно удерживать фазовую точку в правой ветви спектра ($\Delta k \in \{0, +1\}$) за счет переносов разрядов из старших битов.
+* **Established Result:** By virtue of $N_d$-layer scale invariance, divergence to infinity is ruled out with measure $1$ ($100\%$ of stochastic trajectories) across any arbitrarily large region of the number line.
+* **Open Frontier:** Completing a strictly deterministic proof requires constructing a monotonic structural invariant (a Lyapunov resource function $R(x)$) that rigorously prohibits measure-zero anomalous subsequences from remaining trapped indefinitely in the right-hand spectral branch ($\Delta k \in \{0, +1\}$) via carry propagation from higher-order bits.
 
-### 4.1. Предел восхождения Мерсенна ($2^m - 1$) и закон сохранения битового топлива
+### 4.1. The Mersenne Ascent Limit ($2^m - 1$) and Conservation of Bit Fuel
 
-Анализ предельных восхождений показывает, что максимальная непрерывная серия роста реализуется для чисел Мерсенна $x_0 = 2^m - 1$, двоичное представление которых состоит из $m$ подряд идущих единиц (${\underbrace{111\dots111}_{m}}_2$).
+Analysis of extreme ascents reveals that the longest continuous growth streak occurs for Mersenne numbers $x_0 = 2^m - 1$, whose binary representation consists of $m$ consecutive ones (${\underbrace{111\dots111}_{m}}_2$).
 
-1. **Механика выгорания единиц:** На каждом сжатом цикле $\frac{3x + 1}{2}$ число умножается на $1.5$, а одна младшая единица «сгорает» (превращаясь в ноль с последующим сдвигом вправо). Через $m - 1$ шагов значение строго описывается формулой:
+1. **Bit-Burning Mechanics:** At each compressed cycle $\frac{3x + 1}{2}$, the value scales by $1.5$ while a single trailing one is "burned" (converted into a zero and shifted out). After $m - 1$ cycles, the trajectory reaches the exact algebraic state:
    $$x_{m-1} = 3^{m-1} \cdot 2 - 1$$
-2. **Неизбежный срыв в суперчетное состояние:** На $m$-м шаге последняя единица из исходного блока сгорает, и число гарантированно попадает в класс **суперчетных ($\mathbf{E_{0a}}$)**, что обрывает фазу роста глубоким сбросом по слоям ($\Delta k_{\text{break}} \le -1$).
-3. **Универсальный ритм подъема:** В течение всех $m - 1$ циклов роста система ни разу не нарушает границы спектра $N_d$, двигаясь строго по двум правым ветвям ($\Delta k = +1$ и $\Delta k = 0$) в жестком детерминированном ритме:
+2. **Inevitable Collapse into the Super-Even Regime:** On the $m$-th step, the final trailing one from the initial block is exhausted, forcing the number into the **super-even class ($\mathbf{E_{0a}}$)** and terminating the ascent with a deep layer drop ($\Delta k_{\text{break}} \le -1$).
+3. **Universal Ascent Rhythm:** Throughout all $m - 1$ growth cycles, the system strictly obeys the $N_d$-layer spectral bounds, alternating deterministically between the two upper branches ($\Delta k = +1$ and $\Delta k = 0$):
    $$[+1, +1, 0, +1, 0, +1, +1, 0, +1, 0 \dots]$$
-   Асимптотическая скорость подъема по сетке $N_d$ равна $\log_2(3) - 1 \approx 0.58496$ слоя за цикл.
+   The asymptotic ascent velocity across the $N_d$-grid is $\log_2(3) - 1 \approx 0.58496$ layers per cycle.
 
-| Исходное число ($2^m - 1$) | Стартовый слой $N_d$ ($k_{\text{start}}$) | Длина серии роста ($m-1$ циклов) | Пиковый слой $N_d$ ($k_{\text{peak}}$) | Общий подъем ($\Delta k_{\text{total}}$) | Первый шаг срыва ($\Delta k_{\text{break}}$) |
+| Initial Number ($2^m - 1$) | Starting $N_d$-Layer ($k_{\text{start}}$) | Growth Streak ($m-1$ cycles) | Peak $N_d$-Layer ($k_{\text{peak}}$) | Total Layer Gain ($\Delta k_{\text{total}}$) | First Break Step ($\Delta k_{\text{break}}$) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **$2^5 - 1$** ($31$) | $4$ | **$4$ цикла** | $7$ | $+3$ слоя | $-1$ слой |
-| **$2^{10} - 1$** ($1023$) | $9$ | **$9$ циклов** | $15$ | $+6$ слоев | $-3$ слоя |
-| **$2^{20} - 1$** ($\approx 10^6$) | $19$ | **$19$ циклов** | $31$ | $+12$ слоев | $-4$ слоя |
-| **$2^{50} - 1$** ($\approx 10^{15}$) | $49$ | **$49$ циклов** | $78$ | $+29$ слоев | $-2$ слоя |
-| **$2^{100} - 1$** ($\approx 10^{30}$) | $99$ | **$99$ циклов** | $157$ | $+58$ слоев | $-3$ слоя |
+| **$2^5 - 1$** ($31$) | $4$ | **$4$ cycles** | $7$ | $+3$ layers | $-1$ layer |
+| **$2^{10} - 1$** ($1023$) | $9$ | **$9$ cycles** | $15$ | $+6$ layers | $-3$ layers |
+| **$2^{20} - 1$** ($\approx 10^6$) | $19$ | **$19$ cycles** | $31$ | $+12$ layers | $-4$ layers |
+| **$2^{50} - 1$** ($\approx 10^{15}$) | $49$ | **$49$ cycles** | $78$ | $+29$ layers | $-2$ layers |
+| **$2^{100} - 1$** ($\approx 10^{30}$) | $99$ | **$99$ cycles** | $157$ | $+58$ layers | $-3$ layers |
 
-**Следствие (2-адический предел):** Для удержания траектории в фазе роста в течение $L$ сжатых циклов подряд число обязано содержать в младших разрядах блок из $L + 1$ единиц подряд. Поскольку любое натуральное число имеет конечную битовую длину, запас «битового топлива» конечен, и непрерывное восхождение по лестнице слоев $N_d$ гарантированно обрывается за конечное число шагов.
+**Corollary (2-Adic Limit):** Sustaining a continuous ascent across $L$ compressed cycles requires a trailing binary block of $L + 1$ consecutive ones. Because every natural number has finite bit length, this "bit fuel" is strictly finite, guaranteeing that any upward climb along the $N_d$-layer ladder terminates in a finite number of steps.
 
-### 4.2. Битовый термостат гигантов и двухтактный цикл накачки
+### 4.2. The Bit Thermostat of Giants and the Two-Stroke Pump Cycle
 
-Вычислительная проверка траекторий на гигантских масштабах ($10^{100}$–$10^{301}$, до $1000$ бит) выявляет механизм саморегуляции плотности единиц (веса Хэмминга):
+Computational verification across extreme scales ($10^{100}$–$10^{301}$, up to $1000$ bits) reveals a self-regulating mechanism governing bit density (Hamming weight):
 
-1. **Двухтактный цикл «накачка $\to$ выгорание»:** На локальных интервалах рост количества единиц при операции $3x+1$ возможен только при «заливке» нулей в чередующихся битовых структурах вида `...10101...` (сложение $2x + x$ уплотняет разреженные единицы в монолитный блок). Однако сразу после уплотнения включается механика выгорания Мерсенна (секция 4.1), и блок неизбежно сгорает.
-2. **Алгебраический коллапс идеальной «зебры»:** Предельный случай регулярного чередования битов $\underbrace{1010\dots101}_{2n-1}_2 = \frac{4^n - 1}{3}$ (потенциально максимальная накачка) за один операторный шаг попадает на абсолютно четную магистраль $\mathcal{M}_2$:
+1. **Two-Stroke Cycle ("Pump $\to$ Burn"):** Locally, an increase in Hamming weight under $3x+1$ occurs only when carry additions fill zero gaps in alternating bit patterns (`...10101...`), compacting sparse ones into a contiguous block. Once compacted, Mersenne bit-burning (Section 4.1) immediately takes over, consuming the block.
+2. **Algebraic Collapse of the Ideal "Zebra":** The extreme alternating structure ${\underbrace{1010\dots101}_{2n-1}}_2 = \frac{4^n - 1}{3}$ (theoretically maximizing bit-gap filling) collapses directly onto the strictly even highway $\mathcal{M}_2$ in a single step:
    $$3 \cdot \left(\frac{4^n - 1}{3}\right) + 1 = 4^n = 2^{2n} \xrightarrow{\mathcal{M}_2} 1$$
-3. **Эффект битового термостата:** На сверхбольших числах ($332$–$1000$ бит) локальные циклы накачки и выгорания взаимно компенсируются:
+3. **Bit-Thermostat Effect:** On ultra-large integers ($332$–$1000$ bits), local pump and burn phases statistically cancel out:
 
-| Тип числа-гиганта | Стартовый слой ($k_0$) | Пиковый слой (`max_k`) | Подъем ($\Delta k$) | Макс. плотность единиц | Макс. серия роста | Циклов до $1$ |
+| Giant Number Class | Starting Layer ($k_0$) | Peak Layer (`max_k`) | Layer Gain ($\Delta k$) | Peak Bit Density | Max Ascent Streak | Cycles to $1$ |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Случайное $\approx 10^{100}$** ($332$ бита) | $332$ | $333$ | **$+1$ слой** | $54.5\%$ | $7$ шагов | $882$ |
-| **Чередующееся `10101...1`** ($\approx 10^{100}$) | $332$ | $332$ | **$0$ слоев** | $50.2\%$ | $0$ шагов | **$1$ цикл** |
-| **Почти Мерсенн `1110111...1`** ($\approx 10^{100}$) | $332$ | $381$ | **$+49$ слоев** | $86.6\%$ | $47$ шагов | $1075$ |
-| **Случайное $\approx 10^{301}$** ($1000$ бит) | $1000$ | $1001$ | **$+1$ слой** | $53.1\%$ | $8$ шагов | $2289$ |
-
+| **Random $\approx 10^{100}$** ($332$-bit) | $332$ | $333$ | **$+1$ layer** | $54.5\%$ | $7$ steps | $882$ |
+| **Alternating `10101...1`** ($\approx 10^{100}$) | $332$ | $332$ | **$0$ layers** | $50.2\%$ | $0$ steps | **$1$ cycle** |
+| **Near-Mersenne `1110111...1`** ($\approx 10^{100}$) | $332$ | $381$ | **$+49$ layers** | $86.6\%$ | $47$ steps | $1075$ |
+| **Random $\approx 10^{301}$** ($1000$-bit) | $1000$ | $1001$ | **$+1$ layer** | $53.1\%$ | $8$ steps | $2289$ |
+Regardless of the initial bit configuration (even artificially fueled structures with $>86%$ bit density), carry mixing under $3x+1$ rapidly restores bit density toward the $\approx 50%$ equilibrium, preventing sustained upward escape from the starting $N_d$-layer.
