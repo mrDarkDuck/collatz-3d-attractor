@@ -26,7 +26,7 @@ $$I_k = [2^k, 2^{k+1}), \quad k = \lfloor \log_2 x \rfloor$$
 The width of each interval is $|I_k| = 2^k$. When mapped into the logarithmic metric of the attractor, every interval $I_k$ is normalized to a uniform reference scale—the **phase-space quantum $N_d$**.
 
 ### Theorem on the Scale Invariance of an $N_d$-Layer
-> *The internal distribution of states $\{\mathbf{O}, \mathbf{E_{0b}}, \mathbf{E_{0a}}\}$ within any $N_d$-layer is strictly invariant with respect to the layer index $k$ (for all $k \ge 2$).*
+> The internal distribution of states $\lbrace \mathbf{O}, \mathbf{E_{0b}}, \mathbf{E_{0a}} \rbrace$ within any $N_d$-layer is strictly invariant with respect to the layer index $k$ (for all $k \ge 2$).
 
 **Proof:**
 Any layer $I_k = [2^k, 2^{k+1})$ contains exactly $2^k$ integers. Among them:
